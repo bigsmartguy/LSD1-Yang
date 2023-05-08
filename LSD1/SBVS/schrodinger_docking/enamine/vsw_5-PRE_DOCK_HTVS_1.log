@@ -1,0 +1,33 @@
+Stage vsw_5-PRE_DOCK_HTVS_1 initializing...
+[running at reduced cpu priority]
+
+Running stage: vsw_5-PRE_DOCK_HTVS_1
+SCHRODINGER: E:\SC
+PYTHONPATH: None
+Job ID: USER-96L5A2TLTM-0-62a1e167
+Time: Thu Jun 09 20:02:48 2022
+Stage started successfully
+
+Python version: 59011
+The number of output files will be derived from -NJOBS value
+GENCODES is False; ignoring UNIQUEFIELD keyword
+GENCODES is False; ignoring OUTVARIANTFIELD keyword
+GENCODES is False; ignoring OUTCOMPOUNDFIELD keyword
+Counting number of input structures
+Number of input structures: 34486
+Will generate 1 subjobs
+
+Processing ligand files...
+..........28%..........57%..........86%....
+Number of input structures: 34486
+Number of processed structures: 34486
+Number of processed compounds: 10097
+Number of output files: 1
+
+Number of (compounds, structures) for each output file:
+1:(10097, 34486)
+
+STAGE COMPLETED. Elapsed time: 50 seconds
+
+    Output #1 (vsw_5-DOCK_HTVS_1_INPUT) [structures(34486)]:
+      C:\Users\Administrator\Documents\Schrodinger\vsw_5\vsw_5-PRE_DOCK_HTVS_1\vsw_5-PRE_DOCK_HTVS_1-001-in.maegz

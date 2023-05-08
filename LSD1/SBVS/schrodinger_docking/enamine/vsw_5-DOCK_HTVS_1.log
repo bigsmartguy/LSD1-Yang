@@ -1,0 +1,76 @@
+Stage vsw_5-DOCK_HTVS_1 initializing...
+[running at reduced cpu priority]
+
+Running stage: vsw_5-DOCK_HTVS_1
+SCHRODINGER: E:\SC
+PYTHONPATH: None
+Job ID: USER-96L5A2TLTM-0-62a1e1a1
+Time: Thu Jun 09 20:03:46 2022
+Stage started successfully
+
+Python version: 59011
+Will NOT recombine or retitle input ligands
+There will be 1 subjobs.
+Will identify ligands based on unique field: s_vsw_compound_code
+Counting numbers of structures and compounds in input ligands...
+..................................
+Number of input compounds: 10097
+Number of input structures: 34486
+
+Input number of poses for each subjob:
+{1: 34486}
+
+NOTE: 1 jobs will be launched, as that's the number of input files. (The option to 'use input files directly for subjobs' was used.)
+
+Setting up Glide jobs...
+Running Glide jobs...
+
+Running subjobs on hosts:
+  Not available yet
+Number of jobs:       1
+Max retries per job:  2
+Max allowed failures: unlimited
+Run with -LOCAL:      False
+Verbosity:            normal
+
+Starting JobDJ...
+
+Keep one job on driver host: False
+JobDJ columns:
+  C: Number of completed subjobs
+  A: Number of active subjobs (e.g., submitted, running)
+  W: Number of waiting/pending subjobs
+
+C A W | Activity  JobId  JobName  JobHost
+- - - | --------- -----------------------
+Waiting for available processors to use...
+0 1 0 | launched  USER-96L5A2TLTM-0-62a1e1b3 vsw_5-DOCK_HTVS_1-001 localhost [USER-96L5A2TLTM]
+1 0 0 | finished  USER-96L5A2TLTM-0-62a1e1b3 vsw_5-DOCK_HTVS_1-001 localhost [USER-96L5A2TLTM]
+
+All jobs have completed.
+
+1 of 1 job(s) succeeded; 0 job(s) failed.
+
+  Keeping 50% of compounds.
+    Actually keeping 5048 of 10097 compounds.
+  Best by compound: True
+  Calculating CPU time and combining log files...
+    have not calculated CPU time or generated combined logfile
+Merging the Glide output files...
+E:\SC\utilities\glide_merge -f files_to_merge.txt -m 5048 -id_prop s_vsw_compound_code -o vsw_5-HTVS_OUT_1_lib.maegz -p 1
+For progress, see: C:\Users\Administrator\Documents\Schrodinger\vsw_5\vsw_5-DOCK_HTVS_1\glide_merge.log
+glide_merge completed suffessfully
+Reading merged structures...
+   Number of compounds expected to keep: 5048
+   Number of compounds kept: 5048
+   Number of structures kept: 5048
+Generating csv report file...
+Properties CSV file: vsw_5-HTVS_OUT_1.csv
+
+Cleaning up...
+  Archiving vsw_5-DOCK_HTVS_1-001.log...
+
+STAGE COMPLETED. Elapsed time: 19 hours 45 minutes 26 seconds
+
+    Output #1 (vsw_5-HTVS_OUT_1) [structures(5048)]:
+      C:\Users\Administrator\Documents\Schrodinger\vsw_5\vsw_5-DOCK_HTVS_1\vsw_5-HTVS_OUT_1_lib.maegz

@@ -1,0 +1,23 @@
+Stage vsw_5-POSTLIGPREP initializing...
+[running at reduced cpu priority]
+
+Running stage: vsw_5-POSTLIGPREP
+SCHRODINGER: E:\SC
+PYTHONPATH: None
+Job ID: USER-96L5A2TLTM-0-62a1e131
+Time: Thu Jun 09 20:01:53 2022
+Stage started successfully
+
+Python version: 59011
+Removing penalized states and keeping 4 stereoisomers per ion/taut of each compound.
+
+Working on file: C:\Users\Administrator\Documents\Schrodinger\vsw_5\vsw_5-LIGPREP\vsw_5-LIGPREP_OUT-001.maegz
+...................................
+Number of compounds: 10097
+Number of input structures: 35204
+Number of output structures: 34486
+
+STAGE COMPLETED. Elapsed time: 50 seconds
+
+    Output #1 (vsw_5-POSTLIGPREP_OUT) [structures(34486)]:
+      C:\Users\Administrator\Documents\Schrodinger\vsw_5\vsw_5-POSTLIGPREP\vsw_5-POSTLIGPREP_OUT-001.maegz

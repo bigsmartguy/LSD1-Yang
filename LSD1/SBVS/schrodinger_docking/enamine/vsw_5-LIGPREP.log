@@ -1,0 +1,58 @@
+Stage vsw_5-LIGPREP initializing...
+[running at reduced cpu priority]
+
+Running stage: vsw_5-LIGPREP
+SCHRODINGER: E:\SC
+PYTHONPATH: None
+Job ID: USER-96L5A2TLTM-0-62a1d192
+Time: Thu Jun 09 18:55:15 2022
+Stage started successfully
+
+Python version: 59011
+Counting number of input structures
+Number of input structures: 10097
+Each input structure will be treated as a unique compound.
+Separating ligands into 1 subjobs (10097 max ligands per job).
+Not mixing ligands
+
+Recombining ligand files...
+..........99%
+10097 structures were successfully read.
+
+Using built-in tautomer spec file
+Will generate new variants (expand)
+Running LigPrep jobs...
+
+Running subjobs on hosts:
+  Not available yet
+Number of jobs:       1
+Max retries per job:  2
+Max allowed failures: unlimited
+Run with -LOCAL:      False
+Verbosity:            normal
+
+Starting JobDJ...
+
+Keep one job on driver host: False
+JobDJ columns:
+  C: Number of completed subjobs
+  A: Number of active subjobs (e.g., submitted, running)
+  W: Number of waiting/pending subjobs
+
+C A W | Activity  JobId  JobName  JobHost
+- - - | --------- -----------------------
+Waiting for available processors to use...
+0 1 0 | launched  USER-96L5A2TLTM-0-62a1d1b3 vsw_5-LIGPREP-001 localhost [USER-96L5A2TLTM]
+1 0 0 | finished  USER-96L5A2TLTM-0-62a1d1b3 vsw_5-LIGPREP-001 localhost [USER-96L5A2TLTM]
+
+All jobs have completed.
+
+1 of 1 job(s) succeeded; 0 job(s) failed.
+
+Checking subjob outputs...
+Cleaning up...
+
+STAGE COMPLETED. Elapsed time: 1 hour 6 minutes 33 seconds
+
+    Output #1 (vsw_5-LIGPREP_OUT) [structures]:
+      C:\Users\Administrator\Documents\Schrodinger\vsw_5\vsw_5-LIGPREP\vsw_5-LIGPREP_OUT-001.maegz

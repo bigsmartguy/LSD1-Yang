@@ -1,0 +1,35 @@
+Stage vsw_5-PRE_DOCK_SP_1 initializing...
+[running at reduced cpu priority]
+
+Running stage: vsw_5-PRE_DOCK_SP_1
+SCHRODINGER: E:\SC
+PYTHONPATH: None
+Job ID: USER-96L5A2TLTM-0-62a2f7a0
+Time: Fri Jun 10 15:49:52 2022
+Stage started successfully
+
+Python version: 59011
+The number of output files will be derived from -NJOBS value
+GENCODES is False; ignoring UNIQUEFIELD keyword
+GENCODES is False; ignoring OUTVARIANTFIELD keyword
+GENCODES is False; ignoring OUTCOMPOUNDFIELD keyword
+Counting number of input structures
+Number of input structures: 5048
+Adjusting number of jobs to yield 300-3000 ligands per job
+Will generate 2 subjobs
+
+Processing ligand files...
+.....
+Number of input structures: 5048
+Number of processed structures: 5048
+Number of processed compounds: 5048
+Number of output files: 2
+
+Number of (compounds, structures) for each output file:
+1:(2524, 2524), 2:(2524, 2524)
+
+STAGE COMPLETED. Elapsed time: 8 seconds
+
+    Output #1 (vsw_5-DOCK_SP_1_INPUT) [structures(5048)]:
+      C:\Users\Administrator\Documents\Schrodinger\vsw_5\vsw_5-PRE_DOCK_SP_1\vsw_5-PRE_DOCK_SP_1-001-in.maegz
+      C:\Users\Administrator\Documents\Schrodinger\vsw_5\vsw_5-PRE_DOCK_SP_1\vsw_5-PRE_DOCK_SP_1-002-in.maegz

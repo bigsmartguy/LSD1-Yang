@@ -1,0 +1,97 @@
+Stage vsw_5-DOCK_XP_1 initializing...
+[running at reduced cpu priority]
+
+Running stage: vsw_5-DOCK_XP_1
+SCHRODINGER: E:\SC
+PYTHONPATH: None
+Job ID: USER-96L5A2TLTM-0-62a5cb88
+Time: Sun Jun 12 19:18:33 2022
+Stage started successfully
+
+Python version: 59011
+Will NOT recombine or retitle input ligands
+There will be 8 subjobs.
+Will identify ligands based on unique field: s_vsw_compound_code
+Counting numbers of structures and compounds in input ligands...
+.
+Number of input compounds: 1514
+Number of input structures: 1514
+
+Input number of poses for each subjob:
+{1: 190, 2: 190, 3: 190, 4: 190, 5: 190, 6: 190, 7: 190, 8: 184}
+
+NOTE: 8 jobs will be launched, as that's the number of input files. (The option to 'use input files directly for subjobs' was used.)
+
+Setting up Glide jobs...
+Running Glide jobs...
+
+Running subjobs on hosts:
+  Not available yet
+Number of jobs:       8
+Max retries per job:  2
+Max allowed failures: unlimited
+Run with -LOCAL:      False
+Verbosity:            normal
+
+Starting JobDJ...
+
+Keep one job on driver host: False
+JobDJ columns:
+  C: Number of completed subjobs
+  A: Number of active subjobs (e.g., submitted, running)
+  W: Number of waiting/pending subjobs
+
+C A W | Activity  JobId  JobName  JobHost
+- - - | --------- -----------------------
+Waiting for available processors to use...
+0 1 7 | launched  USER-96L5A2TLTM-0-62a5cb8e vsw_5-DOCK_XP_1-001 localhost [USER-96L5A2TLTM]
+1 0 7 | finished  USER-96L5A2TLTM-0-62a5cb8e vsw_5-DOCK_XP_1-001 localhost [USER-96L5A2TLTM]
+1 1 6 | launched  USER-96L5A2TLTM-0-62a6b62f vsw_5-DOCK_XP_1-002 localhost [USER-96L5A2TLTM]
+2 0 6 | finished  USER-96L5A2TLTM-0-62a6b62f vsw_5-DOCK_XP_1-002 localhost [USER-96L5A2TLTM]
+2 1 5 | launched  USER-96L5A2TLTM-0-62a7fb5c vsw_5-DOCK_XP_1-003 localhost [USER-96L5A2TLTM]
+3 0 5 | finished  USER-96L5A2TLTM-0-62a7fb5c vsw_5-DOCK_XP_1-003 localhost [USER-96L5A2TLTM]
+3 1 4 | launched  USER-96L5A2TLTM-0-62a82b17 vsw_5-DOCK_XP_1-004 localhost [USER-96L5A2TLTM]
+4 0 4 | finished  USER-96L5A2TLTM-0-62a82b17 vsw_5-DOCK_XP_1-004 localhost [USER-96L5A2TLTM]
+4 1 3 | launched  USER-96L5A2TLTM-0-62a85195 vsw_5-DOCK_XP_1-005 localhost [USER-96L5A2TLTM]
+5 0 3 | finished  USER-96L5A2TLTM-0-62a85195 vsw_5-DOCK_XP_1-005 localhost [USER-96L5A2TLTM]
+5 1 2 | launched  USER-96L5A2TLTM-0-62a87c85 vsw_5-DOCK_XP_1-006 localhost [USER-96L5A2TLTM]
+6 0 2 | finished  USER-96L5A2TLTM-0-62a87c85 vsw_5-DOCK_XP_1-006 localhost [USER-96L5A2TLTM]
+6 1 1 | launched  USER-96L5A2TLTM-0-62a94744 vsw_5-DOCK_XP_1-007 localhost [USER-96L5A2TLTM]
+7 0 1 | finished  USER-96L5A2TLTM-0-62a94744 vsw_5-DOCK_XP_1-007 localhost [USER-96L5A2TLTM]
+7 1 0 | launched  USER-96L5A2TLTM-0-62a972f6 vsw_5-DOCK_XP_1-008 localhost [USER-96L5A2TLTM]
+8 0 0 | finished  USER-96L5A2TLTM-0-62a972f6 vsw_5-DOCK_XP_1-008 localhost [USER-96L5A2TLTM]
+
+All jobs have completed.
+
+8 of 8 job(s) succeeded; 0 job(s) failed.
+
+  Keeping 10% of compounds.
+    Actually keeping 151 of 1514 compounds.
+  Best by compound: True
+  Calculating CPU time and combining log files...
+    have not calculated CPU time or generated combined logfile
+Merging the Glide output files...
+E:\SC\utilities\glide_merge -f files_to_merge.txt -m 151 -id_prop s_vsw_compound_code -o vsw_5-XP_OUT_1_pv.maegz -p 1
+For progress, see: C:\Users\Administrator\Documents\Schrodinger\vsw_5\vsw_5-DOCK_XP_1\glide_merge.log
+glide_merge completed suffessfully
+Reading merged structures...
+   Number of compounds expected to keep: 151
+   Number of compounds kept: 151
+   Number of structures kept: 151
+Generating csv report file...
+Properties CSV file: vsw_5-XP_OUT_1.csv
+
+Cleaning up...
+  Archiving vsw_5-DOCK_XP_1-001.log...
+  Archiving vsw_5-DOCK_XP_1-002.log...
+  Archiving vsw_5-DOCK_XP_1-003.log...
+  Archiving vsw_5-DOCK_XP_1-004.log...
+  Archiving vsw_5-DOCK_XP_1-005.log...
+  Archiving vsw_5-DOCK_XP_1-006.log...
+  Archiving vsw_5-DOCK_XP_1-007.log...
+  Archiving vsw_5-DOCK_XP_1-008.log...
+
+STAGE COMPLETED. Elapsed time: 70 hours 10 minutes 39 seconds
+
+    Output #1 (vsw_5-XP_OUT_1) [structures(152)]:
+      C:\Users\Administrator\Documents\Schrodinger\vsw_5\vsw_5-DOCK_XP_1\vsw_5-XP_OUT_1_pv.maegz

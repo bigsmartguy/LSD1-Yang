@@ -1,0 +1,79 @@
+Stage vsw_5-DOCK_SP_1 initializing...
+[running at reduced cpu priority]
+
+Running stage: vsw_5-DOCK_SP_1
+SCHRODINGER: E:\SC
+PYTHONPATH: None
+Job ID: USER-96L5A2TLTM-0-62a2f7ac
+Time: Fri Jun 10 15:50:05 2022
+Stage started successfully
+
+Python version: 59011
+Will NOT recombine or retitle input ligands
+There will be 2 subjobs.
+Will identify ligands based on unique field: s_vsw_compound_code
+Counting numbers of structures and compounds in input ligands...
+.....
+Number of input compounds: 5048
+Number of input structures: 5048
+
+Input number of poses for each subjob:
+{1: 2524, 2: 2524}
+
+NOTE: 2 jobs will be launched, as that's the number of input files. (The option to 'use input files directly for subjobs' was used.)
+
+Setting up Glide jobs...
+Running Glide jobs...
+
+Running subjobs on hosts:
+  Not available yet
+Number of jobs:       2
+Max retries per job:  2
+Max allowed failures: unlimited
+Run with -LOCAL:      False
+Verbosity:            normal
+
+Starting JobDJ...
+
+Keep one job on driver host: False
+JobDJ columns:
+  C: Number of completed subjobs
+  A: Number of active subjobs (e.g., submitted, running)
+  W: Number of waiting/pending subjobs
+
+C A W | Activity  JobId  JobName  JobHost
+- - - | --------- -----------------------
+Waiting for available processors to use...
+0 1 1 | launched  USER-96L5A2TLTM-0-62a2f7b5 vsw_5-DOCK_SP_1-001 localhost [USER-96L5A2TLTM]
+1 0 1 | finished  USER-96L5A2TLTM-0-62a2f7b5 vsw_5-DOCK_SP_1-001 localhost [USER-96L5A2TLTM]
+1 1 0 | launched  USER-96L5A2TLTM-0-62a4575a vsw_5-DOCK_SP_1-002 localhost [USER-96L5A2TLTM]
+2 0 0 | finished  USER-96L5A2TLTM-0-62a4575a vsw_5-DOCK_SP_1-002 localhost [USER-96L5A2TLTM]
+
+All jobs have completed.
+
+2 of 2 job(s) succeeded; 0 job(s) failed.
+
+  Keeping 30% of compounds.
+    Actually keeping 1514 of 5048 compounds.
+  Best by compound: True
+  Calculating CPU time and combining log files...
+    have not calculated CPU time or generated combined logfile
+Merging the Glide output files...
+E:\SC\utilities\glide_merge -f files_to_merge.txt -m 1514 -id_prop s_vsw_compound_code -o vsw_5-SP_OUT_1_lib.maegz -p 1
+For progress, see: C:\Users\Administrator\Documents\Schrodinger\vsw_5\vsw_5-DOCK_SP_1\glide_merge.log
+glide_merge completed suffessfully
+Reading merged structures...
+   Number of compounds expected to keep: 1514
+   Number of compounds kept: 1514
+   Number of structures kept: 1514
+Generating csv report file...
+Properties CSV file: vsw_5-SP_OUT_1.csv
+
+Cleaning up...
+  Archiving vsw_5-DOCK_SP_1-001.log...
+  Archiving vsw_5-DOCK_SP_1-002.log...
+
+STAGE COMPLETED. Elapsed time: 51 hours 28 minutes 0 seconds
+
+    Output #1 (vsw_5-SP_OUT_1) [structures(1514)]:
+      C:\Users\Administrator\Documents\Schrodinger\vsw_5\vsw_5-DOCK_SP_1\vsw_5-SP_OUT_1_lib.maegz

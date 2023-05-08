@@ -1,0 +1,220 @@
+
+===========================================
+     Virtual Screening Workflow (VSW)
+     Python version: 59011
+===========================================
+
+SCHRODINGER: E:\SC
+PYTHONPATH: None
+Started at: Thu Jun 09 18:55:13 2022
+[running at reduced cpu priority]
+Driver JobId: USER-96L5A2TLTM-0-62a1d191
+Launch directory: C:\Users\Administrator\Documents\Schrodinger\vsw_5
+Job directory: C:\Users\Administrator\Documents\Schrodinger\vsw_5
+Running locally: True
+Input File: vsw_5.inp
+
+To restart the job upon failure, run this command:
+   $SCHRODINGER/vsw vsw_5.inp -RESTART
+
+Setting subjob_local to: False
+Setting njobs to: 1
+Setting adjust to: True
+Setting cleanup to: True
+
+Starting the pipeline...
+
+Will listen to "pipeline" messages from stages
+General subjob hosts: [('localhost', 1)]
+ligprep hosts: [('localhost', 1)]
+glide hosts: [('localhost', 1)]
+Subjob Local: False
+Number of subjobs: 1
+Adjust subjobs: True
+No force job: Will terminate upon first docking subjob failure instead of merging output from successful Glide subjobs.
+Maximum retries: 2
+Cleanup: True
+
+    Stage: vsw_5-LIGPREP
+        RETITLE: YES
+        NUM_STEREOISOMERS: 32
+        MIXLIGS: YES
+        USE_EPIK: YES
+        STEREO_SOURCE: parities
+        UNIQUEFIELD: NONE
+        METAL_BINDING: NO
+        COMBINEOUTS: NO
+        REGULARIZE: NO
+        NRINGCONFS: 1
+        SKIP_BAD_LIGANDS: YES
+        OUTCOMPOUNDFIELD: s_vsw_compound_code
+        PH: 7.0
+        RECOMBINE: YES
+        PHT: 2.0
+
+    Stage: vsw_5-POSTLIGPREP
+        MAXSTEREO: 4
+        UNIQUEFIELD: s_vsw_compound_code
+        OUTVARIANTFIELD: s_vsw_variant
+        PRESERVE_NJOBS: YES
+        REMOVE_PENALIZED_STATES: YES
+        LIMIT_STEREOISOMERS: YES
+
+    Stage: vsw_5-PRE_DOCK_HTVS_1
+        MAX_SUBJOB_STS: 40000
+        OUTFORMAT: maegz
+        UNIQUEFIELD: s_vsw_compound_code
+        NUMOUT: njobs
+        GENCODES: NO
+        MIN_SUBJOB_STS: 4000
+
+    Stage: vsw_5-DOCK_HTVS_1
+        AMIDE_MODE: penal
+        POSE_OUTTYPE: LIB
+        PRECISION: HTVS
+        POSTDOCKSTRAIN: NO
+        LIG_CCUT: 0.15
+        UNIQUEFIELD: s_vsw_compound_code
+        DOCKING_METHOD: confgen
+        LIG_VSCALE: 0.8
+        FORCEPLANAR: NO
+        EPIK_PENALTIES: YES
+        MAXATOMS: 300
+        PERCENT_TO_KEEP: 50.0
+        POSES_PER_LIG: 1
+        POSTDOCK: YES
+        MAXROTBONDS: 50
+        RECOMBINE: NO
+        BEST_BY_TITLE: YES
+        COMPRESS_POSES: YES
+
+    Stage: vsw_5-PULL_HTVS_1
+        UNIQUEFIELD: s_vsw_variant
+
+    Stage: vsw_5-PRE_DOCK_SP_1
+        MAX_SUBJOB_STS: 3000
+        OUTFORMAT: maegz
+        UNIQUEFIELD: s_vsw_compound_code
+        NUMOUT: njobs
+        GENCODES: NO
+        MIN_SUBJOB_STS: 300
+
+    Stage: vsw_5-DOCK_SP_1
+        LIG_VSCALE: 0.8
+        POSE_OUTTYPE: LIB
+        COMPRESS_POSES: YES
+        POSTDOCKSTRAIN: NO
+        UNIQUEFIELD: s_vsw_compound_code
+        DOCKING_METHOD: confgen
+        PRECISION: SP
+        FORCEPLANAR: NO
+        EPIK_PENALTIES: YES
+        MAXATOMS: 300
+        NENHANCED_SAMPLING: 1
+        LIG_CCUT: 0.15
+        PERCENT_TO_KEEP: 30.0
+        AMIDE_MODE: penal
+        POSTDOCK: YES
+        MAXROTBONDS: 50
+        RECOMBINE: NO
+        BEST_BY_TITLE: YES
+        POSES_PER_LIG: 1
+        WRITE_XP_DESC: NO
+
+    Stage: vsw_5-PULL_SP_1
+        UNIQUEFIELD: s_vsw_variant
+
+    Stage: vsw_5-PRE_DOCK_XP_1
+        MAX_SUBJOB_STS: 200
+        OUTFORMAT: maegz
+        UNIQUEFIELD: s_vsw_compound_code
+        NUMOUT: njobs
+        GENCODES: NO
+        MIN_SUBJOB_STS: 20
+
+    Stage: vsw_5-DOCK_XP_1
+        LIG_VSCALE: 0.8
+        POSE_OUTTYPE: PV
+        COMPRESS_POSES: YES
+        POSTDOCKSTRAIN: NO
+        UNIQUEFIELD: s_vsw_compound_code
+        DOCKING_METHOD: confgen
+        PRECISION: XP
+        FORCEPLANAR: NO
+        EPIK_PENALTIES: YES
+        MAXATOMS: 300
+        LIG_CCUT: 0.15
+        PERCENT_TO_KEEP: 10.0
+        AMIDE_MODE: penal
+        POSTDOCK: YES
+        MAXROTBONDS: 50
+        RECOMBINE: NO
+        BEST_BY_TITLE: YES
+        POSES_PER_LIG: 1
+        WRITE_XP_DESC: NO
+
+Status of stages:
+  Stage Name                     Status
+  ------------------------------ ---------
+  vsw_5-LIGPREP                  WAITING
+  vsw_5-POSTLIGPREP              WAITING
+  vsw_5-PRE_DOCK_HTVS_1          WAITING
+  vsw_5-DOCK_HTVS_1              WAITING
+  vsw_5-PULL_HTVS_1              WAITING
+  vsw_5-PRE_DOCK_SP_1            WAITING
+  vsw_5-DOCK_SP_1                WAITING
+  vsw_5-PULL_SP_1                WAITING
+  vsw_5-PRE_DOCK_XP_1            WAITING
+  vsw_5-DOCK_XP_1                WAITING
+
+Stage activity keys...
+  C: Number of completed stages
+  A: Number of active/running stages
+  W: Number of waiting/pending stages
+
+ C  A  W | Stage name and activity
+-- -- -- | -----------------------
+ 0  0 10 | vsw_5-LIGPREP (USER-96L5A2TLTM-0-62a1d192) launched.
+ 1  0  9 | vsw_5-LIGPREP (USER-96L5A2TLTM-0-62a1d192) completed.
+            Output: vsw_5-LIGPREP_OUT
+ 1  0  9 | vsw_5-POSTLIGPREP (USER-96L5A2TLTM-0-62a1e131) launched.
+ 2  0  8 | vsw_5-POSTLIGPREP (USER-96L5A2TLTM-0-62a1e131) completed.
+            Output: vsw_5-POSTLIGPREP_OUT (34486)
+Cleaning up intermediate files: vsw_5-LIGPREP_OUT
+ 2  0  8 | vsw_5-PRE_DOCK_HTVS_1 (USER-96L5A2TLTM-0-62a1e167) launched.
+ 3  0  7 | vsw_5-PRE_DOCK_HTVS_1 (USER-96L5A2TLTM-0-62a1e167) completed.
+            Output: vsw_5-DOCK_HTVS_1_INPUT (34486)
+ 3  0  7 | vsw_5-DOCK_HTVS_1 (USER-96L5A2TLTM-0-62a1e1a1) launched.
+ 4  0  6 | vsw_5-DOCK_HTVS_1 (USER-96L5A2TLTM-0-62a1e1a1) completed.
+            Output: vsw_5-HTVS_OUT_1 (5048)
+Cleaning up intermediate files: vsw_5-DOCK_HTVS_1_INPUT
+ 4  0  6 | vsw_5-PULL_HTVS_1 (USER-96L5A2TLTM-0-62a2f77e) launched.
+ 5  0  5 | vsw_5-PULL_HTVS_1 (USER-96L5A2TLTM-0-62a2f77e) completed.
+            Output: vsw_5-HTVS_OUT_ORIG_1 (5048)
+Cleaning up intermediate files: vsw_5-HTVS_OUT_1
+ 5  0  5 | vsw_5-PRE_DOCK_SP_1 (USER-96L5A2TLTM-0-62a2f7a0) launched.
+ 6  0  4 | vsw_5-PRE_DOCK_SP_1 (USER-96L5A2TLTM-0-62a2f7a0) completed.
+            Output: vsw_5-DOCK_SP_1_INPUT (5048)
+ 6  0  4 | vsw_5-DOCK_SP_1 (USER-96L5A2TLTM-0-62a2f7ac) launched.
+ 7  0  3 | vsw_5-DOCK_SP_1 (USER-96L5A2TLTM-0-62a2f7ac) completed.
+            Output: vsw_5-SP_OUT_1 (1514)
+Cleaning up intermediate files: vsw_5-DOCK_SP_1_INPUT
+ 7  0  3 | vsw_5-PULL_SP_1 (USER-96L5A2TLTM-0-62a5cb72) launched.
+ 8  0  2 | vsw_5-PULL_SP_1 (USER-96L5A2TLTM-0-62a5cb72) completed.
+            Output: vsw_5-SP_OUT_ORIG_1 (1514)
+Cleaning up intermediate files: vsw_5-HTVS_OUT_ORIG_1
+Cleaning up intermediate files: vsw_5-SP_OUT_1
+ 8  0  2 | vsw_5-PRE_DOCK_XP_1 (USER-96L5A2TLTM-0-62a5cb7e) launched.
+ 9  0  1 | vsw_5-PRE_DOCK_XP_1 (USER-96L5A2TLTM-0-62a5cb7e) completed.
+            Output: vsw_5-DOCK_XP_1_INPUT (1514)
+Cleaning up intermediate files: vsw_5-SP_OUT_ORIG_1
+ 9  0  1 | vsw_5-DOCK_XP_1 (USER-96L5A2TLTM-0-62a5cb88) launched.
+10  0  0 | vsw_5-DOCK_XP_1 (USER-96L5A2TLTM-0-62a5cb88) completed.
+            Output: vsw_5-XP_OUT_1 (152)
+Cleaning up intermediate files: vsw_5-DOCK_XP_1_INPUT
+All stages have completed sucessfully.
+User outputs:
+  XP_OUT_1 (incorporatable) [structures(152)]:
+      C:\Users\Administrator\Documents\Schrodinger\vsw_5\vsw_5-DOCK_XP_1\vsw_5-XP_OUT_1_pv.maegz
+  POSTLIGPREP_OUT [structures(34486)]:
+      C:\Users\Administrator\Documents\Schrodinger\vsw_5\vsw_5-POSTLIGPREP\vsw_5-POSTLIGPREP_OUT-001.maegz
