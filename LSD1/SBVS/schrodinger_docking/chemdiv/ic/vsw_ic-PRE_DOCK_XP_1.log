@@ -1,0 +1,38 @@
+Stage vsw_ic-PRE_DOCK_XP_1 initializing...
+[running at reduced cpu priority]
+
+Running stage: vsw_ic-PRE_DOCK_XP_1
+SCHRODINGER: E:\SC
+PYTHONPATH: None
+Job ID: USER-96L5A2TLTM-0-62a4a567
+Time: Sat Jun 11 22:23:36 2022
+Stage started successfully
+
+Python version: 59011
+The number of output files will be derived from -NJOBS value
+GENCODES is False; ignoring UNIQUEFIELD keyword
+GENCODES is False; ignoring OUTVARIANTFIELD keyword
+GENCODES is False; ignoring OUTCOMPOUNDFIELD keyword
+Counting number of input structures
+Number of input structures: 934
+Adjusting number of jobs to yield 20-200 ligands per job
+Will generate 5 subjobs
+
+Processing ligand files...
+
+Number of input structures: 934
+Number of processed structures: 934
+Number of processed compounds: 934
+Number of output files: 5
+
+Number of (compounds, structures) for each output file:
+1:(187, 187), 2:(187, 187), 3:(187, 187), 4:(187, 187), 5:(186, 186)
+
+STAGE COMPLETED. Elapsed time: 2 seconds
+
+    Output #1 (vsw_ic-DOCK_XP_1_INPUT) [structures(934)]:
+      C:\Users\Administrator\Documents\Schrodinger\vsw_ic\vsw_ic-PRE_DOCK_XP_1\vsw_ic-PRE_DOCK_XP_1-001-in.maegz
+      C:\Users\Administrator\Documents\Schrodinger\vsw_ic\vsw_ic-PRE_DOCK_XP_1\vsw_ic-PRE_DOCK_XP_1-002-in.maegz
+      C:\Users\Administrator\Documents\Schrodinger\vsw_ic\vsw_ic-PRE_DOCK_XP_1\vsw_ic-PRE_DOCK_XP_1-003-in.maegz
+      C:\Users\Administrator\Documents\Schrodinger\vsw_ic\vsw_ic-PRE_DOCK_XP_1\vsw_ic-PRE_DOCK_XP_1-004-in.maegz
+      C:\Users\Administrator\Documents\Schrodinger\vsw_ic\vsw_ic-PRE_DOCK_XP_1\vsw_ic-PRE_DOCK_XP_1-005-in.maegz

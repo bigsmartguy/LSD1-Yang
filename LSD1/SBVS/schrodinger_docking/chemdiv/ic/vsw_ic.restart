@@ -1,0 +1,3706 @@
+(ischrodinger.pipeline.pipeline
+Pipeline
+p1
+(dp2
+S'adjust'
+p3
+I01
+sS'force'
+p4
+NsS'intermediate_varnames'
+p5
+(lp6
+S'vsw_ic-POSTLIGPREP_OUT'
+p7
+aS'vsw_ic-XP_OUT_1'
+p8
+asS'jobname'
+p9
+S'vsw_ic'
+p10
+sS'max_retries'
+p11
+NsS'njobs'
+p12
+I1
+sS'idle_function'
+p13
+NsS'restart_file'
+p14
+S'vsw_ic.restart'
+p15
+sS'stagejobs'
+p16
+(lp17
+(ischrodinger.pipeline.pipeline
+StageJob
+p18
+(dp19
+S'status'
+p20
+S'COMPLETED'
+p21
+sS'stageobj'
+p22
+(ischrodinger.pipeline.stages.ligprep
+LigPrepStage
+p23
+(dp24
+S'_subjob_hosts_list'
+p25
+(lp26
+(S'localhost'
+p27
+I1
+tp28
+asS'_output_objects'
+p29
+(dp30
+sS'_driver_jobid'
+p31
+NsS'_needed_cpus'
+p32
+NsS'_used_hosts'
+p33
+NsS'_required_products'
+p34
+c__builtin__
+set
+p35
+((lp36
+S'macromodel'
+p37
+aS'epik'
+p38
+atRp39
+sS'_target_njobs'
+p40
+I1
+sS'_running_in_pipeline'
+p41
+I01
+sS'stagename'
+p42
+S'vsw_ic-LIGPREP'
+p43
+sS'_stage_job'
+p44
+NsS'_adjust_njobs'
+p45
+I01
+sS'jobdj'
+p46
+NsS'allow_extra_keywords'
+p47
+I00
+sS'_expected_inputs'
+p48
+(dp49
+I1
+(dp50
+S'required'
+p51
+I01
+sS'type'
+p52
+S'structures'
+p53
+sssS'specs'
+p54
+(lp55
+S''
+aS'        UNIQUEFIELD = string(default="NONE") # Field to identify unique compound by'
+p56
+aS'        RETITLE = boolean(default=False) # Whether to set OUTCOMPOUNDFIELD'
+p57
+aS'        OUTCOMPOUNDFIELD = string(default="s_m_title") # Field where to store the compound codes (if RETITLE is True).'
+p58
+aS'        STEREO_SOURCE = string(default="parities") # parities/geometry'
+p59
+aS'        USE_EPIK = boolean(default=False) # Whether to use Epik instead of Ionizer.'
+p60
+aS'        METAL_BINDING = boolean(default=False) # Use Epik metal binding mode.'
+p61
+aS'        RETAIN = boolean(default=True) # Retain input variant for each compound.'
+p62
+aS'        PH = float(default=7.0) # Target pH'
+p63
+aS'        PHT = float(default=2.0) # pH threshold'
+p64
+aS'        IONIZE = boolean(default=True) # Whether to ionize (Ionizer; Epik always ionizes).'
+p65
+aS'        GENERATE_TAUTOMERS = boolean(default=True) # Whether to generate tautomers.'
+p66
+aS'        MAX_TAUTOMERS = integer(default=8) # Maximum number of tautomers to generate (Ionizer).'
+p67
+aS'        NEUTRALIZE = boolean(default=False) # Whether to neutralize before expanding states.'
+p68
+aS'        MAX_STATES = integer(default=16) # Maximum number of states to generate (Epik).'
+p69
+aS'        NUM_STEREOISOMERS = integer(default=32) # Maximum number of stereoisomers to generate per input structure'
+p70
+aS'        NRINGCONFS = integer(default=1) # Ring conformers per ligand'
+p71
+aS'        MIXLIGS = boolean(default=False)'
+p72
+aS'        RECOMBINE = boolean(default=True) # Whether to recombine input ligand files'
+p73
+aS'        COMBINEOUTS = boolean(default=False) # Combine output files'
+p74
+aS'        SKIP_BAD_LIGANDS = boolean(default=True)'
+p75
+aS'        REGULARIZE = boolean(default=False) # Whether to standardize input structures before preparing'
+p76
+aS'        SKIP_NOUNIQUE_LIGANDS = boolean(default=False) # Whether to skip ligands that have no unique field.'
+p77
+aS'        TAUT_SPEC_FILE = string(default=None) # Custom tautomerizer spec file to use.'
+p78
+aS'        NORMALIZE = boolean(default=False) # Whether to normalize input variants'
+p79
+aS'        OUTFORMAT = string(default="mae")'
+p80
+aS'        '
+p81
+asS'_input_names'
+p82
+(dp83
+I1
+S'vsw_ic-ORIGINAL_LIGANDS'
+p84
+ssS'_subjob_local'
+p85
+I00
+sS'_cleanup_requested'
+p86
+I01
+sS'_has_completed'
+p87
+I00
+sS'output_files'
+p88
+(lp89
+sS'_output_names'
+p90
+(dp91
+I1
+S'vsw_ic-LIGPREP_OUT'
+p92
+ssg20
+S'NOT STARTED'
+p93
+sS'recombined_files'
+p94
+(lp95
+sS'_restart_file'
+p96
+NsS'data'
+p97
+(dp98
+S'RETITLE'
+p99
+S'YES'
+p100
+sS'NUM_STEREOISOMERS'
+p101
+S'32'
+p102
+sS'MIXLIGS'
+p103
+S'YES'
+p104
+sS'USE_EPIK'
+p105
+S'YES'
+p106
+sS'STEREO_SOURCE'
+p107
+S'parities'
+p108
+sS'UNIQUEFIELD'
+p109
+S'NONE'
+p110
+sS'METAL_BINDING'
+p111
+S'NO'
+p112
+sS'COMBINEOUTS'
+p113
+S'NO'
+p114
+sS'REGULARIZE'
+p115
+S'NO'
+p116
+sS'NRINGCONFS'
+p117
+S'1'
+sS'SKIP_BAD_LIGANDS'
+p118
+S'YES'
+p119
+sS'OUTCOMPOUNDFIELD'
+p120
+S's_vsw_compound_code'
+p121
+sS'PH'
+p122
+S'7.0'
+p123
+sS'RECOMBINE'
+p124
+S'YES'
+p125
+sS'PHT'
+p126
+S'2.0'
+p127
+ssS'input_files'
+p128
+(lp129
+sS'_idle_function'
+p130
+NsS'_backend'
+p131
+NsS'_has_started'
+p132
+I00
+sS'_expected_outputs'
+p133
+(dp134
+I1
+(dp135
+S'always'
+p136
+I01
+sg52
+g53
+sssS'_last_message_time'
+p137
+NsS'_input_objects'
+p138
+(dp139
+I1
+(ischrodinger.pipeline.pipeio
+Structures
+p140
+(dp141
+S'_count'
+p142
+Nsg52
+g53
+sS'name'
+p143
+S'ORIGINAL_LIGANDS'
+p144
+sS'_structures'
+p145
+(lp146
+S'E:\\sc-work\\ic1.sd'
+p147
+asbssS'ligprep_jobnames'
+p148
+(lp149
+sS'_main_product'
+p150
+S'ligprep'
+p151
+sS'_subjob_max_retries'
+p152
+NsS'px'
+p153
+NsbsS'pipeline'
+p154
+NsS'host_pool'
+p155
+g151
+sS'checked_out_hosts'
+p156
+(lp157
+(g27
+I0
+tp158
+asS'died_action'
+p159
+NsS'num_given_cpus'
+p160
+I0
+sS'module'
+p161
+S'schrodinger.pipeline.stages.ligprep'
+p162
+sS'jobid'
+p163
+S'USER-96L5A2TLTM-0-62a1d996'
+p164
+sS'num_needed_cpus'
+p165
+I0
+sba(ischrodinger.pipeline.pipeline
+StageJob
+p166
+(dp167
+g20
+g21
+sg22
+(ischrodinger.pipeline.stages.ligprep
+PostLigPrepStage
+p168
+(dp169
+S'maxstereo'
+p170
+Nsg25
+(lp171
+(S'localhost'
+p172
+I1
+tp173
+asg29
+(dp174
+sg31
+Nsg96
+Nsg32
+Nsg137
+Nsg33
+Nsg97
+(dp175
+S'MAXSTEREO'
+p176
+S'4'
+sS'UNIQUEFIELD'
+p177
+S's_vsw_compound_code'
+p178
+sS'OUTVARIANTFIELD'
+p179
+S's_vsw_variant'
+p180
+sS'PRESERVE_NJOBS'
+p181
+S'YES'
+p182
+sS'REMOVE_PENALIZED_STATES'
+p183
+S'YES'
+p184
+sS'LIMIT_STEREOISOMERS'
+p185
+S'YES'
+p186
+ssg34
+g35
+((ltRp187
+sg40
+I1
+sg41
+I01
+sg130
+Nsg131
+Nsg42
+S'vsw_ic-POSTLIGPREP'
+p188
+sg132
+I00
+sg45
+I01
+sg133
+(dp189
+I1
+(dp190
+g136
+I01
+sg52
+g53
+sssg47
+I00
+sg48
+(dp191
+I1
+(dp192
+g51
+I01
+sg52
+g53
+sssg138
+(dp193
+I1
+(ischrodinger.pipeline.pipeio
+Structures
+p194
+(dp195
+g142
+Nsg52
+S'structures'
+p196
+sg143
+g92
+sg145
+(lp197
+S'C:\\Users\\Administrator\\Documents\\Schrodinger\\vsw_ic\\vsw_ic-LIGPREP\\vsw_ic-LIGPREP_OUT-001.maegz'
+p198
+asbssg54
+(lp199
+S''
+aS'        LIMIT_STEREOISOMERS = boolean(default=True)'
+p200
+aS'        MAXSTEREO = integer(default=4)'
+p201
+aS'        REMOVE_PENALIZED_STATES = boolean(default=True)'
+p202
+aS'        UNIQUEFIELD = string(default="s_m_title")'
+p203
+aS'        OUTVARIANTFIELD = string(default="s_vsw_variant")'
+p204
+aS'        OUTFORMAT = option("sd", "mae", default="mae")'
+p205
+aS'        PRESERVE_NJOBS = boolean(default=False)'
+p206
+aS'        '
+p207
+asg82
+(dp208
+I1
+S'vsw_ic-LIGPREP_OUT'
+p209
+ssg85
+I00
+sg152
+Nsg44
+Nsg86
+I01
+sg87
+I00
+sg90
+(dp210
+I1
+g7
+ssg150
+Nsbsg154
+Nsg155
+S'general'
+p211
+sg156
+(lp212
+sg159
+Nsg160
+I0
+sg161
+S'schrodinger.pipeline.stages.ligprep'
+p213
+sg163
+S'USER-96L5A2TLTM-0-62a1e1cf'
+p214
+sg165
+I0
+sba(ischrodinger.pipeline.pipeline
+StageJob
+p215
+(dp216
+g20
+g21
+sg22
+(ischrodinger.pipeline.stages.gencodes
+RecombineStage
+p217
+(dp218
+g137
+Nsg25
+(lp219
+g173
+asg29
+(dp220
+sg31
+Nsg96
+Nsg32
+Nsg33
+Nsg97
+(dp221
+S'MAX_SUBJOB_STS'
+p222
+S'40000'
+p223
+sS'OUTFORMAT'
+p224
+S'maegz'
+p225
+sS'UNIQUEFIELD'
+p226
+S's_vsw_compound_code'
+p227
+sS'NUMOUT'
+p228
+S'njobs'
+p229
+sS'GENCODES'
+p230
+S'NO'
+p231
+sS'MIN_SUBJOB_STS'
+p232
+S'4000'
+p233
+ssg34
+g35
+((ltRp234
+sg40
+I1
+sg41
+I01
+sg130
+Nsg131
+Nsg42
+S'vsw_ic-PRE_DOCK_HTVS_1'
+p235
+sg132
+I00
+sg45
+I01
+sg133
+(dp236
+I1
+(dp237
+g136
+I01
+sg52
+g53
+sssg47
+I00
+sg48
+(dp238
+I1
+(dp239
+g51
+I01
+sg52
+g53
+sssg138
+(dp240
+I1
+(ischrodinger.pipeline.pipeio
+Structures
+p241
+(dp242
+g142
+I14223
+sg52
+S'structures'
+p243
+sg143
+g7
+sg145
+(lp244
+S'C:\\Users\\Administrator\\Documents\\Schrodinger\\vsw_ic\\vsw_ic-POSTLIGPREP\\vsw_ic-POSTLIGPREP_OUT-001.maegz'
+p245
+asbssg54
+(lp246
+S''
+aS'        GENCODES = boolean(default=True) # Whether to generate compound and variant codes.'
+p247
+aS'        NUMOUT = option("preserve", "njobs", "fewest", default="preserve") # How to generate the number of output files. "preserve" - same as the input; "fewest" - as few output files as possible; "njobs" - derive from -NJOBS option.'
+p248
+aS'        PRESERVE_NJOBS = boolean(default=False) # If not recombining,'
+p249
+aS'        UNIQUEFIELD = string(default="NONE") # Property that is unique to each compound. If "NONE", then each structure is unique.'
+p250
+aS'        OUTCOMPOUNDFIELD = string(default="s_pipeline_compound_code") # Field to put the compound codes into (if GENCODES is True).'
+p251
+aS'        OUTVARIANTFIELD = string(default="s_pipeline_variant") # Field to put variant codes into (if GENCODES is True)'
+p252
+aS'        OUTFORMAT = option("maegz", "mae", "sdf", default="maegz") # Output format'
+p253
+aS'        SKIP_BAD_LIGANDS = boolean(default=True)'
+p254
+aS'        SKIP_RECEPTOR = boolean(default=True) # Whether to remove receptors from the set (PV files only)'
+p255
+aS'        MIXLIGS = boolean(default=False) # Whether to re-shuffle the ligands between subjobs.'
+p256
+aS'        SKIP_NOUNIQUE_LIGANDS = boolean(default=False) # Whether to skip ligands that have no unique field.'
+p257
+aS'        MIN_SUBJOB_STS = integer(default=None) # Minimum subjob size'
+p258
+aS'        MAX_SUBJOB_STS = integer(default=None) # Maximum subjob size'
+p259
+aS'        '
+p260
+asg82
+(dp261
+I1
+S'vsw_ic-POSTLIGPREP_OUT'
+p262
+ssg85
+I00
+sg152
+Nsg44
+Nsg86
+I01
+sg87
+I00
+sg90
+(dp263
+I1
+S'vsw_ic-DOCK_HTVS_1_INPUT'
+p264
+ssg150
+Nsbsg154
+Nsg155
+g211
+sg156
+(lp265
+sg159
+Nsg160
+I0
+sg161
+S'schrodinger.pipeline.stages.gencodes'
+p266
+sg163
+S'USER-96L5A2TLTM-0-62a1e1ee'
+p267
+sg165
+I0
+sba(ischrodinger.pipeline.pipeline
+StageJob
+p268
+(dp269
+g20
+g21
+sg22
+(ischrodinger.pipeline.stages.glide
+DockingStage
+p270
+(dp271
+g25
+(lp272
+(S'localhost'
+p273
+I1
+tp274
+asg29
+(dp275
+sg31
+Nsg32
+NsS'recombined_ligands'
+p276
+(lp277
+sg33
+Nsg34
+g35
+((ltRp278
+sg40
+I1
+sg41
+I01
+sg42
+S'vsw_ic-DOCK_HTVS_1'
+p279
+sg44
+Nsg45
+I01
+sg46
+Nsg47
+I00
+sg48
+(dp280
+I1
+(dp281
+g51
+I01
+sg52
+g53
+ssI2
+(dp282
+g51
+I01
+sg52
+S'grid'
+p283
+sssg54
+(lp284
+S'AMIDE_MODE                  = option(\'penal\', \'fixed\', \'free\', \'trans\', \'gen\', \'generalized\', default=\'penal\') # amide bond rotation behavior: "fixed", "free", "penal", "trans", "gen[eralized]"'
+p285
+aS'AMIDE_TRANS_ALL             = boolean(default=False) # include "nonstandard" amides in trans enforcement'
+p286
+aS'AMIDE_TRANSTOL              = float(default=20.0) # trans amide tolerance (in degrees)'
+p287
+aS'ASL_RES_INTERACTION         = string(default=None) # If present, use it; else, use "radius_res_interaction."'
+p288
+aS'BALANCED_STRUCS             = boolean(default=False) # use experimental confgen template balancing mode'
+p289
+aS'CALC_INPUT_RMS              = boolean(default=False) # report RMS deviation against input geometry of each ligand'
+p290
+aS'CANONICALIZE                = boolean(default=True) # docking initiated from a canonical conformation per input ligand (false by default for HTVS precision)'
+p291
+aS'CLIENT_MODULE               = string(default=None) # Python module used by Glide to run in client mode'
+p292
+aS"CLIENT_OPTIONS              = string(default='') # Options used to initialize the client_module"
+p293
+aS'COMPRESS_POSES              = boolean(default=True) # generate compressed maestro pose and _raw files'
+p294
+aS"CONFGEN_EXTRA               = string(default='') # Extra keywords to add to confgen line"
+p295
+aS'CORE_ATOMS                  = int_list(default=None) # index into reference ligand for each atom in core'
+p296
+aS'CORE_DEFINITION             = option(\'all\', \'allheavy\', \'smarts\', \'atomlist\', \'combiglide\', \'combi\', \'cg\', \'ctsmarts\', \'mcssmarts\', default=\'allheavy\') # is core "all" atoms in molecule, "allheavy" (default), "smarts" pattern, "atomlist", etc.'
+p297
+aS'CORE_FILTER                 = boolean(default=False) # skip ligands that do not contain the core'
+p298
+aS'CORE_POS_MAX_RMSD           = float(default=0.1) # maximum RMSD of core atom positions'
+p299
+aS'CORE_RESTRAIN               = boolean(default=False) # restrain core atoms'
+p300
+aS'CORE_RESTRAIN_V             = float(default=5.0) # strength of core restraining potential'
+p301
+aS'CORE_SMARTS                 = string(default=None) # SMARTS pattern to match for core RMSD calculation/restraint'
+p302
+aS'CORE_SNAP                   = boolean(default=None) # When using core constraints ("CORE_RESTRAIN yes"): if "yes", use "snapping" core constraints algorithm. If "no", use filtering algorithm. If not set, choose automatically based on CORE_POS_MAX_RMSD ("yes" if < 0.75; "no" otherwise)'
+p303
+aS'CORECONS_FALLBACK           = boolean(default=False) # if a ligand fails to dock with CORE_SNAP retry it without'
+p304
+aS'CORESCALE                   = float(default=None) # Scaling factor for number of core conformers'
+p305
+aS"CSV_PROPS_FILE              = string(default='') # file containing names of m2io properties to be added to csvfile"
+p306
+aS"CUTOFF_CONFIG_FILE          = string(default='') # config file for using WScore SP cutoffs, optionally connecting to a cutoff server"
+p307
+aS'CV_CUTOFF                   = float(default=0.0) # Coulomb-van der Waals energy cutoff used for final filtering'
+p308
+aS"DIELMOD                     = option('rdiel', 'cdiel', default='rdiel') # type of dielectric to use: distance-dependent (rdiel) or constant (cdiel)"
+p309
+aS"DOCKING_METHOD              = option('confgen', 'rigid', 'inplace', 'mininplace', 'optandscore', 'refineinput', default='confgen') # docking method: confgen=flexible docking; rigid=rigid docking; mininplace=refine (do not dock); inplace=score in place (do not dock)"
+p310
+aS'DOINTRA                     = boolean(default=False) # relax bad intramolecular contacts'
+p311
+aS'DOINTRA_SCALE               = float(default=1.0) # scaling factor for intramolecular pose relaxation'
+p312
+aS'EPIK_PENALTIES              = boolean(default=True) # include ligand Epik state penalties in the Glide DockingScore scoring function'
+p313
+aS'EXPANDED_SAMPLING           = boolean(default=False) # bypass elimination of poses in rough scoring stage (useful for fragment docking)'
+p314
+aS'EXPDEN_FILE                 = string(default=None) # Experimental density file (used by PrimeX)'
+p315
+aS'FACEDEN                     = float(default=120.0) # Used by PrimeX'
+p316
+aS'FACRF                       = float(default=50.0) # Used by PrimeX'
+p317
+aS'FITDEN                      = boolean(default=False) # activate docking with ligand density data from PrimeX'
+p318
+aS'FLEXTORS                    = boolean(default=True) # unused'
+p319
+aS"FORCEFIELD                  = string(default='OPLS3') # force field"
+p320
+aS'FORCEPLANAR                 = boolean(default=False) # trigger MMFFLD planarity options'
+p321
+aS'GLIDE_CONFGEN_BADDIST2      = float(default=6.0, min=0.0) # distance cutoff, squared, for bad contacts in confgen'
+p322
+aS'GLIDE_CONFGEN_EFCUT         = float(default=12.0, min=0.0) # energy cutoff during ligand conformer generation'
+p323
+aS'GLIDE_CONS_FEAT_FILE        = string(default=None) # feature file name for constraints jobs'
+p324
+aS'GLIDE_CONS_FINALONLY        = boolean(default=False) # only check for constraint satisfaction after docking is complete'
+p325
+aS'GLIDE_CONS_RMETCOORD        = float_list(default=list()) # sphere radii of Glide metal_coordination constraints'
+p326
+aS'GLIDE_CONS_RNOEMAX          = float_list(default=list()) # maximum distances for Glide NOE constraints'
+p327
+aS'GLIDE_CONS_RNOEMIN          = float_list(default=list()) # minimum distances for Glide NOE constraints'
+p328
+aS'GLIDE_CONS_RPOS             = float_list(default=list()) # sphere radii of Glide positional constraints'
+p329
+aS'GLIDE_CONS_XMETCOORD        = float_list(default=list()) # X-coordinates of Glide metal-coordination constraints'
+p330
+aS'GLIDE_CONS_XNOE             = float_list(default=list()) # X-coordinates of targets for Glide NOE constraints'
+p331
+aS'GLIDE_CONS_XPOS             = float_list(default=list()) # X-coordinates of Glide positional constraints'
+p332
+aS'GLIDE_CONS_YMETCOORD        = float_list(default=list()) # Y-coordinates of Glide metal-coordination constraints'
+p333
+aS'GLIDE_CONS_YNOE             = float_list(default=list()) # Y-coordinates of targets for Glide NOE constraints'
+p334
+aS'GLIDE_CONS_YPOS             = float_list(default=list()) # Y-coordinates of Glide positional constraints'
+p335
+aS'GLIDE_CONS_ZMETCOORD        = float_list(default=list()) # Z-coordinates of Glide metal-coordination constraints'
+p336
+aS'GLIDE_CONS_ZNOE             = float_list(default=list()) # Z-coordinates of targets for Glide NOE constraints'
+p337
+aS'GLIDE_CONS_ZPOS             = float_list(default=list()) # Z-coordinates of Glide positional constraints'
+p338
+aS'GLIDE_DIELCO                = float(default=2.0, min=0.0, max=9999.9) # dielectric constant'
+p339
+aS'GLIDE_ELEMENTS              = boolean(default=False) # run in "Glide Elements" mode'
+p340
+aS'GLIDE_EXVOL_PENAL_NUM       = float_list(default=list()) # maximum penalties in kcal/mol for each Glide excluded volume violation'
+p341
+aS"GLIDE_EXVOL_PENAL_STRENGTH  = option('low', 'small', 'medium', 'high', 'large', default='large') # penalty specification for (all) Glide excluded volumes."
+p342
+aS'GLIDE_NTOTALCONS            = integer(default=0, min=0, max=10) # number of receptor atoms having constraints'
+p343
+aS'GLIDE_NUMEXVOL              = integer(default=0, min=0) # number of receptor excluded-volume regions'
+p344
+aS'GLIDE_NUMMETCOORDCONS       = integer(default=0, min=0) # number of receptor metal-coordination constraints'
+p345
+aS'GLIDE_NUMMETCOORDSITES      = int_list(default=list()) # number of available coordination sites per metal-coordination constraint'
+p346
+aS'GLIDE_NUMNOECONS            = integer(default=0, min=0) # number of receptor NOE constraints'
+p347
+aS'GLIDE_NUMPOSITCONS          = integer(default=0, min=0) # number of receptor positional constraints'
+p348
+aS'GLIDE_NUMUSEXVOL            = integer(default=0, min=0) # number of excluded-volume regions to use'
+p349
+aS'GLIDE_OUTPUT_USEHTOR        = boolean(default=True) # use rotation of polar hydrogens as pose-distinguishing criterion'
+p350
+aS'GLIDE_POSTDOCK_CVFACT       = float(default=0.0) # coefficient of (-ECvdW^2) in postdock Emodel'
+p351
+aS'GLIDE_POSTDOCK_GSFACT       = float(default=0.0) # coefficient of Glidescore (and ECvdW) in Emodel during post-docking rescoring'
+p352
+aS'GLIDE_POSTDOCK_ZINT         = float(default=0.5) # coefficient of strain energy in postdock Emodel'
+p353
+aS"GLIDE_REFLIG_FORMAT         = option('maestro', 'sd', 'mol2', default='maestro') # Glide reference ligand file format"
+p354
+aS'GLIDE_REXVOL                = float_list(default=list()) # sphere radii of Glide excluded volumes'
+p355
+aS'GLIDE_REXVOLIN              = float_list(default=list()) # inner sphere (max penalty) radii of Glide excluded volumes'
+p356
+aS'GLIDE_TORCONS_ALLBONDS      = bool_list(default=list()) # constrain all independent dihedrals (one per rotatable bond) contained in SMARTS pattern (if false, specified dihedrals only)'
+p357
+aS'GLIDE_TORCONS_IATOMS        = int_list(default=list()) # first of four atoms (index into SMARTS pattern) forming dihedral to be constrained'
+p358
+aS'GLIDE_TORCONS_JATOMS        = int_list(default=list()) # second of four atoms (index into SMARTS pattern) forming dihedral to be constrained'
+p359
+aS'GLIDE_TORCONS_KATOMS        = int_list(default=list()) # third of four atoms (index into SMARTS pattern) forming dihedral to be constrained'
+p360
+aS'GLIDE_TORCONS_LATOMS        = int_list(default=list()) # fourth of four atoms (index into SMARTS pattern) forming dihedral to be constrained'
+p361
+aS'GLIDE_TORCONS_PATTERN_INDEX = int_list(default=list()) # index into TORCONS_PATTERNS string array indicating which SMARTS pattern a given quartet of atom indices refers to'
+p362
+aS'GLIDE_TORCONS_PATTERNS      = string_list(default=list()) # SMARTS patterns for matching docked ligands to torsional constraints'
+p363
+aS'GLIDE_TORCONS_SETVAL        = bool_list(default=list()) # apply user-supplied value for constrained torsions (if false, use input value in each docked ligand)'
+p364
+aS'GLIDE_TORCONS_VALUES        = float_list(default=list()) # Values to set constrained torsions to.  (Ignored if corresponding element of TORCONS_SETVAL is false.)'
+p365
+aS'GLIDE_TORCONSFILE           = string(default=None) # m2io-format file containing SMARTS pattern and bond (and optional dihedral angle) specifications for torsional constraints'
+p366
+aS'GLIDE_XEXVOL                = float_list(default=list()) # X-coordinates of centers of Glide excluded volumes'
+p367
+aS'GLIDE_XP_NMAXCORE           = integer(default=4, min=0) # maximum number of anchors to use in XP refinement'
+p368
+aS'GLIDE_XP_RMSCUT             = float(default=2.5) # RMS cutoff for "fast XP" min-and-score'
+p369
+aS'GLIDE_YEXVOL                = float_list(default=list()) # Y-coordinates of centers of Glide excluded volumes'
+p370
+aS'GLIDE_ZEXVOL                = float_list(default=list()) # Z-coordinates of centers of Glide excluded volumes'
+p371
+aS'GLIDECONS                   = boolean(default=False) # use constraints'
+p372
+aS'GLIDECONSFEATATOMS          = string_list(default=list()) # array of comma-separated lists of atom indices, giving positions in the SMARTS of constraint-satisfying ligand atoms'
+p373
+aS'GLIDECONSFEATHASINCLUDE     = bool_list(default=list()) # indicates whether the indexed feature has a valid value for the "GLIDECONSFEATINCLUDE" keyword'
+p374
+aS'GLIDECONSFEATHASNFILL       = bool_list(default=list()) # indicates whether the indexed feature has a valid value for the "GLIDECONSFEATNFILL" keyword'
+p375
+aS"GLIDECONSFEATINCLUDE        = bool_list(default=list()) # include the SMARTS pattern as a match for the indexed feature?  (false means matches for that SMARTS *don't* satisfy the constraint"
+p376
+aS'GLIDECONSFEATINDEX          = int_list(default=list()) # indicates which feature the given SMARTS pattern, atom list, etc., belong to'
+p377
+aS'GLIDECONSFEATNFILL          = int_list(default=list()) # number of ligand atoms from SMARTS match that must be found in hydrophobic region to satisfy a hydrophobic constraint'
+p378
+aS'GLIDECONSFEATPATTERNS       = string_list(default=None) # SMARTS patterns that constitute constraint-satisfying ligand features'
+p379
+aS'GLIDECONSGROUPNREQUIRED     = int_list(default=list()) # number of constraints in each group required to be satisfied'
+p380
+aS'GLIDECONSNAMES              = string_list(default=list()) # constraint label list'
+p381
+aS'GLIDECONSUSEMET             = boolean(default=False) # use element-based metal radii for Glide constraints'
+p382
+aS'GLIDESCORUSEMET             = boolean(default=False) # use element-based metal radii in Glide scoring'
+p383
+aS'GLIDEUSEALLEXVOL            = boolean(default=False) # use all excluded volumes in file (as opposed to selected ones)'
+p384
+aS'GLIDEUSECONSFEAT            = boolean(default=False) # use constraints feature (SMARTS) file'
+p385
+aS'GLIDEUSECONSFEATINDEX       = int_list(default=list()) # indicates which ligand feature satisfies the given constraint'
+p386
+aS'GLIDEUSECONSGROUPINDEX      = int_list(default=list()) # indicates which constraint group the given constraint belongs to'
+p387
+aS'GLIDEUSECONSLABELS          = string_list(default=list()) # array of constraint labels to be used in docking job'
+p388
+aS'GLIDEUSEXVOL                = boolean(default=False) # use excluded volumes'
+p389
+aS'GLIDEUSEXVOLNAMES           = string_list(default=list()) # excluded-volume labels to use in docking job'
+p390
+aS'GLIDEXVOLNAMES              = string_list(default=list()) # excluded-volume label list'
+p391
+aS'GRIDFILE                    = string(default=None) # path to grid (.grd or .zip) file'
+p392
+aS'GSCORE                      = option(\'SP3.5\', \'SP4.0\', \'SP4.5\', \'SP5.0\', \'SP6.0\', default=\'SP5.0\') # GlideScore version ("SP5.0" etc.)'
+p393
+aS'GSCORE_CUTOFF               = float(default=100.0) # GlideScore cutoff'
+p394
+aS'HAVEGLIDECONSFEAT           = boolean(default=False) # use pre-existing feature file for Glide constraints'
+p395
+aS'HBOND_ACCEP_HALO            = boolean(default=False) # include halogens as possible H-bond acceptors in scoring'
+p396
+aS'HBOND_CUTOFF                = float(default=0.0) # H-bond cutoff used for final filtering'
+p397
+aS'HBOND_DONOR_AROMH           = boolean(default=False) # include aromatic H as a possible H-bond donor in scoring'
+p398
+aS'HBOND_DONOR_AROMH_CHARGE    = float(default=0.0) # count aromatic H as a donor if its partial charge exceeds this value'
+p399
+aS'HBOND_DONOR_HALO            = boolean(default=False) # include halogens as possible H-bond donors in scoring'
+p400
+aS'IFD_CROSSCL                 = float(default=2.0)'
+p401
+aS'IFD_DXCUT                   = float(default=30.0)'
+p402
+aS'IFD_LPCUT                   = float(default=2.0)'
+p403
+aS'IFD_RPRE                    = float(default=1.0)'
+p404
+aS'IFD_RSCUT                   = float(default=1.5)'
+p405
+aS'IFD_RWCUT                   = float(default=0.5)'
+p406
+aS'IFD_SCCUT                   = float(default=8.0)'
+p407
+aS'IFD_TR0                     = float(default=0.0)'
+p408
+aS'INCLUDE_INPUT_CONF          = boolean(default=False) # include input conformation in confgen output'
+p409
+aS'INCLUDE_INPUT_RINGS         = boolean(default=False) # include input ring structures in confgen'
+p410
+aS"JOBNAME                     = string(default='impact') # job name used for job control and as a filename prefix"
+p411
+aS'JOBTYPE                     = string(default=None) # job type (used only by glide.py)'
+p412
+aS'KEEP_STATE                  = boolean(default=False) # keep <jobname>_state.json file at the end of the job'
+p413
+aS'KEEP_SUBJOB_POSES           = boolean(default=True) # keep <jobname>_subjob.poses.zip at the end of a distributed docking job'
+p414
+aS'KEEPRAW                     = boolean(default=False) # do not delete the unsorted/unfiltered ("raw") pose file, <jobname>_raw.mae[gz]'
+p415
+aS'KEEPSKIPPED                 = boolean(default=False) # save skipped ligands to <jobname>_skipped.mae[gz]'
+p416
+aS'LIG_CCUT                    = float(default=0.15, min=0.0) # charge cutoff to determine whether to use vdW scaling of ligand atoms'
+p417
+aS'LIG_MAECHARGES              = boolean(default=False) # use charges from ligand Maestro file instead of those from the force field'
+p418
+aS'LIG_VSCALE                  = float(default=0.8, min=0.0) # ligand vdW scaling (see also LIG_CCUT)'
+p419
+aS'LIGAND_END                  = integer(default=0, min=0) # end ligand'
+p420
+aS'LIGAND_OFFSET               = integer(default=0, min=0) # offset to add to ligand numbers for reporting purposes (used by the subjob splitting/merging machinery)'
+p421
+aS'LIGAND_START                = integer(default=1, min=1) # start ligand'
+p422
+aS"LIGANDFILE                  = string(default='') # Glide docking ligands file name"
+p423
+aS'LIGANDFILES                 = string_list(default=list()) # array of filenames to dock. Can be used instead of LIGANDFILE'
+p424
+aS"LIGFORMAT                   = option('maestro', 'sd', 'mol2', default='maestro') # Glide docking ligands file format"
+p425
+aS'MACROCYCLE                  = boolean(default=False) # generate macrocycle ring templates on the fly using Prime'
+p426
+aS"MACROCYCLE_OPTIONS          = string(default='') # options string to pass to Prime's macrocycle conformer generator"
+p427
+aS'MAX_ITERATIONS              = integer(default=100, min=0) # maximum number of iterations during docking minimization'
+p428
+aS'MAXATOMS                    = integer(default=500, min=1, max=500) # maximum number of ligand atoms; larger ligands will be skipped'
+p429
+aS'MAXCORE                     = integer(default=-1) # maximum number of core conformers (-1 means use default formula)'
+p430
+aS'MAXHARD                     = integer(default=None)'
+p431
+aS'MAXKEEP                     = integer(default=5000, min=1) # maximum number of poses to keep after the rough scoring stage'
+p432
+aS'MAXREF                      = integer(default=400, min=1) # maximum number of poses to refine'
+p433
+aS'MAXROTBONDS                 = integer(default=100, min=0, max=100) # maximum number of rotatable bonds. Ligands exceeding this limit will be skipped'
+p434
+aS'MAXSOFT                     = integer(default=None)'
+p435
+aS'METAL_CUTOFF                = float(default=10.0) # metal bond cutoff used for final filtering'
+p436
+aS'NDIR                        = integer(default=302, min=1) # number of directions for the ligand diameter'
+p437
+aS'NENHANCED_SAMPLING          = integer(default=1, min=1, max=4) # expand size of the Glide funnel by N times to process poses from N confgen runs with minor perturbations to the input ligand coordinates'
+p438
+aS'NEWXP_FFUNC_FILE            = string(default=None) # DICE "ffunc <name>," file created by previous NewXP steps.'
+p439
+aS'NEWXP_LIPO_SCORE            = float(default=None) # DICE "hr," lipophilic score (from wmap SIP job).'
+p440
+aS'NEWXP_OFFSET                = float(default=2.0) # DICE "offset," default is initial guess for first qsar docking.'
+p441
+aS"NEWXP_STAGE                 = option('WmapFit', 'ReorgFit', 'TestSetDock', 'OldSoftDock', 'NewSoftDock', 'HardDock', 'DescripOnly', default='DescripOnly') # See mmim_def.h for values; determines which other parameters the Glide job needs."
+p442
+aS'NEWXP_WATREF                = float(default=None) # DICE "watref," wmap score for the ligand (from SIP job using wmap file).'
+p443
+aS'NEWXP_WMAP_FILE             = string(default=None) # DICE "wmap file," output from wmap job.'
+p444
+aS'NEWXP_ZROFF                 = float(default=2.0) # DICE "zroff," default is initial guess for first qsar docking.'
+p445
+aS'NMAXRMSSYM                  = integer(default=100, min=0) # max number of poses to compare taking symmetry into account'
+p446
+aS'NOSORT                      = boolean(default=False) # don\'t sort poses from "_raw.mae" file into "_[lib|pv].mae"'
+p447
+aS'NPCONF                      = integer(default=80000, min=1, max=800000) # maximum number of conformers'
+p448
+aS'NREPORT                     = integer(default=0, min=0) # maximum number of poses to report at the end of the job (zero means "unlimited")'
+p449
+aS'NREQUIRED_CONS              = string(default=\'ALL\') # number of constraints that need to be satisfied (must be an integer or "all")'
+p450
+aS'OUTPUTDIR                   = string(default=None) # if present in gridgen, overrides directory path from GRIDFILE'
+p451
+aS'PAIRDISTANCES               = float_list(default=None) # user-selected bond constraint distances'
+p452
+aS'PEPTIDE                     = boolean(default=False) # use grid and sampling settings optimized for polypeptides'
+p453
+aS'PHASE_DB                    = string(default=None) # Absolute path to Phase database to use as source of ligands to dock'
+p454
+aS'PHASE_NCONFS                = integer(default=1, min=1) # Number of confs per ligand to read from Phase DB'
+p455
+aS'PHASE_SUBSET                = string(default=None) # Subset file listing the IDs of the ligands to dock from a Phase database'
+p456
+aS'POSE_DISPLACEMENT           = float(default=1.3, min=0.0) # minimum heavy-atom "max displacement" for counting two poses as distinct'
+p457
+aS'POSE_HTORSION               = float(default=40.0, min=0.0, max=60.0) # minimum deviation (degrees) in polar H torsion for counting two poses as distinct'
+p458
+aS'POSE_OUTTYPE                = option(\'poseviewer\', \'ligandlib\', \'poseviewer_sd\', \'ligandlib_sd\', \'phase_subset\', default=\'poseviewer\') # format for file containing docked poses: "poseviewer" for _pv.mae output; "ligandlib" for _lib.mae; similarly "poseviewer_sd" and "ligandlib_sd" for sdf output; "phase_subset" for bypassing _lib or _pv in favor of a Phase subset file.'
+p459
+aS'POSE_RMSD                   = float(default=0.5, min=0.0) # minimum heavy-atom rmsd for counting two poses as distinct'
+p460
+aS'POSES_PER_LIG               = integer(default=1, min=1) # maximum number of poses to report per each input ligand'
+p461
+aS'POSTDOCK                    = boolean(default=True) # perform post-docking minimization and scoring'
+p462
+aS'POSTDOCK_ITMAX              = integer(default=500, min=1) # maximum number of iterations for post-docking minimization'
+p463
+aS'POSTDOCK_NPOSE              = integer(default=5) # maximum number of best-by-Emodel poses to submit to post-docking minimization'
+p464
+aS'POSTDOCK_SCITMAX            = integer(default=100, min=1) # maximum number of iterations for post-docking strain correction'
+p465
+aS'POSTDOCK_XP_DELE            = float(default=0.5) # keep XP post-docking minimization geometry if its XP GlideScore is within this window of the original docked pose XP GlideScore'
+p466
+aS'POSTDOCKCG                  = boolean(default=False) # use conjugate gradient minimization (instead of variable metric) in post-docking minimization'
+p467
+aS'POSTDOCKLIGMIN              = boolean(default=True) # include minimization in post-docking'
+p468
+aS'POSTDOCKSTRAIN              = boolean(default=False) # include strain correction in post-docking score'
+p469
+aS"PRECISION                   = option('SP', 'Normal', 'Accurate', 'HTVS', 'XP', default='SP') # glide docking precision"
+p470
+aS'PREMIN                      = boolean(default=False) # minimize input structure before confgen'
+p471
+aS'PREMINCG                    = boolean(default=False) # use conjugate gradient minimization (instead of variable metric) in pre-confgen minimization'
+p472
+aS'PREMINELEC                  = boolean(default=False) # include electrostatics in pre-confgen minimization'
+p473
+aS'PREMINITMAX                 = integer(default=0) # maximum number of iterations for pre-confgen minimization'
+p474
+aS'RADIUS_RES_INTERACTION      = float(default=12.0, min=0.0) # use residues within this distance of the grid box center'
+p475
+aS'REF_LIGAND_FILE             = string(default=None) # Glide reference ligand file name'
+p476
+aS'REFINDEX                    = integer(default=1, min=1) # index of the reference ligand structure'
+p477
+aS'REFLIGCT                    = integer(default=None) # CT handle for Glide reference ligand'
+p478
+aS'REPORT_CPU_TIME             = boolean(default=False) # Report the CPU time spent on docking each ligand in the r_glide_cpu_time pose property'
+p479
+aS'REWARD_INTRA_HBONDS         = boolean(default=False) # reward formation of intramolecular hydrogen bonds in the ligand'
+p480
+aS'RINGCONFCUT                 = float(default=2.5) # energy cutoff during ring conformer generation'
+p481
+aS'RINGONFLY                   = boolean(default=False) # sample ring conformations if no template found and store as templates for reuse'
+p482
+aS'SAMPLE_N_INVERSIONS         = boolean(default=True) # include (non-ring) N inversions in confgen'
+p483
+aS'SAMPLE_RINGS                = boolean(default=True) # sample ring conformations using templates during confgen'
+p484
+aS'SAMPLING                    = integer(default=-1, min=-1, max=10) # mode for the "sampling" stage'
+p485
+aS'SCORE_INPUT_POSE            = boolean(default=False) # score and report the input pose in addition to the docked poses'
+p486
+aS'SCORE_MINIMIZED_INPUT_POSE  = boolean(default=False) # score and report the minimized input pose in addition to the docked poses'
+p487
+aS'SCORING_CUTOFF              = float(default=100.0) # rough score cutoff'
+p488
+aS"SCORING_EXTRA               = string(default='') # Extra keywords to add to scoring line"
+p489
+aS'SCREEN_EXTRA                = string(default=\'\') # Extra keywords to add to first "screen" line (used for reading/writing grid and for rough scoring)'
+p490
+aS'SKIP_EPIK_METAL_ONLY        = boolean(default=False) # skip ligand ionization/tautomeric states that have been prepared by Epik or LigPrep specifically to interact with a metal ion'
+p491
+aS'STRAIN_EMFACTOR             = float(default=1.0) # Coefficient of strain-energy correction to Emodel'
+p492
+aS'STRAIN_EMTHRESH             = float(default=0.0) # Threshold for strain-energy correction to Emodel'
+p493
+aS'STRAIN_FCTIGHT              = float(default=10.0) # Force constant for "tightly restrained" postdock minimization'
+p494
+aS'STRAIN_GSFACTOR             = float(default=0.25) # Coefficient of strain-energy correction to Glidescore'
+p495
+aS'STRAIN_GSTHRESH             = float(default=4.0) # Threshold for strain-energy correction to Glidescore'
+p496
+aS'STRAIN_HWTIGHT              = float(default=15.0) # Half-width of flat-bottom for tight torsional minimization'
+p497
+aS'STRAINELEC                  = boolean(default=False) # include electrostatics in post-docking strain correction'
+p498
+aS"SUBSTRATE_PENAL_FILE        = string(default='') # File listing the grid-cell coordinates and penalty values for substrate-envelope jobs"
+p499
+aS'USE_CONS                    = string_list(default=list()) # USE_CONS "<name>[:<feature_index>]", ...'
+p500
+aS'USE_REF_LIGAND              = boolean(default=False) # use reference ligand for RMSD evaluation or core constraints specification'
+p501
+aS'USECOMPMAE                  = boolean(default=False) # write compressed output Maestro file (defaults to true for Glide jobs)'
+p502
+aS'USENEWXP                    = boolean(default=False) # DICE keyword "XP6.0"; either it\'s there, or it ain\'t.'
+p503
+aS"VSHORT                      = option('anneal', 'allsoft', default='anneal') # short-distance behavior of the potentials"
+p504
+aS'WRITE_CSV                   = boolean(default=False) # enables csvmode for Glide output'
+p505
+aS'WRITE_RES_INTERACTION       = boolean(default=False) # generate per-residue interactions with the ligand for residues specified by "RADIUS_RES_INTERACTION" or "ASL_RES_INTERACTION"'
+p506
+aS'WRITE_XP_DESC               = boolean(default=False) # generate data for visualization with the XP Visualizer when PRECISION is set to "XP"'
+p507
+aS'WRITEREPT                   = boolean(default=False) # write human-readable report file (.rept)'
+p508
+aS"WS_COUL                     = option('nocoul', 'coulcut', 'none', default='none') # WScore coulcut mode"
+p509
+aS'WS_COULCUT                  = float(default=10000.0) # WScore coulcut'
+p510
+aS'WS_DISABLE_TERMS            = string_list(default=list()) # list of wsviz property names corresponding to scoring terms to disable (e.g., "r_wsviz_cocopen")'
+p511
+aS'WS_EXCLUDED_PDB_WATERS      = int_list(default=list()) # list of receptor waters to exclude from WScore desolvation penalty analysis'
+p512
+aS'WS_EXCLUDED_PROT_RESIDUES   = int_list(default=list()) # list of protein residues to exclude from WScore desolvation penalty analysis'
+p513
+aS'WS_EXCLUDED_WATER_COORDS    = float_list(default=list()) # list of watermap coordinates used to specify waters to be excluded from WScore desolvation penalty analysis'
+p514
+aS'WS_EXCLUDED_WMAP_WATERS     = int_list(default=list()) # list of watermap waters to exclude from WScore desolvation penalty analysis'
+p515
+aS'WS_HR                       = float(default=0.0) # WScore hr'
+p516
+aS'WS_OFFSET                   = float(default=2.0) # WScore offset'
+p517
+aS"WS_VOID_FILE                = string(default='') # WScore void file"
+p518
+aS'WS_WATREF                   = float(default=0.0) # WScore watref'
+p519
+aS"WS_WMAP_FILE                = string(default='') # WScore WaterMap file"
+p520
+aS'WS_WMAPSCORE                = boolean(default=True) # whether to use the values in WS_HR and WS_WATREF'
+p521
+aS'WS_WRTBEST                  = boolean(default=False) # write the "best" poses, in addition to the final pose in a WScore job'
+p522
+aS'WS_ZROFF                    = float(default=2.0) # WScore zroff'
+p523
+aS'WSCORE                      = boolean(default=False) # WScore mode'
+p524
+aS'        RECOMBINE = boolean(default=True) # Whether to recombine ligand files'
+p525
+aS'        UNIQUEFIELD = string(default="s_m_title")'
+p526
+aS'        OUTVARIANTFIELD = string(default=None) # Field for generated variant codes'
+p527
+aS'        NUM_TO_KEEP = integer(default=0) # Keep at most this many output ligands'
+p528
+aS'        PERCENT_TO_KEEP = float(default=0.0) # Keep only this percentage of the (input) ligands'
+p529
+aS'        COMPRESS_IN_FILES = boolean(default=True) # Whether to compress subjob *_in files'
+p530
+aS'        BEST_BY_TITLE = boolean(default=False) # Whether to keep only the best scoring pose per compound at the end.'
+p531
+aS'        LVDW = float(default=0.8) # Old name for LIG_VSCALE. glide.py will recognize it.'
+p532
+aS'        LIGCCUT = float(default=0.15) # Old name for LIG_CCUT. glide.py will recognize it.'
+p533
+aS'        LIGAND_CONFS = string(default=None) # Old name for DOCKING_METHOD. glide.py will recognize it.'
+p534
+aS'        DIELECTRIC = float(default=None) # Old name for GLIDE_DIELCO (ignored)'
+p535
+aS''
+aS'        # Metal and H-bond constraint options:'
+p536
+aS'        [CONSTRAINT_GROUP:1]'
+p537
+aS'          USE_CONS = string()'
+p538
+aS'          NREQUIRED_CONS = string()'
+p539
+aS'        [CONSTRAINT_GROUP:2]'
+p540
+aS'          USE_CONS = string()'
+p541
+aS'          NREQUIRED_CONS = string()'
+p542
+aS'        [CONSTRAINT_GROUP:3]'
+p543
+aS'          USE_CONS = string()'
+p544
+aS'          NREQUIRED_CONS = string()'
+p545
+aS'        [CONSTRAINT_GROUP:4]'
+p546
+aS'          USE_CONS = string()'
+p547
+aS'          NREQUIRED_CONS = string()'
+p548
+aS'        [FEATURE:1]'
+p549
+aS'          __many__ = string()'
+p550
+aS'        [FEATURE:2]'
+p551
+aS'          __many__ = string()'
+p552
+aS'        [FEATURE:3]'
+p553
+aS'          __many__ = string()'
+p554
+aS'        [FEATURE:4]'
+p555
+aS'          __many__ = string()'
+p556
+aS'        [FEATURE:5]'
+p557
+aS'          __many__ = string()'
+p558
+aS'        '
+p559
+asg82
+(dp560
+I1
+S'vsw_ic-DOCK_HTVS_1_INPUT'
+p561
+sI2
+S'vsw_ic-GRID_1'
+p562
+ssg85
+I00
+sg86
+I01
+sg87
+I00
+sg90
+(dp563
+I1
+S'vsw_ic-HTVS_OUT_1'
+p564
+ssg20
+S'NOT STARTED'
+p565
+sg96
+NsS'docked_ligands'
+p566
+(dp567
+sg97
+(dp568
+S'AMIDE_MODE'
+p569
+S'penal'
+p570
+sS'POSE_OUTTYPE'
+p571
+S'LIB'
+p572
+sS'PRECISION'
+p573
+S'HTVS'
+p574
+sS'POSTDOCKSTRAIN'
+p575
+S'NO'
+p576
+sS'LIG_CCUT'
+p577
+S'0.15'
+p578
+sS'UNIQUEFIELD'
+p579
+S's_vsw_compound_code'
+p580
+sS'DOCKING_METHOD'
+p581
+S'confgen'
+p582
+sS'LIG_VSCALE'
+p583
+S'0.8'
+p584
+sS'FORCEPLANAR'
+p585
+S'NO'
+p586
+sS'EPIK_PENALTIES'
+p587
+S'YES'
+p588
+sS'MAXATOMS'
+p589
+S'300'
+p590
+sS'PERCENT_TO_KEEP'
+p591
+S'50.0'
+p592
+sS'POSES_PER_LIG'
+p593
+S'1'
+sS'POSTDOCK'
+p594
+S'YES'
+p595
+sS'MAXROTBONDS'
+p596
+S'50'
+p597
+sS'RECOMBINE'
+p598
+S'NO'
+p599
+sS'BEST_BY_TITLE'
+p600
+S'YES'
+p601
+sS'COMPRESS_POSES'
+p602
+S'YES'
+p603
+ssS'subjob_inposes'
+p604
+(dp605
+sg130
+Nsg131
+Nsg132
+I00
+sS'_force_jobs'
+p606
+I01
+sg133
+(dp607
+I1
+(dp608
+g136
+I01
+sg52
+g53
+ssI2
+(dp609
+g136
+I00
+sg52
+g53
+ssI3
+(dp610
+g136
+I00
+sg52
+S'text'
+p611
+sssg137
+Nsg138
+(dp612
+I1
+(ischrodinger.pipeline.pipeio
+Structures
+p613
+(dp614
+g142
+I14223
+sg52
+S'structures'
+p615
+sg143
+g264
+sg145
+(lp616
+S'C:\\Users\\Administrator\\Documents\\Schrodinger\\vsw_ic\\vsw_ic-PRE_DOCK_HTVS_1\\vsw_ic-PRE_DOCK_HTVS_1-001-in.maegz'
+p617
+asbsI2
+(ischrodinger.pipeline.pipeio
+Grid
+p618
+(dp619
+g52
+g283
+sS'_gridfile'
+p620
+S'E:\\sc-work\\glide-grid_1\\glide-grid_1.zip'
+p621
+sg143
+S'GRID_1'
+p622
+sbssg150
+S'glide'
+p623
+sg152
+NsS'input_compound_count'
+p624
+Nsbsg154
+Nsg155
+g623
+sg156
+(lp625
+(g273
+I0
+tp626
+asg159
+Nsg160
+I0
+sg161
+S'schrodinger.pipeline.stages.glide'
+p627
+sg163
+S'USER-96L5A2TLTM-0-62a1e20c'
+p628
+sg165
+I0
+sba(ischrodinger.pipeline.pipeline
+StageJob
+p629
+(dp630
+g20
+g21
+sg22
+(ischrodinger.pipeline.stages.pull
+PullStage
+p631
+(dp632
+g137
+Nsg25
+(lp633
+g173
+asg29
+(dp634
+sg31
+Nsg96
+Nsg32
+Nsg33
+Nsg97
+(dp635
+S'UNIQUEFIELD'
+p636
+S's_vsw_variant'
+p637
+ssg34
+g35
+((ltRp638
+sg40
+I1
+sg41
+I01
+sS'input_st_count'
+p639
+I0
+sg130
+Nsg131
+Nsg42
+S'vsw_ic-PULL_HTVS_1'
+p640
+sg132
+I00
+sg45
+I01
+sg133
+(dp641
+I1
+(dp642
+g136
+I01
+sg52
+g53
+sssg47
+I00
+sg48
+(dp643
+I1
+(dp644
+g51
+I01
+sg52
+g53
+ssI2
+(dp645
+g51
+I01
+sg52
+g53
+sssg138
+(dp646
+I1
+(ischrodinger.pipeline.pipeio
+Structures
+p647
+(dp648
+g142
+I3115
+sg52
+S'structures'
+p649
+sg143
+g564
+sg145
+(lp650
+S'C:\\Users\\Administrator\\Documents\\Schrodinger\\vsw_ic\\vsw_ic-DOCK_HTVS_1\\vsw_ic-HTVS_OUT_1_lib.maegz'
+p651
+asbsI2
+g241
+ssg54
+(lp652
+S''
+aS'        UNIQUEFIELD = string(default="s_m_title")'
+p653
+aS'        NUM_TO_KEEP = integer(default=0) # Maxium number of unique compounds to pull'
+p654
+aS'        PERCENT_TO_KEEP = float(default=0.0) # Percent of compounds to retain'
+p655
+aS'        KEEP_CHARGES = boolean(default=False) # Whether to save the partial charges'
+p656
+aS'        CHARGE_PROPERTY = string(default="r_m_charge1") # Charge property to keep'
+p657
+aS'        '
+p658
+asg82
+(dp659
+I1
+S'vsw_ic-HTVS_OUT_1'
+p660
+sI2
+S'vsw_ic-POSTLIGPREP_OUT'
+p661
+ssg85
+I00
+sg152
+Nsg44
+Nsg86
+I01
+sg87
+I00
+sg90
+(dp662
+I1
+S'vsw_ic-HTVS_OUT_ORIG_1'
+p663
+ssg150
+Nsbsg154
+Nsg155
+g211
+sg156
+(lp664
+sg159
+Nsg160
+I0
+sg161
+S'schrodinger.pipeline.stages.pull'
+p665
+sg163
+S'USER-96L5A2TLTM-0-62a2bb7e'
+p666
+sg165
+I0
+sba(ischrodinger.pipeline.pipeline
+StageJob
+p667
+(dp668
+g20
+g21
+sg22
+(ischrodinger.pipeline.stages.gencodes
+RecombineStage
+p669
+(dp670
+g137
+Nsg25
+(lp671
+g173
+asg29
+(dp672
+sg31
+Nsg96
+Nsg32
+Nsg33
+Nsg97
+(dp673
+S'MAX_SUBJOB_STS'
+p674
+S'3000'
+p675
+sS'OUTFORMAT'
+p676
+S'maegz'
+p677
+sS'UNIQUEFIELD'
+p678
+S's_vsw_compound_code'
+p679
+sS'NUMOUT'
+p680
+S'njobs'
+p681
+sS'GENCODES'
+p682
+S'NO'
+p683
+sS'MIN_SUBJOB_STS'
+p684
+S'300'
+p685
+ssg34
+g35
+((ltRp686
+sg40
+I1
+sg41
+I01
+sg130
+Nsg131
+Nsg42
+S'vsw_ic-PRE_DOCK_SP_1'
+p687
+sg132
+I00
+sg45
+I01
+sg133
+(dp688
+I1
+(dp689
+g136
+I01
+sg52
+g53
+sssg47
+I00
+sg48
+(dp690
+I1
+(dp691
+g51
+I01
+sg52
+g53
+sssg138
+(dp692
+I1
+(ischrodinger.pipeline.pipeio
+Structures
+p693
+(dp694
+g142
+I3115
+sg52
+S'structures'
+p695
+sg143
+g663
+sg145
+(lp696
+S'C:\\Users\\Administrator\\Documents\\Schrodinger\\vsw_ic\\vsw_ic-PULL_HTVS_1\\vsw_ic-HTVS_OUT_ORIG_1-001.maegz'
+p697
+asbssg54
+(lp698
+S''
+aS'        GENCODES = boolean(default=True) # Whether to generate compound and variant codes.'
+p699
+aS'        NUMOUT = option("preserve", "njobs", "fewest", default="preserve") # How to generate the number of output files. "preserve" - same as the input; "fewest" - as few output files as possible; "njobs" - derive from -NJOBS option.'
+p700
+aS'        PRESERVE_NJOBS = boolean(default=False) # If not recombining,'
+p701
+aS'        UNIQUEFIELD = string(default="NONE") # Property that is unique to each compound. If "NONE", then each structure is unique.'
+p702
+aS'        OUTCOMPOUNDFIELD = string(default="s_pipeline_compound_code") # Field to put the compound codes into (if GENCODES is True).'
+p703
+aS'        OUTVARIANTFIELD = string(default="s_pipeline_variant") # Field to put variant codes into (if GENCODES is True)'
+p704
+aS'        OUTFORMAT = option("maegz", "mae", "sdf", default="maegz") # Output format'
+p705
+aS'        SKIP_BAD_LIGANDS = boolean(default=True)'
+p706
+aS'        SKIP_RECEPTOR = boolean(default=True) # Whether to remove receptors from the set (PV files only)'
+p707
+aS'        MIXLIGS = boolean(default=False) # Whether to re-shuffle the ligands between subjobs.'
+p708
+aS'        SKIP_NOUNIQUE_LIGANDS = boolean(default=False) # Whether to skip ligands that have no unique field.'
+p709
+aS'        MIN_SUBJOB_STS = integer(default=None) # Minimum subjob size'
+p710
+aS'        MAX_SUBJOB_STS = integer(default=None) # Maximum subjob size'
+p711
+aS'        '
+p712
+asg82
+(dp713
+I1
+S'vsw_ic-HTVS_OUT_ORIG_1'
+p714
+ssg85
+I00
+sg152
+Nsg44
+Nsg86
+I01
+sg87
+I00
+sg90
+(dp715
+I1
+S'vsw_ic-DOCK_SP_1_INPUT'
+p716
+ssg150
+Nsbsg154
+Nsg155
+g211
+sg156
+(lp717
+sg159
+Nsg160
+I0
+sg161
+S'schrodinger.pipeline.stages.gencodes'
+p718
+sg163
+S'USER-96L5A2TLTM-0-62a2bb94'
+p719
+sg165
+I0
+sba(ischrodinger.pipeline.pipeline
+StageJob
+p720
+(dp721
+g20
+g21
+sg22
+(ischrodinger.pipeline.stages.glide
+DockingStage
+p722
+(dp723
+g25
+(lp724
+g274
+asg29
+(dp725
+sg31
+Nsg32
+Nsg276
+(lp726
+sg33
+Nsg34
+g35
+((ltRp727
+sg40
+I1
+sg41
+I01
+sg42
+S'vsw_ic-DOCK_SP_1'
+p728
+sg44
+Nsg45
+I01
+sg46
+Nsg47
+I00
+sg48
+(dp729
+I1
+(dp730
+g51
+I01
+sg52
+g53
+ssI2
+(dp731
+g51
+I01
+sg52
+g283
+sssg54
+(lp732
+S'AMIDE_MODE                  = option(\'penal\', \'fixed\', \'free\', \'trans\', \'gen\', \'generalized\', default=\'penal\') # amide bond rotation behavior: "fixed", "free", "penal", "trans", "gen[eralized]"'
+p733
+aS'AMIDE_TRANS_ALL             = boolean(default=False) # include "nonstandard" amides in trans enforcement'
+p734
+aS'AMIDE_TRANSTOL              = float(default=20.0) # trans amide tolerance (in degrees)'
+p735
+aS'ASL_RES_INTERACTION         = string(default=None) # If present, use it; else, use "radius_res_interaction."'
+p736
+aS'BALANCED_STRUCS             = boolean(default=False) # use experimental confgen template balancing mode'
+p737
+aS'CALC_INPUT_RMS              = boolean(default=False) # report RMS deviation against input geometry of each ligand'
+p738
+aS'CANONICALIZE                = boolean(default=True) # docking initiated from a canonical conformation per input ligand (false by default for HTVS precision)'
+p739
+aS'CLIENT_MODULE               = string(default=None) # Python module used by Glide to run in client mode'
+p740
+aS"CLIENT_OPTIONS              = string(default='') # Options used to initialize the client_module"
+p741
+aS'COMPRESS_POSES              = boolean(default=True) # generate compressed maestro pose and _raw files'
+p742
+aS"CONFGEN_EXTRA               = string(default='') # Extra keywords to add to confgen line"
+p743
+aS'CORE_ATOMS                  = int_list(default=None) # index into reference ligand for each atom in core'
+p744
+aS'CORE_DEFINITION             = option(\'all\', \'allheavy\', \'smarts\', \'atomlist\', \'combiglide\', \'combi\', \'cg\', \'ctsmarts\', \'mcssmarts\', default=\'allheavy\') # is core "all" atoms in molecule, "allheavy" (default), "smarts" pattern, "atomlist", etc.'
+p745
+aS'CORE_FILTER                 = boolean(default=False) # skip ligands that do not contain the core'
+p746
+aS'CORE_POS_MAX_RMSD           = float(default=0.1) # maximum RMSD of core atom positions'
+p747
+aS'CORE_RESTRAIN               = boolean(default=False) # restrain core atoms'
+p748
+aS'CORE_RESTRAIN_V             = float(default=5.0) # strength of core restraining potential'
+p749
+aS'CORE_SMARTS                 = string(default=None) # SMARTS pattern to match for core RMSD calculation/restraint'
+p750
+aS'CORE_SNAP                   = boolean(default=None) # When using core constraints ("CORE_RESTRAIN yes"): if "yes", use "snapping" core constraints algorithm. If "no", use filtering algorithm. If not set, choose automatically based on CORE_POS_MAX_RMSD ("yes" if < 0.75; "no" otherwise)'
+p751
+aS'CORECONS_FALLBACK           = boolean(default=False) # if a ligand fails to dock with CORE_SNAP retry it without'
+p752
+aS'CORESCALE                   = float(default=None) # Scaling factor for number of core conformers'
+p753
+aS"CSV_PROPS_FILE              = string(default='') # file containing names of m2io properties to be added to csvfile"
+p754
+aS"CUTOFF_CONFIG_FILE          = string(default='') # config file for using WScore SP cutoffs, optionally connecting to a cutoff server"
+p755
+aS'CV_CUTOFF                   = float(default=0.0) # Coulomb-van der Waals energy cutoff used for final filtering'
+p756
+aS"DIELMOD                     = option('rdiel', 'cdiel', default='rdiel') # type of dielectric to use: distance-dependent (rdiel) or constant (cdiel)"
+p757
+aS"DOCKING_METHOD              = option('confgen', 'rigid', 'inplace', 'mininplace', 'optandscore', 'refineinput', default='confgen') # docking method: confgen=flexible docking; rigid=rigid docking; mininplace=refine (do not dock); inplace=score in place (do not dock)"
+p758
+aS'DOINTRA                     = boolean(default=False) # relax bad intramolecular contacts'
+p759
+aS'DOINTRA_SCALE               = float(default=1.0) # scaling factor for intramolecular pose relaxation'
+p760
+aS'EPIK_PENALTIES              = boolean(default=True) # include ligand Epik state penalties in the Glide DockingScore scoring function'
+p761
+aS'EXPANDED_SAMPLING           = boolean(default=False) # bypass elimination of poses in rough scoring stage (useful for fragment docking)'
+p762
+aS'EXPDEN_FILE                 = string(default=None) # Experimental density file (used by PrimeX)'
+p763
+aS'FACEDEN                     = float(default=120.0) # Used by PrimeX'
+p764
+aS'FACRF                       = float(default=50.0) # Used by PrimeX'
+p765
+aS'FITDEN                      = boolean(default=False) # activate docking with ligand density data from PrimeX'
+p766
+aS'FLEXTORS                    = boolean(default=True) # unused'
+p767
+aS"FORCEFIELD                  = string(default='OPLS3') # force field"
+p768
+aS'FORCEPLANAR                 = boolean(default=False) # trigger MMFFLD planarity options'
+p769
+aS'GLIDE_CONFGEN_BADDIST2      = float(default=6.0, min=0.0) # distance cutoff, squared, for bad contacts in confgen'
+p770
+aS'GLIDE_CONFGEN_EFCUT         = float(default=12.0, min=0.0) # energy cutoff during ligand conformer generation'
+p771
+aS'GLIDE_CONS_FEAT_FILE        = string(default=None) # feature file name for constraints jobs'
+p772
+aS'GLIDE_CONS_FINALONLY        = boolean(default=False) # only check for constraint satisfaction after docking is complete'
+p773
+aS'GLIDE_CONS_RMETCOORD        = float_list(default=list()) # sphere radii of Glide metal_coordination constraints'
+p774
+aS'GLIDE_CONS_RNOEMAX          = float_list(default=list()) # maximum distances for Glide NOE constraints'
+p775
+aS'GLIDE_CONS_RNOEMIN          = float_list(default=list()) # minimum distances for Glide NOE constraints'
+p776
+aS'GLIDE_CONS_RPOS             = float_list(default=list()) # sphere radii of Glide positional constraints'
+p777
+aS'GLIDE_CONS_XMETCOORD        = float_list(default=list()) # X-coordinates of Glide metal-coordination constraints'
+p778
+aS'GLIDE_CONS_XNOE             = float_list(default=list()) # X-coordinates of targets for Glide NOE constraints'
+p779
+aS'GLIDE_CONS_XPOS             = float_list(default=list()) # X-coordinates of Glide positional constraints'
+p780
+aS'GLIDE_CONS_YMETCOORD        = float_list(default=list()) # Y-coordinates of Glide metal-coordination constraints'
+p781
+aS'GLIDE_CONS_YNOE             = float_list(default=list()) # Y-coordinates of targets for Glide NOE constraints'
+p782
+aS'GLIDE_CONS_YPOS             = float_list(default=list()) # Y-coordinates of Glide positional constraints'
+p783
+aS'GLIDE_CONS_ZMETCOORD        = float_list(default=list()) # Z-coordinates of Glide metal-coordination constraints'
+p784
+aS'GLIDE_CONS_ZNOE             = float_list(default=list()) # Z-coordinates of targets for Glide NOE constraints'
+p785
+aS'GLIDE_CONS_ZPOS             = float_list(default=list()) # Z-coordinates of Glide positional constraints'
+p786
+aS'GLIDE_DIELCO                = float(default=2.0, min=0.0, max=9999.9) # dielectric constant'
+p787
+aS'GLIDE_ELEMENTS              = boolean(default=False) # run in "Glide Elements" mode'
+p788
+aS'GLIDE_EXVOL_PENAL_NUM       = float_list(default=list()) # maximum penalties in kcal/mol for each Glide excluded volume violation'
+p789
+aS"GLIDE_EXVOL_PENAL_STRENGTH  = option('low', 'small', 'medium', 'high', 'large', default='large') # penalty specification for (all) Glide excluded volumes."
+p790
+aS'GLIDE_NTOTALCONS            = integer(default=0, min=0, max=10) # number of receptor atoms having constraints'
+p791
+aS'GLIDE_NUMEXVOL              = integer(default=0, min=0) # number of receptor excluded-volume regions'
+p792
+aS'GLIDE_NUMMETCOORDCONS       = integer(default=0, min=0) # number of receptor metal-coordination constraints'
+p793
+aS'GLIDE_NUMMETCOORDSITES      = int_list(default=list()) # number of available coordination sites per metal-coordination constraint'
+p794
+aS'GLIDE_NUMNOECONS            = integer(default=0, min=0) # number of receptor NOE constraints'
+p795
+aS'GLIDE_NUMPOSITCONS          = integer(default=0, min=0) # number of receptor positional constraints'
+p796
+aS'GLIDE_NUMUSEXVOL            = integer(default=0, min=0) # number of excluded-volume regions to use'
+p797
+aS'GLIDE_OUTPUT_USEHTOR        = boolean(default=True) # use rotation of polar hydrogens as pose-distinguishing criterion'
+p798
+aS'GLIDE_POSTDOCK_CVFACT       = float(default=0.0) # coefficient of (-ECvdW^2) in postdock Emodel'
+p799
+aS'GLIDE_POSTDOCK_GSFACT       = float(default=0.0) # coefficient of Glidescore (and ECvdW) in Emodel during post-docking rescoring'
+p800
+aS'GLIDE_POSTDOCK_ZINT         = float(default=0.5) # coefficient of strain energy in postdock Emodel'
+p801
+aS"GLIDE_REFLIG_FORMAT         = option('maestro', 'sd', 'mol2', default='maestro') # Glide reference ligand file format"
+p802
+aS'GLIDE_REXVOL                = float_list(default=list()) # sphere radii of Glide excluded volumes'
+p803
+aS'GLIDE_REXVOLIN              = float_list(default=list()) # inner sphere (max penalty) radii of Glide excluded volumes'
+p804
+aS'GLIDE_TORCONS_ALLBONDS      = bool_list(default=list()) # constrain all independent dihedrals (one per rotatable bond) contained in SMARTS pattern (if false, specified dihedrals only)'
+p805
+aS'GLIDE_TORCONS_IATOMS        = int_list(default=list()) # first of four atoms (index into SMARTS pattern) forming dihedral to be constrained'
+p806
+aS'GLIDE_TORCONS_JATOMS        = int_list(default=list()) # second of four atoms (index into SMARTS pattern) forming dihedral to be constrained'
+p807
+aS'GLIDE_TORCONS_KATOMS        = int_list(default=list()) # third of four atoms (index into SMARTS pattern) forming dihedral to be constrained'
+p808
+aS'GLIDE_TORCONS_LATOMS        = int_list(default=list()) # fourth of four atoms (index into SMARTS pattern) forming dihedral to be constrained'
+p809
+aS'GLIDE_TORCONS_PATTERN_INDEX = int_list(default=list()) # index into TORCONS_PATTERNS string array indicating which SMARTS pattern a given quartet of atom indices refers to'
+p810
+aS'GLIDE_TORCONS_PATTERNS      = string_list(default=list()) # SMARTS patterns for matching docked ligands to torsional constraints'
+p811
+aS'GLIDE_TORCONS_SETVAL        = bool_list(default=list()) # apply user-supplied value for constrained torsions (if false, use input value in each docked ligand)'
+p812
+aS'GLIDE_TORCONS_VALUES        = float_list(default=list()) # Values to set constrained torsions to.  (Ignored if corresponding element of TORCONS_SETVAL is false.)'
+p813
+aS'GLIDE_TORCONSFILE           = string(default=None) # m2io-format file containing SMARTS pattern and bond (and optional dihedral angle) specifications for torsional constraints'
+p814
+aS'GLIDE_XEXVOL                = float_list(default=list()) # X-coordinates of centers of Glide excluded volumes'
+p815
+aS'GLIDE_XP_NMAXCORE           = integer(default=4, min=0) # maximum number of anchors to use in XP refinement'
+p816
+aS'GLIDE_XP_RMSCUT             = float(default=2.5) # RMS cutoff for "fast XP" min-and-score'
+p817
+aS'GLIDE_YEXVOL                = float_list(default=list()) # Y-coordinates of centers of Glide excluded volumes'
+p818
+aS'GLIDE_ZEXVOL                = float_list(default=list()) # Z-coordinates of centers of Glide excluded volumes'
+p819
+aS'GLIDECONS                   = boolean(default=False) # use constraints'
+p820
+aS'GLIDECONSFEATATOMS          = string_list(default=list()) # array of comma-separated lists of atom indices, giving positions in the SMARTS of constraint-satisfying ligand atoms'
+p821
+aS'GLIDECONSFEATHASINCLUDE     = bool_list(default=list()) # indicates whether the indexed feature has a valid value for the "GLIDECONSFEATINCLUDE" keyword'
+p822
+aS'GLIDECONSFEATHASNFILL       = bool_list(default=list()) # indicates whether the indexed feature has a valid value for the "GLIDECONSFEATNFILL" keyword'
+p823
+aS"GLIDECONSFEATINCLUDE        = bool_list(default=list()) # include the SMARTS pattern as a match for the indexed feature?  (false means matches for that SMARTS *don't* satisfy the constraint"
+p824
+aS'GLIDECONSFEATINDEX          = int_list(default=list()) # indicates which feature the given SMARTS pattern, atom list, etc., belong to'
+p825
+aS'GLIDECONSFEATNFILL          = int_list(default=list()) # number of ligand atoms from SMARTS match that must be found in hydrophobic region to satisfy a hydrophobic constraint'
+p826
+aS'GLIDECONSFEATPATTERNS       = string_list(default=None) # SMARTS patterns that constitute constraint-satisfying ligand features'
+p827
+aS'GLIDECONSGROUPNREQUIRED     = int_list(default=list()) # number of constraints in each group required to be satisfied'
+p828
+aS'GLIDECONSNAMES              = string_list(default=list()) # constraint label list'
+p829
+aS'GLIDECONSUSEMET             = boolean(default=False) # use element-based metal radii for Glide constraints'
+p830
+aS'GLIDESCORUSEMET             = boolean(default=False) # use element-based metal radii in Glide scoring'
+p831
+aS'GLIDEUSEALLEXVOL            = boolean(default=False) # use all excluded volumes in file (as opposed to selected ones)'
+p832
+aS'GLIDEUSECONSFEAT            = boolean(default=False) # use constraints feature (SMARTS) file'
+p833
+aS'GLIDEUSECONSFEATINDEX       = int_list(default=list()) # indicates which ligand feature satisfies the given constraint'
+p834
+aS'GLIDEUSECONSGROUPINDEX      = int_list(default=list()) # indicates which constraint group the given constraint belongs to'
+p835
+aS'GLIDEUSECONSLABELS          = string_list(default=list()) # array of constraint labels to be used in docking job'
+p836
+aS'GLIDEUSEXVOL                = boolean(default=False) # use excluded volumes'
+p837
+aS'GLIDEUSEXVOLNAMES           = string_list(default=list()) # excluded-volume labels to use in docking job'
+p838
+aS'GLIDEXVOLNAMES              = string_list(default=list()) # excluded-volume label list'
+p839
+aS'GRIDFILE                    = string(default=None) # path to grid (.grd or .zip) file'
+p840
+aS'GSCORE                      = option(\'SP3.5\', \'SP4.0\', \'SP4.5\', \'SP5.0\', \'SP6.0\', default=\'SP5.0\') # GlideScore version ("SP5.0" etc.)'
+p841
+aS'GSCORE_CUTOFF               = float(default=100.0) # GlideScore cutoff'
+p842
+aS'HAVEGLIDECONSFEAT           = boolean(default=False) # use pre-existing feature file for Glide constraints'
+p843
+aS'HBOND_ACCEP_HALO            = boolean(default=False) # include halogens as possible H-bond acceptors in scoring'
+p844
+aS'HBOND_CUTOFF                = float(default=0.0) # H-bond cutoff used for final filtering'
+p845
+aS'HBOND_DONOR_AROMH           = boolean(default=False) # include aromatic H as a possible H-bond donor in scoring'
+p846
+aS'HBOND_DONOR_AROMH_CHARGE    = float(default=0.0) # count aromatic H as a donor if its partial charge exceeds this value'
+p847
+aS'HBOND_DONOR_HALO            = boolean(default=False) # include halogens as possible H-bond donors in scoring'
+p848
+aS'IFD_CROSSCL                 = float(default=2.0)'
+p849
+aS'IFD_DXCUT                   = float(default=30.0)'
+p850
+aS'IFD_LPCUT                   = float(default=2.0)'
+p851
+aS'IFD_RPRE                    = float(default=1.0)'
+p852
+aS'IFD_RSCUT                   = float(default=1.5)'
+p853
+aS'IFD_RWCUT                   = float(default=0.5)'
+p854
+aS'IFD_SCCUT                   = float(default=8.0)'
+p855
+aS'IFD_TR0                     = float(default=0.0)'
+p856
+aS'INCLUDE_INPUT_CONF          = boolean(default=False) # include input conformation in confgen output'
+p857
+aS'INCLUDE_INPUT_RINGS         = boolean(default=False) # include input ring structures in confgen'
+p858
+aS"JOBNAME                     = string(default='impact') # job name used for job control and as a filename prefix"
+p859
+aS'JOBTYPE                     = string(default=None) # job type (used only by glide.py)'
+p860
+aS'KEEP_STATE                  = boolean(default=False) # keep <jobname>_state.json file at the end of the job'
+p861
+aS'KEEP_SUBJOB_POSES           = boolean(default=True) # keep <jobname>_subjob.poses.zip at the end of a distributed docking job'
+p862
+aS'KEEPRAW                     = boolean(default=False) # do not delete the unsorted/unfiltered ("raw") pose file, <jobname>_raw.mae[gz]'
+p863
+aS'KEEPSKIPPED                 = boolean(default=False) # save skipped ligands to <jobname>_skipped.mae[gz]'
+p864
+aS'LIG_CCUT                    = float(default=0.15, min=0.0) # charge cutoff to determine whether to use vdW scaling of ligand atoms'
+p865
+aS'LIG_MAECHARGES              = boolean(default=False) # use charges from ligand Maestro file instead of those from the force field'
+p866
+aS'LIG_VSCALE                  = float(default=0.8, min=0.0) # ligand vdW scaling (see also LIG_CCUT)'
+p867
+aS'LIGAND_END                  = integer(default=0, min=0) # end ligand'
+p868
+aS'LIGAND_OFFSET               = integer(default=0, min=0) # offset to add to ligand numbers for reporting purposes (used by the subjob splitting/merging machinery)'
+p869
+aS'LIGAND_START                = integer(default=1, min=1) # start ligand'
+p870
+aS"LIGANDFILE                  = string(default='') # Glide docking ligands file name"
+p871
+aS'LIGANDFILES                 = string_list(default=list()) # array of filenames to dock. Can be used instead of LIGANDFILE'
+p872
+aS"LIGFORMAT                   = option('maestro', 'sd', 'mol2', default='maestro') # Glide docking ligands file format"
+p873
+aS'MACROCYCLE                  = boolean(default=False) # generate macrocycle ring templates on the fly using Prime'
+p874
+aS"MACROCYCLE_OPTIONS          = string(default='') # options string to pass to Prime's macrocycle conformer generator"
+p875
+aS'MAX_ITERATIONS              = integer(default=100, min=0) # maximum number of iterations during docking minimization'
+p876
+aS'MAXATOMS                    = integer(default=500, min=1, max=500) # maximum number of ligand atoms; larger ligands will be skipped'
+p877
+aS'MAXCORE                     = integer(default=-1) # maximum number of core conformers (-1 means use default formula)'
+p878
+aS'MAXHARD                     = integer(default=None)'
+p879
+aS'MAXKEEP                     = integer(default=5000, min=1) # maximum number of poses to keep after the rough scoring stage'
+p880
+aS'MAXREF                      = integer(default=400, min=1) # maximum number of poses to refine'
+p881
+aS'MAXROTBONDS                 = integer(default=100, min=0, max=100) # maximum number of rotatable bonds. Ligands exceeding this limit will be skipped'
+p882
+aS'MAXSOFT                     = integer(default=None)'
+p883
+aS'METAL_CUTOFF                = float(default=10.0) # metal bond cutoff used for final filtering'
+p884
+aS'NDIR                        = integer(default=302, min=1) # number of directions for the ligand diameter'
+p885
+aS'NENHANCED_SAMPLING          = integer(default=1, min=1, max=4) # expand size of the Glide funnel by N times to process poses from N confgen runs with minor perturbations to the input ligand coordinates'
+p886
+aS'NEWXP_FFUNC_FILE            = string(default=None) # DICE "ffunc <name>," file created by previous NewXP steps.'
+p887
+aS'NEWXP_LIPO_SCORE            = float(default=None) # DICE "hr," lipophilic score (from wmap SIP job).'
+p888
+aS'NEWXP_OFFSET                = float(default=2.0) # DICE "offset," default is initial guess for first qsar docking.'
+p889
+aS"NEWXP_STAGE                 = option('WmapFit', 'ReorgFit', 'TestSetDock', 'OldSoftDock', 'NewSoftDock', 'HardDock', 'DescripOnly', default='DescripOnly') # See mmim_def.h for values; determines which other parameters the Glide job needs."
+p890
+aS'NEWXP_WATREF                = float(default=None) # DICE "watref," wmap score for the ligand (from SIP job using wmap file).'
+p891
+aS'NEWXP_WMAP_FILE             = string(default=None) # DICE "wmap file," output from wmap job.'
+p892
+aS'NEWXP_ZROFF                 = float(default=2.0) # DICE "zroff," default is initial guess for first qsar docking.'
+p893
+aS'NMAXRMSSYM                  = integer(default=100, min=0) # max number of poses to compare taking symmetry into account'
+p894
+aS'NOSORT                      = boolean(default=False) # don\'t sort poses from "_raw.mae" file into "_[lib|pv].mae"'
+p895
+aS'NPCONF                      = integer(default=80000, min=1, max=800000) # maximum number of conformers'
+p896
+aS'NREPORT                     = integer(default=0, min=0) # maximum number of poses to report at the end of the job (zero means "unlimited")'
+p897
+aS'NREQUIRED_CONS              = string(default=\'ALL\') # number of constraints that need to be satisfied (must be an integer or "all")'
+p898
+aS'OUTPUTDIR                   = string(default=None) # if present in gridgen, overrides directory path from GRIDFILE'
+p899
+aS'PAIRDISTANCES               = float_list(default=None) # user-selected bond constraint distances'
+p900
+aS'PEPTIDE                     = boolean(default=False) # use grid and sampling settings optimized for polypeptides'
+p901
+aS'PHASE_DB                    = string(default=None) # Absolute path to Phase database to use as source of ligands to dock'
+p902
+aS'PHASE_NCONFS                = integer(default=1, min=1) # Number of confs per ligand to read from Phase DB'
+p903
+aS'PHASE_SUBSET                = string(default=None) # Subset file listing the IDs of the ligands to dock from a Phase database'
+p904
+aS'POSE_DISPLACEMENT           = float(default=1.3, min=0.0) # minimum heavy-atom "max displacement" for counting two poses as distinct'
+p905
+aS'POSE_HTORSION               = float(default=40.0, min=0.0, max=60.0) # minimum deviation (degrees) in polar H torsion for counting two poses as distinct'
+p906
+aS'POSE_OUTTYPE                = option(\'poseviewer\', \'ligandlib\', \'poseviewer_sd\', \'ligandlib_sd\', \'phase_subset\', default=\'poseviewer\') # format for file containing docked poses: "poseviewer" for _pv.mae output; "ligandlib" for _lib.mae; similarly "poseviewer_sd" and "ligandlib_sd" for sdf output; "phase_subset" for bypassing _lib or _pv in favor of a Phase subset file.'
+p907
+aS'POSE_RMSD                   = float(default=0.5, min=0.0) # minimum heavy-atom rmsd for counting two poses as distinct'
+p908
+aS'POSES_PER_LIG               = integer(default=1, min=1) # maximum number of poses to report per each input ligand'
+p909
+aS'POSTDOCK                    = boolean(default=True) # perform post-docking minimization and scoring'
+p910
+aS'POSTDOCK_ITMAX              = integer(default=500, min=1) # maximum number of iterations for post-docking minimization'
+p911
+aS'POSTDOCK_NPOSE              = integer(default=5) # maximum number of best-by-Emodel poses to submit to post-docking minimization'
+p912
+aS'POSTDOCK_SCITMAX            = integer(default=100, min=1) # maximum number of iterations for post-docking strain correction'
+p913
+aS'POSTDOCK_XP_DELE            = float(default=0.5) # keep XP post-docking minimization geometry if its XP GlideScore is within this window of the original docked pose XP GlideScore'
+p914
+aS'POSTDOCKCG                  = boolean(default=False) # use conjugate gradient minimization (instead of variable metric) in post-docking minimization'
+p915
+aS'POSTDOCKLIGMIN              = boolean(default=True) # include minimization in post-docking'
+p916
+aS'POSTDOCKSTRAIN              = boolean(default=False) # include strain correction in post-docking score'
+p917
+aS"PRECISION                   = option('SP', 'Normal', 'Accurate', 'HTVS', 'XP', default='SP') # glide docking precision"
+p918
+aS'PREMIN                      = boolean(default=False) # minimize input structure before confgen'
+p919
+aS'PREMINCG                    = boolean(default=False) # use conjugate gradient minimization (instead of variable metric) in pre-confgen minimization'
+p920
+aS'PREMINELEC                  = boolean(default=False) # include electrostatics in pre-confgen minimization'
+p921
+aS'PREMINITMAX                 = integer(default=0) # maximum number of iterations for pre-confgen minimization'
+p922
+aS'RADIUS_RES_INTERACTION      = float(default=12.0, min=0.0) # use residues within this distance of the grid box center'
+p923
+aS'REF_LIGAND_FILE             = string(default=None) # Glide reference ligand file name'
+p924
+aS'REFINDEX                    = integer(default=1, min=1) # index of the reference ligand structure'
+p925
+aS'REFLIGCT                    = integer(default=None) # CT handle for Glide reference ligand'
+p926
+aS'REPORT_CPU_TIME             = boolean(default=False) # Report the CPU time spent on docking each ligand in the r_glide_cpu_time pose property'
+p927
+aS'REWARD_INTRA_HBONDS         = boolean(default=False) # reward formation of intramolecular hydrogen bonds in the ligand'
+p928
+aS'RINGCONFCUT                 = float(default=2.5) # energy cutoff during ring conformer generation'
+p929
+aS'RINGONFLY                   = boolean(default=False) # sample ring conformations if no template found and store as templates for reuse'
+p930
+aS'SAMPLE_N_INVERSIONS         = boolean(default=True) # include (non-ring) N inversions in confgen'
+p931
+aS'SAMPLE_RINGS                = boolean(default=True) # sample ring conformations using templates during confgen'
+p932
+aS'SAMPLING                    = integer(default=-1, min=-1, max=10) # mode for the "sampling" stage'
+p933
+aS'SCORE_INPUT_POSE            = boolean(default=False) # score and report the input pose in addition to the docked poses'
+p934
+aS'SCORE_MINIMIZED_INPUT_POSE  = boolean(default=False) # score and report the minimized input pose in addition to the docked poses'
+p935
+aS'SCORING_CUTOFF              = float(default=100.0) # rough score cutoff'
+p936
+aS"SCORING_EXTRA               = string(default='') # Extra keywords to add to scoring line"
+p937
+aS'SCREEN_EXTRA                = string(default=\'\') # Extra keywords to add to first "screen" line (used for reading/writing grid and for rough scoring)'
+p938
+aS'SKIP_EPIK_METAL_ONLY        = boolean(default=False) # skip ligand ionization/tautomeric states that have been prepared by Epik or LigPrep specifically to interact with a metal ion'
+p939
+aS'STRAIN_EMFACTOR             = float(default=1.0) # Coefficient of strain-energy correction to Emodel'
+p940
+aS'STRAIN_EMTHRESH             = float(default=0.0) # Threshold for strain-energy correction to Emodel'
+p941
+aS'STRAIN_FCTIGHT              = float(default=10.0) # Force constant for "tightly restrained" postdock minimization'
+p942
+aS'STRAIN_GSFACTOR             = float(default=0.25) # Coefficient of strain-energy correction to Glidescore'
+p943
+aS'STRAIN_GSTHRESH             = float(default=4.0) # Threshold for strain-energy correction to Glidescore'
+p944
+aS'STRAIN_HWTIGHT              = float(default=15.0) # Half-width of flat-bottom for tight torsional minimization'
+p945
+aS'STRAINELEC                  = boolean(default=False) # include electrostatics in post-docking strain correction'
+p946
+aS"SUBSTRATE_PENAL_FILE        = string(default='') # File listing the grid-cell coordinates and penalty values for substrate-envelope jobs"
+p947
+aS'USE_CONS                    = string_list(default=list()) # USE_CONS "<name>[:<feature_index>]", ...'
+p948
+aS'USE_REF_LIGAND              = boolean(default=False) # use reference ligand for RMSD evaluation or core constraints specification'
+p949
+aS'USECOMPMAE                  = boolean(default=False) # write compressed output Maestro file (defaults to true for Glide jobs)'
+p950
+aS'USENEWXP                    = boolean(default=False) # DICE keyword "XP6.0"; either it\'s there, or it ain\'t.'
+p951
+aS"VSHORT                      = option('anneal', 'allsoft', default='anneal') # short-distance behavior of the potentials"
+p952
+aS'WRITE_CSV                   = boolean(default=False) # enables csvmode for Glide output'
+p953
+aS'WRITE_RES_INTERACTION       = boolean(default=False) # generate per-residue interactions with the ligand for residues specified by "RADIUS_RES_INTERACTION" or "ASL_RES_INTERACTION"'
+p954
+aS'WRITE_XP_DESC               = boolean(default=False) # generate data for visualization with the XP Visualizer when PRECISION is set to "XP"'
+p955
+aS'WRITEREPT                   = boolean(default=False) # write human-readable report file (.rept)'
+p956
+aS"WS_COUL                     = option('nocoul', 'coulcut', 'none', default='none') # WScore coulcut mode"
+p957
+aS'WS_COULCUT                  = float(default=10000.0) # WScore coulcut'
+p958
+aS'WS_DISABLE_TERMS            = string_list(default=list()) # list of wsviz property names corresponding to scoring terms to disable (e.g., "r_wsviz_cocopen")'
+p959
+aS'WS_EXCLUDED_PDB_WATERS      = int_list(default=list()) # list of receptor waters to exclude from WScore desolvation penalty analysis'
+p960
+aS'WS_EXCLUDED_PROT_RESIDUES   = int_list(default=list()) # list of protein residues to exclude from WScore desolvation penalty analysis'
+p961
+aS'WS_EXCLUDED_WATER_COORDS    = float_list(default=list()) # list of watermap coordinates used to specify waters to be excluded from WScore desolvation penalty analysis'
+p962
+aS'WS_EXCLUDED_WMAP_WATERS     = int_list(default=list()) # list of watermap waters to exclude from WScore desolvation penalty analysis'
+p963
+aS'WS_HR                       = float(default=0.0) # WScore hr'
+p964
+aS'WS_OFFSET                   = float(default=2.0) # WScore offset'
+p965
+aS"WS_VOID_FILE                = string(default='') # WScore void file"
+p966
+aS'WS_WATREF                   = float(default=0.0) # WScore watref'
+p967
+aS"WS_WMAP_FILE                = string(default='') # WScore WaterMap file"
+p968
+aS'WS_WMAPSCORE                = boolean(default=True) # whether to use the values in WS_HR and WS_WATREF'
+p969
+aS'WS_WRTBEST                  = boolean(default=False) # write the "best" poses, in addition to the final pose in a WScore job'
+p970
+aS'WS_ZROFF                    = float(default=2.0) # WScore zroff'
+p971
+aS'WSCORE                      = boolean(default=False) # WScore mode'
+p972
+aS'        RECOMBINE = boolean(default=True) # Whether to recombine ligand files'
+p973
+aS'        UNIQUEFIELD = string(default="s_m_title")'
+p974
+aS'        OUTVARIANTFIELD = string(default=None) # Field for generated variant codes'
+p975
+aS'        NUM_TO_KEEP = integer(default=0) # Keep at most this many output ligands'
+p976
+aS'        PERCENT_TO_KEEP = float(default=0.0) # Keep only this percentage of the (input) ligands'
+p977
+aS'        COMPRESS_IN_FILES = boolean(default=True) # Whether to compress subjob *_in files'
+p978
+aS'        BEST_BY_TITLE = boolean(default=False) # Whether to keep only the best scoring pose per compound at the end.'
+p979
+aS'        LVDW = float(default=0.8) # Old name for LIG_VSCALE. glide.py will recognize it.'
+p980
+aS'        LIGCCUT = float(default=0.15) # Old name for LIG_CCUT. glide.py will recognize it.'
+p981
+aS'        LIGAND_CONFS = string(default=None) # Old name for DOCKING_METHOD. glide.py will recognize it.'
+p982
+aS'        DIELECTRIC = float(default=None) # Old name for GLIDE_DIELCO (ignored)'
+p983
+aS''
+aS'        # Metal and H-bond constraint options:'
+p984
+aS'        [CONSTRAINT_GROUP:1]'
+p985
+aS'          USE_CONS = string()'
+p986
+aS'          NREQUIRED_CONS = string()'
+p987
+aS'        [CONSTRAINT_GROUP:2]'
+p988
+aS'          USE_CONS = string()'
+p989
+aS'          NREQUIRED_CONS = string()'
+p990
+aS'        [CONSTRAINT_GROUP:3]'
+p991
+aS'          USE_CONS = string()'
+p992
+aS'          NREQUIRED_CONS = string()'
+p993
+aS'        [CONSTRAINT_GROUP:4]'
+p994
+aS'          USE_CONS = string()'
+p995
+aS'          NREQUIRED_CONS = string()'
+p996
+aS'        [FEATURE:1]'
+p997
+aS'          __many__ = string()'
+p998
+aS'        [FEATURE:2]'
+p999
+aS'          __many__ = string()'
+p1000
+aS'        [FEATURE:3]'
+p1001
+aS'          __many__ = string()'
+p1002
+aS'        [FEATURE:4]'
+p1003
+aS'          __many__ = string()'
+p1004
+aS'        [FEATURE:5]'
+p1005
+aS'          __many__ = string()'
+p1006
+aS'        '
+p1007
+asg82
+(dp1008
+I1
+S'vsw_ic-DOCK_SP_1_INPUT'
+p1009
+sI2
+S'vsw_ic-GRID_1'
+p1010
+ssg85
+I00
+sg86
+I01
+sg87
+I00
+sg90
+(dp1011
+I1
+S'vsw_ic-SP_OUT_1'
+p1012
+ssg20
+g565
+sg96
+Nsg566
+(dp1013
+sg97
+(dp1014
+S'LIG_VSCALE'
+p1015
+S'0.8'
+p1016
+sS'POSE_OUTTYPE'
+p1017
+S'LIB'
+p1018
+sS'COMPRESS_POSES'
+p1019
+S'YES'
+p1020
+sS'POSTDOCKSTRAIN'
+p1021
+S'NO'
+p1022
+sS'UNIQUEFIELD'
+p1023
+S's_vsw_compound_code'
+p1024
+sS'DOCKING_METHOD'
+p1025
+S'confgen'
+p1026
+sS'PRECISION'
+p1027
+S'SP'
+p1028
+sS'FORCEPLANAR'
+p1029
+S'NO'
+p1030
+sS'EPIK_PENALTIES'
+p1031
+S'YES'
+p1032
+sS'MAXATOMS'
+p1033
+S'300'
+p1034
+sS'NENHANCED_SAMPLING'
+p1035
+S'1'
+sS'LIG_CCUT'
+p1036
+S'0.15'
+p1037
+sS'PERCENT_TO_KEEP'
+p1038
+S'30.0'
+p1039
+sS'AMIDE_MODE'
+p1040
+S'penal'
+p1041
+sS'POSTDOCK'
+p1042
+S'YES'
+p1043
+sS'MAXROTBONDS'
+p1044
+S'50'
+p1045
+sS'RECOMBINE'
+p1046
+S'NO'
+p1047
+sS'BEST_BY_TITLE'
+p1048
+S'YES'
+p1049
+sS'POSES_PER_LIG'
+p1050
+S'1'
+sS'WRITE_XP_DESC'
+p1051
+S'NO'
+p1052
+ssg604
+(dp1053
+sg130
+Nsg131
+Nsg132
+I00
+sg606
+I01
+sg133
+(dp1054
+I1
+(dp1055
+g136
+I01
+sg52
+g53
+ssI2
+(dp1056
+g136
+I00
+sg52
+g53
+ssI3
+(dp1057
+g136
+I00
+sg52
+g611
+sssg137
+Nsg138
+(dp1058
+I1
+(ischrodinger.pipeline.pipeio
+Structures
+p1059
+(dp1060
+g142
+I3115
+sg52
+S'structures'
+p1061
+sg143
+g716
+sg145
+(lp1062
+S'C:\\Users\\Administrator\\Documents\\Schrodinger\\vsw_ic\\vsw_ic-PRE_DOCK_SP_1\\vsw_ic-PRE_DOCK_SP_1-001-in.maegz'
+p1063
+aS'C:\\Users\\Administrator\\Documents\\Schrodinger\\vsw_ic\\vsw_ic-PRE_DOCK_SP_1\\vsw_ic-PRE_DOCK_SP_1-002-in.maegz'
+p1064
+asbsI2
+g618
+ssg150
+g623
+sg152
+Nsg624
+Nsbsg154
+Nsg155
+g623
+sg156
+(lp1065
+(g273
+I0
+tp1066
+asg159
+Nsg160
+I0
+sg161
+S'schrodinger.pipeline.stages.glide'
+p1067
+sg163
+S'USER-96L5A2TLTM-0-62a2bba1'
+p1068
+sg165
+I0
+sba(ischrodinger.pipeline.pipeline
+StageJob
+p1069
+(dp1070
+g20
+g21
+sg22
+(ischrodinger.pipeline.stages.pull
+PullStage
+p1071
+(dp1072
+g137
+Nsg25
+(lp1073
+g173
+asg29
+(dp1074
+sg31
+Nsg96
+Nsg32
+Nsg33
+Nsg97
+(dp1075
+S'UNIQUEFIELD'
+p1076
+S's_vsw_variant'
+p1077
+ssg34
+g35
+((ltRp1078
+sg40
+I1
+sg41
+I01
+sg639
+I0
+sg130
+Nsg131
+Nsg42
+S'vsw_ic-PULL_SP_1'
+p1079
+sg132
+I00
+sg45
+I01
+sg133
+(dp1080
+I1
+(dp1081
+g136
+I01
+sg52
+g53
+sssg47
+I00
+sg48
+(dp1082
+I1
+(dp1083
+g51
+I01
+sg52
+g53
+ssI2
+(dp1084
+g51
+I01
+sg52
+g53
+sssg138
+(dp1085
+I1
+(ischrodinger.pipeline.pipeio
+Structures
+p1086
+(dp1087
+g142
+I934
+sg52
+S'structures'
+p1088
+sg143
+g1012
+sg145
+(lp1089
+S'C:\\Users\\Administrator\\Documents\\Schrodinger\\vsw_ic\\vsw_ic-DOCK_SP_1\\vsw_ic-SP_OUT_1_lib.maegz'
+p1090
+asbsI2
+g693
+ssg54
+(lp1091
+S''
+aS'        UNIQUEFIELD = string(default="s_m_title")'
+p1092
+aS'        NUM_TO_KEEP = integer(default=0) # Maxium number of unique compounds to pull'
+p1093
+aS'        PERCENT_TO_KEEP = float(default=0.0) # Percent of compounds to retain'
+p1094
+aS'        KEEP_CHARGES = boolean(default=False) # Whether to save the partial charges'
+p1095
+aS'        CHARGE_PROPERTY = string(default="r_m_charge1") # Charge property to keep'
+p1096
+aS'        '
+p1097
+asg82
+(dp1098
+I1
+S'vsw_ic-SP_OUT_1'
+p1099
+sI2
+S'vsw_ic-HTVS_OUT_ORIG_1'
+p1100
+ssg85
+I00
+sg152
+Nsg44
+Nsg86
+I01
+sg87
+I00
+sg90
+(dp1101
+I1
+S'vsw_ic-SP_OUT_ORIG_1'
+p1102
+ssg150
+Nsbsg154
+Nsg155
+g211
+sg156
+(lp1103
+sg159
+Nsg160
+I0
+sg161
+S'schrodinger.pipeline.stages.pull'
+p1104
+sg163
+S'USER-96L5A2TLTM-0-62a4a55e'
+p1105
+sg165
+I0
+sba(ischrodinger.pipeline.pipeline
+StageJob
+p1106
+(dp1107
+g20
+g21
+sg22
+(ischrodinger.pipeline.stages.gencodes
+RecombineStage
+p1108
+(dp1109
+g137
+Nsg25
+(lp1110
+g173
+asg29
+(dp1111
+sg31
+Nsg96
+Nsg32
+Nsg33
+Nsg97
+(dp1112
+S'MAX_SUBJOB_STS'
+p1113
+S'200'
+p1114
+sS'OUTFORMAT'
+p1115
+S'maegz'
+p1116
+sS'UNIQUEFIELD'
+p1117
+S's_vsw_compound_code'
+p1118
+sS'NUMOUT'
+p1119
+S'njobs'
+p1120
+sS'GENCODES'
+p1121
+S'NO'
+p1122
+sS'MIN_SUBJOB_STS'
+p1123
+S'20'
+p1124
+ssg34
+g35
+((ltRp1125
+sg40
+I1
+sg41
+I01
+sg130
+Nsg131
+Nsg42
+S'vsw_ic-PRE_DOCK_XP_1'
+p1126
+sg132
+I00
+sg45
+I01
+sg133
+(dp1127
+I1
+(dp1128
+g136
+I01
+sg52
+g53
+sssg47
+I00
+sg48
+(dp1129
+I1
+(dp1130
+g51
+I01
+sg52
+g53
+sssg138
+(dp1131
+I1
+(ischrodinger.pipeline.pipeio
+Structures
+p1132
+(dp1133
+g142
+I934
+sg52
+S'structures'
+p1134
+sg143
+g1102
+sg145
+(lp1135
+S'C:\\Users\\Administrator\\Documents\\Schrodinger\\vsw_ic\\vsw_ic-PULL_SP_1\\vsw_ic-SP_OUT_ORIG_1-001.maegz'
+p1136
+asbssg54
+(lp1137
+S''
+aS'        GENCODES = boolean(default=True) # Whether to generate compound and variant codes.'
+p1138
+aS'        NUMOUT = option("preserve", "njobs", "fewest", default="preserve") # How to generate the number of output files. "preserve" - same as the input; "fewest" - as few output files as possible; "njobs" - derive from -NJOBS option.'
+p1139
+aS'        PRESERVE_NJOBS = boolean(default=False) # If not recombining,'
+p1140
+aS'        UNIQUEFIELD = string(default="NONE") # Property that is unique to each compound. If "NONE", then each structure is unique.'
+p1141
+aS'        OUTCOMPOUNDFIELD = string(default="s_pipeline_compound_code") # Field to put the compound codes into (if GENCODES is True).'
+p1142
+aS'        OUTVARIANTFIELD = string(default="s_pipeline_variant") # Field to put variant codes into (if GENCODES is True)'
+p1143
+aS'        OUTFORMAT = option("maegz", "mae", "sdf", default="maegz") # Output format'
+p1144
+aS'        SKIP_BAD_LIGANDS = boolean(default=True)'
+p1145
+aS'        SKIP_RECEPTOR = boolean(default=True) # Whether to remove receptors from the set (PV files only)'
+p1146
+aS'        MIXLIGS = boolean(default=False) # Whether to re-shuffle the ligands between subjobs.'
+p1147
+aS'        SKIP_NOUNIQUE_LIGANDS = boolean(default=False) # Whether to skip ligands that have no unique field.'
+p1148
+aS'        MIN_SUBJOB_STS = integer(default=None) # Minimum subjob size'
+p1149
+aS'        MAX_SUBJOB_STS = integer(default=None) # Maximum subjob size'
+p1150
+aS'        '
+p1151
+asg82
+(dp1152
+I1
+S'vsw_ic-SP_OUT_ORIG_1'
+p1153
+ssg85
+I00
+sg152
+Nsg44
+Nsg86
+I01
+sg87
+I00
+sg90
+(dp1154
+I1
+S'vsw_ic-DOCK_XP_1_INPUT'
+p1155
+ssg150
+Nsbsg154
+Nsg155
+g211
+sg156
+(lp1156
+sg159
+Nsg160
+I0
+sg161
+S'schrodinger.pipeline.stages.gencodes'
+p1157
+sg163
+S'USER-96L5A2TLTM-0-62a4a567'
+p1158
+sg165
+I0
+sba(ischrodinger.pipeline.pipeline
+StageJob
+p1159
+(dp1160
+g20
+g21
+sg22
+(ischrodinger.pipeline.stages.glide
+DockingStage
+p1161
+(dp1162
+g25
+(lp1163
+g274
+asg29
+(dp1164
+sg31
+Nsg32
+Nsg276
+(lp1165
+sg33
+Nsg34
+g35
+((ltRp1166
+sg40
+I1
+sg41
+I01
+sg42
+S'vsw_ic-DOCK_XP_1'
+p1167
+sg44
+Nsg45
+I01
+sg46
+Nsg47
+I00
+sg48
+(dp1168
+I1
+(dp1169
+g51
+I01
+sg52
+g53
+ssI2
+(dp1170
+g51
+I01
+sg52
+g283
+sssg54
+(lp1171
+S'AMIDE_MODE                  = option(\'penal\', \'fixed\', \'free\', \'trans\', \'gen\', \'generalized\', default=\'penal\') # amide bond rotation behavior: "fixed", "free", "penal", "trans", "gen[eralized]"'
+p1172
+aS'AMIDE_TRANS_ALL             = boolean(default=False) # include "nonstandard" amides in trans enforcement'
+p1173
+aS'AMIDE_TRANSTOL              = float(default=20.0) # trans amide tolerance (in degrees)'
+p1174
+aS'ASL_RES_INTERACTION         = string(default=None) # If present, use it; else, use "radius_res_interaction."'
+p1175
+aS'BALANCED_STRUCS             = boolean(default=False) # use experimental confgen template balancing mode'
+p1176
+aS'CALC_INPUT_RMS              = boolean(default=False) # report RMS deviation against input geometry of each ligand'
+p1177
+aS'CANONICALIZE                = boolean(default=True) # docking initiated from a canonical conformation per input ligand (false by default for HTVS precision)'
+p1178
+aS'CLIENT_MODULE               = string(default=None) # Python module used by Glide to run in client mode'
+p1179
+aS"CLIENT_OPTIONS              = string(default='') # Options used to initialize the client_module"
+p1180
+aS'COMPRESS_POSES              = boolean(default=True) # generate compressed maestro pose and _raw files'
+p1181
+aS"CONFGEN_EXTRA               = string(default='') # Extra keywords to add to confgen line"
+p1182
+aS'CORE_ATOMS                  = int_list(default=None) # index into reference ligand for each atom in core'
+p1183
+aS'CORE_DEFINITION             = option(\'all\', \'allheavy\', \'smarts\', \'atomlist\', \'combiglide\', \'combi\', \'cg\', \'ctsmarts\', \'mcssmarts\', default=\'allheavy\') # is core "all" atoms in molecule, "allheavy" (default), "smarts" pattern, "atomlist", etc.'
+p1184
+aS'CORE_FILTER                 = boolean(default=False) # skip ligands that do not contain the core'
+p1185
+aS'CORE_POS_MAX_RMSD           = float(default=0.1) # maximum RMSD of core atom positions'
+p1186
+aS'CORE_RESTRAIN               = boolean(default=False) # restrain core atoms'
+p1187
+aS'CORE_RESTRAIN_V             = float(default=5.0) # strength of core restraining potential'
+p1188
+aS'CORE_SMARTS                 = string(default=None) # SMARTS pattern to match for core RMSD calculation/restraint'
+p1189
+aS'CORE_SNAP                   = boolean(default=None) # When using core constraints ("CORE_RESTRAIN yes"): if "yes", use "snapping" core constraints algorithm. If "no", use filtering algorithm. If not set, choose automatically based on CORE_POS_MAX_RMSD ("yes" if < 0.75; "no" otherwise)'
+p1190
+aS'CORECONS_FALLBACK           = boolean(default=False) # if a ligand fails to dock with CORE_SNAP retry it without'
+p1191
+aS'CORESCALE                   = float(default=None) # Scaling factor for number of core conformers'
+p1192
+aS"CSV_PROPS_FILE              = string(default='') # file containing names of m2io properties to be added to csvfile"
+p1193
+aS"CUTOFF_CONFIG_FILE          = string(default='') # config file for using WScore SP cutoffs, optionally connecting to a cutoff server"
+p1194
+aS'CV_CUTOFF                   = float(default=0.0) # Coulomb-van der Waals energy cutoff used for final filtering'
+p1195
+aS"DIELMOD                     = option('rdiel', 'cdiel', default='rdiel') # type of dielectric to use: distance-dependent (rdiel) or constant (cdiel)"
+p1196
+aS"DOCKING_METHOD              = option('confgen', 'rigid', 'inplace', 'mininplace', 'optandscore', 'refineinput', default='confgen') # docking method: confgen=flexible docking; rigid=rigid docking; mininplace=refine (do not dock); inplace=score in place (do not dock)"
+p1197
+aS'DOINTRA                     = boolean(default=False) # relax bad intramolecular contacts'
+p1198
+aS'DOINTRA_SCALE               = float(default=1.0) # scaling factor for intramolecular pose relaxation'
+p1199
+aS'EPIK_PENALTIES              = boolean(default=True) # include ligand Epik state penalties in the Glide DockingScore scoring function'
+p1200
+aS'EXPANDED_SAMPLING           = boolean(default=False) # bypass elimination of poses in rough scoring stage (useful for fragment docking)'
+p1201
+aS'EXPDEN_FILE                 = string(default=None) # Experimental density file (used by PrimeX)'
+p1202
+aS'FACEDEN                     = float(default=120.0) # Used by PrimeX'
+p1203
+aS'FACRF                       = float(default=50.0) # Used by PrimeX'
+p1204
+aS'FITDEN                      = boolean(default=False) # activate docking with ligand density data from PrimeX'
+p1205
+aS'FLEXTORS                    = boolean(default=True) # unused'
+p1206
+aS"FORCEFIELD                  = string(default='OPLS3') # force field"
+p1207
+aS'FORCEPLANAR                 = boolean(default=False) # trigger MMFFLD planarity options'
+p1208
+aS'GLIDE_CONFGEN_BADDIST2      = float(default=6.0, min=0.0) # distance cutoff, squared, for bad contacts in confgen'
+p1209
+aS'GLIDE_CONFGEN_EFCUT         = float(default=12.0, min=0.0) # energy cutoff during ligand conformer generation'
+p1210
+aS'GLIDE_CONS_FEAT_FILE        = string(default=None) # feature file name for constraints jobs'
+p1211
+aS'GLIDE_CONS_FINALONLY        = boolean(default=False) # only check for constraint satisfaction after docking is complete'
+p1212
+aS'GLIDE_CONS_RMETCOORD        = float_list(default=list()) # sphere radii of Glide metal_coordination constraints'
+p1213
+aS'GLIDE_CONS_RNOEMAX          = float_list(default=list()) # maximum distances for Glide NOE constraints'
+p1214
+aS'GLIDE_CONS_RNOEMIN          = float_list(default=list()) # minimum distances for Glide NOE constraints'
+p1215
+aS'GLIDE_CONS_RPOS             = float_list(default=list()) # sphere radii of Glide positional constraints'
+p1216
+aS'GLIDE_CONS_XMETCOORD        = float_list(default=list()) # X-coordinates of Glide metal-coordination constraints'
+p1217
+aS'GLIDE_CONS_XNOE             = float_list(default=list()) # X-coordinates of targets for Glide NOE constraints'
+p1218
+aS'GLIDE_CONS_XPOS             = float_list(default=list()) # X-coordinates of Glide positional constraints'
+p1219
+aS'GLIDE_CONS_YMETCOORD        = float_list(default=list()) # Y-coordinates of Glide metal-coordination constraints'
+p1220
+aS'GLIDE_CONS_YNOE             = float_list(default=list()) # Y-coordinates of targets for Glide NOE constraints'
+p1221
+aS'GLIDE_CONS_YPOS             = float_list(default=list()) # Y-coordinates of Glide positional constraints'
+p1222
+aS'GLIDE_CONS_ZMETCOORD        = float_list(default=list()) # Z-coordinates of Glide metal-coordination constraints'
+p1223
+aS'GLIDE_CONS_ZNOE             = float_list(default=list()) # Z-coordinates of targets for Glide NOE constraints'
+p1224
+aS'GLIDE_CONS_ZPOS             = float_list(default=list()) # Z-coordinates of Glide positional constraints'
+p1225
+aS'GLIDE_DIELCO                = float(default=2.0, min=0.0, max=9999.9) # dielectric constant'
+p1226
+aS'GLIDE_ELEMENTS              = boolean(default=False) # run in "Glide Elements" mode'
+p1227
+aS'GLIDE_EXVOL_PENAL_NUM       = float_list(default=list()) # maximum penalties in kcal/mol for each Glide excluded volume violation'
+p1228
+aS"GLIDE_EXVOL_PENAL_STRENGTH  = option('low', 'small', 'medium', 'high', 'large', default='large') # penalty specification for (all) Glide excluded volumes."
+p1229
+aS'GLIDE_NTOTALCONS            = integer(default=0, min=0, max=10) # number of receptor atoms having constraints'
+p1230
+aS'GLIDE_NUMEXVOL              = integer(default=0, min=0) # number of receptor excluded-volume regions'
+p1231
+aS'GLIDE_NUMMETCOORDCONS       = integer(default=0, min=0) # number of receptor metal-coordination constraints'
+p1232
+aS'GLIDE_NUMMETCOORDSITES      = int_list(default=list()) # number of available coordination sites per metal-coordination constraint'
+p1233
+aS'GLIDE_NUMNOECONS            = integer(default=0, min=0) # number of receptor NOE constraints'
+p1234
+aS'GLIDE_NUMPOSITCONS          = integer(default=0, min=0) # number of receptor positional constraints'
+p1235
+aS'GLIDE_NUMUSEXVOL            = integer(default=0, min=0) # number of excluded-volume regions to use'
+p1236
+aS'GLIDE_OUTPUT_USEHTOR        = boolean(default=True) # use rotation of polar hydrogens as pose-distinguishing criterion'
+p1237
+aS'GLIDE_POSTDOCK_CVFACT       = float(default=0.0) # coefficient of (-ECvdW^2) in postdock Emodel'
+p1238
+aS'GLIDE_POSTDOCK_GSFACT       = float(default=0.0) # coefficient of Glidescore (and ECvdW) in Emodel during post-docking rescoring'
+p1239
+aS'GLIDE_POSTDOCK_ZINT         = float(default=0.5) # coefficient of strain energy in postdock Emodel'
+p1240
+aS"GLIDE_REFLIG_FORMAT         = option('maestro', 'sd', 'mol2', default='maestro') # Glide reference ligand file format"
+p1241
+aS'GLIDE_REXVOL                = float_list(default=list()) # sphere radii of Glide excluded volumes'
+p1242
+aS'GLIDE_REXVOLIN              = float_list(default=list()) # inner sphere (max penalty) radii of Glide excluded volumes'
+p1243
+aS'GLIDE_TORCONS_ALLBONDS      = bool_list(default=list()) # constrain all independent dihedrals (one per rotatable bond) contained in SMARTS pattern (if false, specified dihedrals only)'
+p1244
+aS'GLIDE_TORCONS_IATOMS        = int_list(default=list()) # first of four atoms (index into SMARTS pattern) forming dihedral to be constrained'
+p1245
+aS'GLIDE_TORCONS_JATOMS        = int_list(default=list()) # second of four atoms (index into SMARTS pattern) forming dihedral to be constrained'
+p1246
+aS'GLIDE_TORCONS_KATOMS        = int_list(default=list()) # third of four atoms (index into SMARTS pattern) forming dihedral to be constrained'
+p1247
+aS'GLIDE_TORCONS_LATOMS        = int_list(default=list()) # fourth of four atoms (index into SMARTS pattern) forming dihedral to be constrained'
+p1248
+aS'GLIDE_TORCONS_PATTERN_INDEX = int_list(default=list()) # index into TORCONS_PATTERNS string array indicating which SMARTS pattern a given quartet of atom indices refers to'
+p1249
+aS'GLIDE_TORCONS_PATTERNS      = string_list(default=list()) # SMARTS patterns for matching docked ligands to torsional constraints'
+p1250
+aS'GLIDE_TORCONS_SETVAL        = bool_list(default=list()) # apply user-supplied value for constrained torsions (if false, use input value in each docked ligand)'
+p1251
+aS'GLIDE_TORCONS_VALUES        = float_list(default=list()) # Values to set constrained torsions to.  (Ignored if corresponding element of TORCONS_SETVAL is false.)'
+p1252
+aS'GLIDE_TORCONSFILE           = string(default=None) # m2io-format file containing SMARTS pattern and bond (and optional dihedral angle) specifications for torsional constraints'
+p1253
+aS'GLIDE_XEXVOL                = float_list(default=list()) # X-coordinates of centers of Glide excluded volumes'
+p1254
+aS'GLIDE_XP_NMAXCORE           = integer(default=4, min=0) # maximum number of anchors to use in XP refinement'
+p1255
+aS'GLIDE_XP_RMSCUT             = float(default=2.5) # RMS cutoff for "fast XP" min-and-score'
+p1256
+aS'GLIDE_YEXVOL                = float_list(default=list()) # Y-coordinates of centers of Glide excluded volumes'
+p1257
+aS'GLIDE_ZEXVOL                = float_list(default=list()) # Z-coordinates of centers of Glide excluded volumes'
+p1258
+aS'GLIDECONS                   = boolean(default=False) # use constraints'
+p1259
+aS'GLIDECONSFEATATOMS          = string_list(default=list()) # array of comma-separated lists of atom indices, giving positions in the SMARTS of constraint-satisfying ligand atoms'
+p1260
+aS'GLIDECONSFEATHASINCLUDE     = bool_list(default=list()) # indicates whether the indexed feature has a valid value for the "GLIDECONSFEATINCLUDE" keyword'
+p1261
+aS'GLIDECONSFEATHASNFILL       = bool_list(default=list()) # indicates whether the indexed feature has a valid value for the "GLIDECONSFEATNFILL" keyword'
+p1262
+aS"GLIDECONSFEATINCLUDE        = bool_list(default=list()) # include the SMARTS pattern as a match for the indexed feature?  (false means matches for that SMARTS *don't* satisfy the constraint"
+p1263
+aS'GLIDECONSFEATINDEX          = int_list(default=list()) # indicates which feature the given SMARTS pattern, atom list, etc., belong to'
+p1264
+aS'GLIDECONSFEATNFILL          = int_list(default=list()) # number of ligand atoms from SMARTS match that must be found in hydrophobic region to satisfy a hydrophobic constraint'
+p1265
+aS'GLIDECONSFEATPATTERNS       = string_list(default=None) # SMARTS patterns that constitute constraint-satisfying ligand features'
+p1266
+aS'GLIDECONSGROUPNREQUIRED     = int_list(default=list()) # number of constraints in each group required to be satisfied'
+p1267
+aS'GLIDECONSNAMES              = string_list(default=list()) # constraint label list'
+p1268
+aS'GLIDECONSUSEMET             = boolean(default=False) # use element-based metal radii for Glide constraints'
+p1269
+aS'GLIDESCORUSEMET             = boolean(default=False) # use element-based metal radii in Glide scoring'
+p1270
+aS'GLIDEUSEALLEXVOL            = boolean(default=False) # use all excluded volumes in file (as opposed to selected ones)'
+p1271
+aS'GLIDEUSECONSFEAT            = boolean(default=False) # use constraints feature (SMARTS) file'
+p1272
+aS'GLIDEUSECONSFEATINDEX       = int_list(default=list()) # indicates which ligand feature satisfies the given constraint'
+p1273
+aS'GLIDEUSECONSGROUPINDEX      = int_list(default=list()) # indicates which constraint group the given constraint belongs to'
+p1274
+aS'GLIDEUSECONSLABELS          = string_list(default=list()) # array of constraint labels to be used in docking job'
+p1275
+aS'GLIDEUSEXVOL                = boolean(default=False) # use excluded volumes'
+p1276
+aS'GLIDEUSEXVOLNAMES           = string_list(default=list()) # excluded-volume labels to use in docking job'
+p1277
+aS'GLIDEXVOLNAMES              = string_list(default=list()) # excluded-volume label list'
+p1278
+aS'GRIDFILE                    = string(default=None) # path to grid (.grd or .zip) file'
+p1279
+aS'GSCORE                      = option(\'SP3.5\', \'SP4.0\', \'SP4.5\', \'SP5.0\', \'SP6.0\', default=\'SP5.0\') # GlideScore version ("SP5.0" etc.)'
+p1280
+aS'GSCORE_CUTOFF               = float(default=100.0) # GlideScore cutoff'
+p1281
+aS'HAVEGLIDECONSFEAT           = boolean(default=False) # use pre-existing feature file for Glide constraints'
+p1282
+aS'HBOND_ACCEP_HALO            = boolean(default=False) # include halogens as possible H-bond acceptors in scoring'
+p1283
+aS'HBOND_CUTOFF                = float(default=0.0) # H-bond cutoff used for final filtering'
+p1284
+aS'HBOND_DONOR_AROMH           = boolean(default=False) # include aromatic H as a possible H-bond donor in scoring'
+p1285
+aS'HBOND_DONOR_AROMH_CHARGE    = float(default=0.0) # count aromatic H as a donor if its partial charge exceeds this value'
+p1286
+aS'HBOND_DONOR_HALO            = boolean(default=False) # include halogens as possible H-bond donors in scoring'
+p1287
+aS'IFD_CROSSCL                 = float(default=2.0)'
+p1288
+aS'IFD_DXCUT                   = float(default=30.0)'
+p1289
+aS'IFD_LPCUT                   = float(default=2.0)'
+p1290
+aS'IFD_RPRE                    = float(default=1.0)'
+p1291
+aS'IFD_RSCUT                   = float(default=1.5)'
+p1292
+aS'IFD_RWCUT                   = float(default=0.5)'
+p1293
+aS'IFD_SCCUT                   = float(default=8.0)'
+p1294
+aS'IFD_TR0                     = float(default=0.0)'
+p1295
+aS'INCLUDE_INPUT_CONF          = boolean(default=False) # include input conformation in confgen output'
+p1296
+aS'INCLUDE_INPUT_RINGS         = boolean(default=False) # include input ring structures in confgen'
+p1297
+aS"JOBNAME                     = string(default='impact') # job name used for job control and as a filename prefix"
+p1298
+aS'JOBTYPE                     = string(default=None) # job type (used only by glide.py)'
+p1299
+aS'KEEP_STATE                  = boolean(default=False) # keep <jobname>_state.json file at the end of the job'
+p1300
+aS'KEEP_SUBJOB_POSES           = boolean(default=True) # keep <jobname>_subjob.poses.zip at the end of a distributed docking job'
+p1301
+aS'KEEPRAW                     = boolean(default=False) # do not delete the unsorted/unfiltered ("raw") pose file, <jobname>_raw.mae[gz]'
+p1302
+aS'KEEPSKIPPED                 = boolean(default=False) # save skipped ligands to <jobname>_skipped.mae[gz]'
+p1303
+aS'LIG_CCUT                    = float(default=0.15, min=0.0) # charge cutoff to determine whether to use vdW scaling of ligand atoms'
+p1304
+aS'LIG_MAECHARGES              = boolean(default=False) # use charges from ligand Maestro file instead of those from the force field'
+p1305
+aS'LIG_VSCALE                  = float(default=0.8, min=0.0) # ligand vdW scaling (see also LIG_CCUT)'
+p1306
+aS'LIGAND_END                  = integer(default=0, min=0) # end ligand'
+p1307
+aS'LIGAND_OFFSET               = integer(default=0, min=0) # offset to add to ligand numbers for reporting purposes (used by the subjob splitting/merging machinery)'
+p1308
+aS'LIGAND_START                = integer(default=1, min=1) # start ligand'
+p1309
+aS"LIGANDFILE                  = string(default='') # Glide docking ligands file name"
+p1310
+aS'LIGANDFILES                 = string_list(default=list()) # array of filenames to dock. Can be used instead of LIGANDFILE'
+p1311
+aS"LIGFORMAT                   = option('maestro', 'sd', 'mol2', default='maestro') # Glide docking ligands file format"
+p1312
+aS'MACROCYCLE                  = boolean(default=False) # generate macrocycle ring templates on the fly using Prime'
+p1313
+aS"MACROCYCLE_OPTIONS          = string(default='') # options string to pass to Prime's macrocycle conformer generator"
+p1314
+aS'MAX_ITERATIONS              = integer(default=100, min=0) # maximum number of iterations during docking minimization'
+p1315
+aS'MAXATOMS                    = integer(default=500, min=1, max=500) # maximum number of ligand atoms; larger ligands will be skipped'
+p1316
+aS'MAXCORE                     = integer(default=-1) # maximum number of core conformers (-1 means use default formula)'
+p1317
+aS'MAXHARD                     = integer(default=None)'
+p1318
+aS'MAXKEEP                     = integer(default=5000, min=1) # maximum number of poses to keep after the rough scoring stage'
+p1319
+aS'MAXREF                      = integer(default=400, min=1) # maximum number of poses to refine'
+p1320
+aS'MAXROTBONDS                 = integer(default=100, min=0, max=100) # maximum number of rotatable bonds. Ligands exceeding this limit will be skipped'
+p1321
+aS'MAXSOFT                     = integer(default=None)'
+p1322
+aS'METAL_CUTOFF                = float(default=10.0) # metal bond cutoff used for final filtering'
+p1323
+aS'NDIR                        = integer(default=302, min=1) # number of directions for the ligand diameter'
+p1324
+aS'NENHANCED_SAMPLING          = integer(default=1, min=1, max=4) # expand size of the Glide funnel by N times to process poses from N confgen runs with minor perturbations to the input ligand coordinates'
+p1325
+aS'NEWXP_FFUNC_FILE            = string(default=None) # DICE "ffunc <name>," file created by previous NewXP steps.'
+p1326
+aS'NEWXP_LIPO_SCORE            = float(default=None) # DICE "hr," lipophilic score (from wmap SIP job).'
+p1327
+aS'NEWXP_OFFSET                = float(default=2.0) # DICE "offset," default is initial guess for first qsar docking.'
+p1328
+aS"NEWXP_STAGE                 = option('WmapFit', 'ReorgFit', 'TestSetDock', 'OldSoftDock', 'NewSoftDock', 'HardDock', 'DescripOnly', default='DescripOnly') # See mmim_def.h for values; determines which other parameters the Glide job needs."
+p1329
+aS'NEWXP_WATREF                = float(default=None) # DICE "watref," wmap score for the ligand (from SIP job using wmap file).'
+p1330
+aS'NEWXP_WMAP_FILE             = string(default=None) # DICE "wmap file," output from wmap job.'
+p1331
+aS'NEWXP_ZROFF                 = float(default=2.0) # DICE "zroff," default is initial guess for first qsar docking.'
+p1332
+aS'NMAXRMSSYM                  = integer(default=100, min=0) # max number of poses to compare taking symmetry into account'
+p1333
+aS'NOSORT                      = boolean(default=False) # don\'t sort poses from "_raw.mae" file into "_[lib|pv].mae"'
+p1334
+aS'NPCONF                      = integer(default=80000, min=1, max=800000) # maximum number of conformers'
+p1335
+aS'NREPORT                     = integer(default=0, min=0) # maximum number of poses to report at the end of the job (zero means "unlimited")'
+p1336
+aS'NREQUIRED_CONS              = string(default=\'ALL\') # number of constraints that need to be satisfied (must be an integer or "all")'
+p1337
+aS'OUTPUTDIR                   = string(default=None) # if present in gridgen, overrides directory path from GRIDFILE'
+p1338
+aS'PAIRDISTANCES               = float_list(default=None) # user-selected bond constraint distances'
+p1339
+aS'PEPTIDE                     = boolean(default=False) # use grid and sampling settings optimized for polypeptides'
+p1340
+aS'PHASE_DB                    = string(default=None) # Absolute path to Phase database to use as source of ligands to dock'
+p1341
+aS'PHASE_NCONFS                = integer(default=1, min=1) # Number of confs per ligand to read from Phase DB'
+p1342
+aS'PHASE_SUBSET                = string(default=None) # Subset file listing the IDs of the ligands to dock from a Phase database'
+p1343
+aS'POSE_DISPLACEMENT           = float(default=1.3, min=0.0) # minimum heavy-atom "max displacement" for counting two poses as distinct'
+p1344
+aS'POSE_HTORSION               = float(default=40.0, min=0.0, max=60.0) # minimum deviation (degrees) in polar H torsion for counting two poses as distinct'
+p1345
+aS'POSE_OUTTYPE                = option(\'poseviewer\', \'ligandlib\', \'poseviewer_sd\', \'ligandlib_sd\', \'phase_subset\', default=\'poseviewer\') # format for file containing docked poses: "poseviewer" for _pv.mae output; "ligandlib" for _lib.mae; similarly "poseviewer_sd" and "ligandlib_sd" for sdf output; "phase_subset" for bypassing _lib or _pv in favor of a Phase subset file.'
+p1346
+aS'POSE_RMSD                   = float(default=0.5, min=0.0) # minimum heavy-atom rmsd for counting two poses as distinct'
+p1347
+aS'POSES_PER_LIG               = integer(default=1, min=1) # maximum number of poses to report per each input ligand'
+p1348
+aS'POSTDOCK                    = boolean(default=True) # perform post-docking minimization and scoring'
+p1349
+aS'POSTDOCK_ITMAX              = integer(default=500, min=1) # maximum number of iterations for post-docking minimization'
+p1350
+aS'POSTDOCK_NPOSE              = integer(default=5) # maximum number of best-by-Emodel poses to submit to post-docking minimization'
+p1351
+aS'POSTDOCK_SCITMAX            = integer(default=100, min=1) # maximum number of iterations for post-docking strain correction'
+p1352
+aS'POSTDOCK_XP_DELE            = float(default=0.5) # keep XP post-docking minimization geometry if its XP GlideScore is within this window of the original docked pose XP GlideScore'
+p1353
+aS'POSTDOCKCG                  = boolean(default=False) # use conjugate gradient minimization (instead of variable metric) in post-docking minimization'
+p1354
+aS'POSTDOCKLIGMIN              = boolean(default=True) # include minimization in post-docking'
+p1355
+aS'POSTDOCKSTRAIN              = boolean(default=False) # include strain correction in post-docking score'
+p1356
+aS"PRECISION                   = option('SP', 'Normal', 'Accurate', 'HTVS', 'XP', default='SP') # glide docking precision"
+p1357
+aS'PREMIN                      = boolean(default=False) # minimize input structure before confgen'
+p1358
+aS'PREMINCG                    = boolean(default=False) # use conjugate gradient minimization (instead of variable metric) in pre-confgen minimization'
+p1359
+aS'PREMINELEC                  = boolean(default=False) # include electrostatics in pre-confgen minimization'
+p1360
+aS'PREMINITMAX                 = integer(default=0) # maximum number of iterations for pre-confgen minimization'
+p1361
+aS'RADIUS_RES_INTERACTION      = float(default=12.0, min=0.0) # use residues within this distance of the grid box center'
+p1362
+aS'REF_LIGAND_FILE             = string(default=None) # Glide reference ligand file name'
+p1363
+aS'REFINDEX                    = integer(default=1, min=1) # index of the reference ligand structure'
+p1364
+aS'REFLIGCT                    = integer(default=None) # CT handle for Glide reference ligand'
+p1365
+aS'REPORT_CPU_TIME             = boolean(default=False) # Report the CPU time spent on docking each ligand in the r_glide_cpu_time pose property'
+p1366
+aS'REWARD_INTRA_HBONDS         = boolean(default=False) # reward formation of intramolecular hydrogen bonds in the ligand'
+p1367
+aS'RINGCONFCUT                 = float(default=2.5) # energy cutoff during ring conformer generation'
+p1368
+aS'RINGONFLY                   = boolean(default=False) # sample ring conformations if no template found and store as templates for reuse'
+p1369
+aS'SAMPLE_N_INVERSIONS         = boolean(default=True) # include (non-ring) N inversions in confgen'
+p1370
+aS'SAMPLE_RINGS                = boolean(default=True) # sample ring conformations using templates during confgen'
+p1371
+aS'SAMPLING                    = integer(default=-1, min=-1, max=10) # mode for the "sampling" stage'
+p1372
+aS'SCORE_INPUT_POSE            = boolean(default=False) # score and report the input pose in addition to the docked poses'
+p1373
+aS'SCORE_MINIMIZED_INPUT_POSE  = boolean(default=False) # score and report the minimized input pose in addition to the docked poses'
+p1374
+aS'SCORING_CUTOFF              = float(default=100.0) # rough score cutoff'
+p1375
+aS"SCORING_EXTRA               = string(default='') # Extra keywords to add to scoring line"
+p1376
+aS'SCREEN_EXTRA                = string(default=\'\') # Extra keywords to add to first "screen" line (used for reading/writing grid and for rough scoring)'
+p1377
+aS'SKIP_EPIK_METAL_ONLY        = boolean(default=False) # skip ligand ionization/tautomeric states that have been prepared by Epik or LigPrep specifically to interact with a metal ion'
+p1378
+aS'STRAIN_EMFACTOR             = float(default=1.0) # Coefficient of strain-energy correction to Emodel'
+p1379
+aS'STRAIN_EMTHRESH             = float(default=0.0) # Threshold for strain-energy correction to Emodel'
+p1380
+aS'STRAIN_FCTIGHT              = float(default=10.0) # Force constant for "tightly restrained" postdock minimization'
+p1381
+aS'STRAIN_GSFACTOR             = float(default=0.25) # Coefficient of strain-energy correction to Glidescore'
+p1382
+aS'STRAIN_GSTHRESH             = float(default=4.0) # Threshold for strain-energy correction to Glidescore'
+p1383
+aS'STRAIN_HWTIGHT              = float(default=15.0) # Half-width of flat-bottom for tight torsional minimization'
+p1384
+aS'STRAINELEC                  = boolean(default=False) # include electrostatics in post-docking strain correction'
+p1385
+aS"SUBSTRATE_PENAL_FILE        = string(default='') # File listing the grid-cell coordinates and penalty values for substrate-envelope jobs"
+p1386
+aS'USE_CONS                    = string_list(default=list()) # USE_CONS "<name>[:<feature_index>]", ...'
+p1387
+aS'USE_REF_LIGAND              = boolean(default=False) # use reference ligand for RMSD evaluation or core constraints specification'
+p1388
+aS'USECOMPMAE                  = boolean(default=False) # write compressed output Maestro file (defaults to true for Glide jobs)'
+p1389
+aS'USENEWXP                    = boolean(default=False) # DICE keyword "XP6.0"; either it\'s there, or it ain\'t.'
+p1390
+aS"VSHORT                      = option('anneal', 'allsoft', default='anneal') # short-distance behavior of the potentials"
+p1391
+aS'WRITE_CSV                   = boolean(default=False) # enables csvmode for Glide output'
+p1392
+aS'WRITE_RES_INTERACTION       = boolean(default=False) # generate per-residue interactions with the ligand for residues specified by "RADIUS_RES_INTERACTION" or "ASL_RES_INTERACTION"'
+p1393
+aS'WRITE_XP_DESC               = boolean(default=False) # generate data for visualization with the XP Visualizer when PRECISION is set to "XP"'
+p1394
+aS'WRITEREPT                   = boolean(default=False) # write human-readable report file (.rept)'
+p1395
+aS"WS_COUL                     = option('nocoul', 'coulcut', 'none', default='none') # WScore coulcut mode"
+p1396
+aS'WS_COULCUT                  = float(default=10000.0) # WScore coulcut'
+p1397
+aS'WS_DISABLE_TERMS            = string_list(default=list()) # list of wsviz property names corresponding to scoring terms to disable (e.g., "r_wsviz_cocopen")'
+p1398
+aS'WS_EXCLUDED_PDB_WATERS      = int_list(default=list()) # list of receptor waters to exclude from WScore desolvation penalty analysis'
+p1399
+aS'WS_EXCLUDED_PROT_RESIDUES   = int_list(default=list()) # list of protein residues to exclude from WScore desolvation penalty analysis'
+p1400
+aS'WS_EXCLUDED_WATER_COORDS    = float_list(default=list()) # list of watermap coordinates used to specify waters to be excluded from WScore desolvation penalty analysis'
+p1401
+aS'WS_EXCLUDED_WMAP_WATERS     = int_list(default=list()) # list of watermap waters to exclude from WScore desolvation penalty analysis'
+p1402
+aS'WS_HR                       = float(default=0.0) # WScore hr'
+p1403
+aS'WS_OFFSET                   = float(default=2.0) # WScore offset'
+p1404
+aS"WS_VOID_FILE                = string(default='') # WScore void file"
+p1405
+aS'WS_WATREF                   = float(default=0.0) # WScore watref'
+p1406
+aS"WS_WMAP_FILE                = string(default='') # WScore WaterMap file"
+p1407
+aS'WS_WMAPSCORE                = boolean(default=True) # whether to use the values in WS_HR and WS_WATREF'
+p1408
+aS'WS_WRTBEST                  = boolean(default=False) # write the "best" poses, in addition to the final pose in a WScore job'
+p1409
+aS'WS_ZROFF                    = float(default=2.0) # WScore zroff'
+p1410
+aS'WSCORE                      = boolean(default=False) # WScore mode'
+p1411
+aS'        RECOMBINE = boolean(default=True) # Whether to recombine ligand files'
+p1412
+aS'        UNIQUEFIELD = string(default="s_m_title")'
+p1413
+aS'        OUTVARIANTFIELD = string(default=None) # Field for generated variant codes'
+p1414
+aS'        NUM_TO_KEEP = integer(default=0) # Keep at most this many output ligands'
+p1415
+aS'        PERCENT_TO_KEEP = float(default=0.0) # Keep only this percentage of the (input) ligands'
+p1416
+aS'        COMPRESS_IN_FILES = boolean(default=True) # Whether to compress subjob *_in files'
+p1417
+aS'        BEST_BY_TITLE = boolean(default=False) # Whether to keep only the best scoring pose per compound at the end.'
+p1418
+aS'        LVDW = float(default=0.8) # Old name for LIG_VSCALE. glide.py will recognize it.'
+p1419
+aS'        LIGCCUT = float(default=0.15) # Old name for LIG_CCUT. glide.py will recognize it.'
+p1420
+aS'        LIGAND_CONFS = string(default=None) # Old name for DOCKING_METHOD. glide.py will recognize it.'
+p1421
+aS'        DIELECTRIC = float(default=None) # Old name for GLIDE_DIELCO (ignored)'
+p1422
+aS''
+aS'        # Metal and H-bond constraint options:'
+p1423
+aS'        [CONSTRAINT_GROUP:1]'
+p1424
+aS'          USE_CONS = string()'
+p1425
+aS'          NREQUIRED_CONS = string()'
+p1426
+aS'        [CONSTRAINT_GROUP:2]'
+p1427
+aS'          USE_CONS = string()'
+p1428
+aS'          NREQUIRED_CONS = string()'
+p1429
+aS'        [CONSTRAINT_GROUP:3]'
+p1430
+aS'          USE_CONS = string()'
+p1431
+aS'          NREQUIRED_CONS = string()'
+p1432
+aS'        [CONSTRAINT_GROUP:4]'
+p1433
+aS'          USE_CONS = string()'
+p1434
+aS'          NREQUIRED_CONS = string()'
+p1435
+aS'        [FEATURE:1]'
+p1436
+aS'          __many__ = string()'
+p1437
+aS'        [FEATURE:2]'
+p1438
+aS'          __many__ = string()'
+p1439
+aS'        [FEATURE:3]'
+p1440
+aS'          __many__ = string()'
+p1441
+aS'        [FEATURE:4]'
+p1442
+aS'          __many__ = string()'
+p1443
+aS'        [FEATURE:5]'
+p1444
+aS'          __many__ = string()'
+p1445
+aS'        '
+p1446
+asg82
+(dp1447
+I1
+S'vsw_ic-DOCK_XP_1_INPUT'
+p1448
+sI2
+S'vsw_ic-GRID_1'
+p1449
+ssg85
+I00
+sg86
+I01
+sg87
+I00
+sg90
+(dp1450
+I1
+g8
+ssg20
+g565
+sg96
+Nsg566
+(dp1451
+sg97
+(dp1452
+S'LIG_VSCALE'
+p1453
+S'0.8'
+p1454
+sS'POSE_OUTTYPE'
+p1455
+S'PV'
+p1456
+sS'COMPRESS_POSES'
+p1457
+S'YES'
+p1458
+sS'POSTDOCKSTRAIN'
+p1459
+S'NO'
+p1460
+sS'UNIQUEFIELD'
+p1461
+S's_vsw_compound_code'
+p1462
+sS'DOCKING_METHOD'
+p1463
+S'confgen'
+p1464
+sS'PRECISION'
+p1465
+S'XP'
+p1466
+sS'FORCEPLANAR'
+p1467
+S'NO'
+p1468
+sS'EPIK_PENALTIES'
+p1469
+S'YES'
+p1470
+sS'MAXATOMS'
+p1471
+S'300'
+p1472
+sS'LIG_CCUT'
+p1473
+S'0.15'
+p1474
+sS'PERCENT_TO_KEEP'
+p1475
+S'10.0'
+p1476
+sS'AMIDE_MODE'
+p1477
+S'penal'
+p1478
+sS'POSTDOCK'
+p1479
+S'YES'
+p1480
+sS'MAXROTBONDS'
+p1481
+S'50'
+p1482
+sS'RECOMBINE'
+p1483
+S'NO'
+p1484
+sS'BEST_BY_TITLE'
+p1485
+S'YES'
+p1486
+sS'POSES_PER_LIG'
+p1487
+S'1'
+sS'WRITE_XP_DESC'
+p1488
+S'NO'
+p1489
+ssg604
+(dp1490
+sg130
+Nsg131
+Nsg132
+I00
+sg606
+I01
+sg133
+(dp1491
+I1
+(dp1492
+g136
+I01
+sg52
+g53
+ssI2
+(dp1493
+g136
+I00
+sg52
+g53
+ssI3
+(dp1494
+g136
+I00
+sg52
+g611
+sssg137
+Nsg138
+(dp1495
+I1
+(ischrodinger.pipeline.pipeio
+Structures
+p1496
+(dp1497
+g142
+I934
+sg52
+S'structures'
+p1498
+sg143
+g1155
+sg145
+(lp1499
+S'C:\\Users\\Administrator\\Documents\\Schrodinger\\vsw_ic\\vsw_ic-PRE_DOCK_XP_1\\vsw_ic-PRE_DOCK_XP_1-001-in.maegz'
+p1500
+aS'C:\\Users\\Administrator\\Documents\\Schrodinger\\vsw_ic\\vsw_ic-PRE_DOCK_XP_1\\vsw_ic-PRE_DOCK_XP_1-002-in.maegz'
+p1501
+aS'C:\\Users\\Administrator\\Documents\\Schrodinger\\vsw_ic\\vsw_ic-PRE_DOCK_XP_1\\vsw_ic-PRE_DOCK_XP_1-003-in.maegz'
+p1502
+aS'C:\\Users\\Administrator\\Documents\\Schrodinger\\vsw_ic\\vsw_ic-PRE_DOCK_XP_1\\vsw_ic-PRE_DOCK_XP_1-004-in.maegz'
+p1503
+aS'C:\\Users\\Administrator\\Documents\\Schrodinger\\vsw_ic\\vsw_ic-PRE_DOCK_XP_1\\vsw_ic-PRE_DOCK_XP_1-005-in.maegz'
+p1504
+asbsI2
+g618
+ssg150
+g623
+sg152
+Nsg624
+Nsbsg154
+Nsg155
+g623
+sg156
+(lp1505
+(g273
+I0
+tp1506
+asg159
+Nsg160
+I0
+sg161
+S'schrodinger.pipeline.stages.glide'
+p1507
+sg163
+S'USER-96L5A2TLTM-0-62a4a571'
+p1508
+sg165
+I0
+sbasS'host_dict'
+p1509
+(dp1510
+g151
+(lp1511
+g28
+asg623
+(lp1512
+g274
+asg211
+(lp1513
+g173
+assg131
+Nsg132
+I01
+sS'_structure_output'
+p1514
+S'XP_OUT_1'
+p1515
+sS'_user_outputs'
+p1516
+g35
+((lp1517
+S'XP_OUT_1'
+p1518
+aS'POSTLIGPREP_OUT'
+p1519
+atRp1520
+sS'restart_from_beginning'
+p1521
+I00
+sS'cleanup'
+p1522
+I01
+sS'prog'
+p1523
+S'VSW'
+p1524
+sS'_objects'
+p1525
+(dp1526
+S'vsw_ic-ORIGINAL_LIGANDS'
+p1527
+g140
+sS'vsw_ic-GRID_1'
+p1528
+g618
+sg8
+(ischrodinger.pipeline.pipeio
+Structures
+p1529
+(dp1530
+g142
+I94
+sg52
+S'structures'
+p1531
+sg143
+g8
+sg145
+(lp1532
+S'C:\\Users\\Administrator\\Documents\\Schrodinger\\vsw_ic\\vsw_ic-DOCK_XP_1\\vsw_ic-XP_OUT_1_pv.maegz'
+p1533
+asbsg7
+g241
+ssS'subjob_local'
+p1534
+I00
+sb.

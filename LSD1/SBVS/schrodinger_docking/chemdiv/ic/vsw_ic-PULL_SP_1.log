@@ -1,0 +1,21 @@
+Stage vsw_ic-PULL_SP_1 initializing...
+[running at reduced cpu priority]
+
+Running stage: vsw_ic-PULL_SP_1
+SCHRODINGER: E:\SC
+PYTHONPATH: None
+Job ID: USER-96L5A2TLTM-0-62a4a55e
+Time: Sat Jun 11 22:23:27 2022
+Stage started successfully
+
+Python version: 59011
+Generating a set of compounds in the subset
+
+  Pulling all 934 compounds from the original set
+...
+
+
+STAGE COMPLETED. Elapsed time: 3 seconds
+
+    Output #1 (vsw_ic-SP_OUT_ORIG_1) [structures(934)]:
+      C:\Users\Administrator\Documents\Schrodinger\vsw_ic\vsw_ic-PULL_SP_1\vsw_ic-SP_OUT_ORIG_1-001.maegz

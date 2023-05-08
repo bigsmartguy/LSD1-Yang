@@ -1,0 +1,21 @@
+Stage vsw_ic-PULL_HTVS_1 initializing...
+[running at reduced cpu priority]
+
+Running stage: vsw_ic-PULL_HTVS_1
+SCHRODINGER: E:\SC
+PYTHONPATH: None
+Job ID: USER-96L5A2TLTM-0-62a2bb7e
+Time: Fri Jun 10 11:33:19 2022
+Stage started successfully
+
+Python version: 59011
+Generating a set of compounds in the subset
+...
+  Pulling all 3115 compounds from the original set
+..............
+
+
+STAGE COMPLETED. Elapsed time: 15 seconds
+
+    Output #1 (vsw_ic-HTVS_OUT_ORIG_1) [structures(3115)]:
+      C:\Users\Administrator\Documents\Schrodinger\vsw_ic\vsw_ic-PULL_HTVS_1\vsw_ic-HTVS_OUT_ORIG_1-001.maegz
