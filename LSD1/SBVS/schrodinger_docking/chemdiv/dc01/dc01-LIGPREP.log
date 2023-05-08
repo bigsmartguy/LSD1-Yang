@@ -1,0 +1,58 @@
+Stage dc01-LIGPREP initializing...
+[running at reduced cpu priority]
+
+Running stage: dc01-LIGPREP
+SCHRODINGER: E:\SC
+PYTHONPATH: None
+Job ID: USER-96L5A2TLTM-0-62a49cb8
+Time: Sat Jun 11 21:46:32 2022
+Stage started successfully
+
+Python version: 59011
+Counting number of input structures
+Number of input structures: 2027
+Each input structure will be treated as a unique compound.
+Separating ligands into 1 subjobs (2027 max ligands per job).
+Not mixing ligands
+
+Recombining ligand files...
+..
+2027 structures were successfully read.
+
+Using built-in tautomer spec file
+Will generate new variants (expand)
+Running LigPrep jobs...
+
+Running subjobs on hosts:
+  Not available yet
+Number of jobs:       1
+Max retries per job:  2
+Max allowed failures: unlimited
+Run with -LOCAL:      False
+Verbosity:            normal
+
+Starting JobDJ...
+
+Keep one job on driver host: False
+JobDJ columns:
+  C: Number of completed subjobs
+  A: Number of active subjobs (e.g., submitted, running)
+  W: Number of waiting/pending subjobs
+
+C A W | Activity  JobId  JobName  JobHost
+- - - | --------- -----------------------
+Waiting for available processors to use...
+0 1 0 | launched  USER-96L5A2TLTM-0-62a49cc3 dc01-LIGPREP-001 localhost [USER-96L5A2TLTM]
+1 0 0 | finished  USER-96L5A2TLTM-0-62a49cc3 dc01-LIGPREP-001 localhost [USER-96L5A2TLTM]
+
+All jobs have completed.
+
+1 of 1 job(s) succeeded; 0 job(s) failed.
+
+Checking subjob outputs...
+Cleaning up...
+
+STAGE COMPLETED. Elapsed time: 12 minutes 46 seconds
+
+    Output #1 (dc01-LIGPREP_OUT) [structures]:
+      C:\Users\Administrator\Documents\Schrodinger\dc01\dc01-LIGPREP\dc01-LIGPREP_OUT-001.maegz

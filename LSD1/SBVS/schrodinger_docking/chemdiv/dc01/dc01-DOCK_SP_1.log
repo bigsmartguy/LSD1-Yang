@@ -1,0 +1,76 @@
+Stage dc01-DOCK_SP_1 initializing...
+[running at reduced cpu priority]
+
+Running stage: dc01-DOCK_SP_1
+SCHRODINGER: E:\SC
+PYTHONPATH: None
+Job ID: USER-96L5A2TLTM-0-62a5593b
+Time: Sun Jun 12 11:10:52 2022
+Stage started successfully
+
+Python version: 59011
+Will NOT recombine or retitle input ligands
+There will be 1 subjobs.
+Will identify ligands based on unique field: s_vsw_compound_code
+Counting numbers of structures and compounds in input ligands...
+.
+Number of input compounds: 1013
+Number of input structures: 1013
+
+Input number of poses for each subjob:
+{1: 1013}
+
+NOTE: 1 jobs will be launched, as that's the number of input files. (The option to 'use input files directly for subjobs' was used.)
+
+Setting up Glide jobs...
+Running Glide jobs...
+
+Running subjobs on hosts:
+  Not available yet
+Number of jobs:       1
+Max retries per job:  2
+Max allowed failures: unlimited
+Run with -LOCAL:      False
+Verbosity:            normal
+
+Starting JobDJ...
+
+Keep one job on driver host: False
+JobDJ columns:
+  C: Number of completed subjobs
+  A: Number of active subjobs (e.g., submitted, running)
+  W: Number of waiting/pending subjobs
+
+C A W | Activity  JobId  JobName  JobHost
+- - - | --------- -----------------------
+Waiting for available processors to use...
+0 1 0 | launched  USER-96L5A2TLTM-0-62a55941 dc01-DOCK_SP_1-001 localhost [USER-96L5A2TLTM]
+1 0 0 | finished  USER-96L5A2TLTM-0-62a55941 dc01-DOCK_SP_1-001 localhost [USER-96L5A2TLTM]
+
+All jobs have completed.
+
+1 of 1 job(s) succeeded; 0 job(s) failed.
+
+  Keeping 30% of compounds.
+    Actually keeping 303 of 1013 compounds.
+  Best by compound: True
+  Calculating CPU time and combining log files...
+    have not calculated CPU time or generated combined logfile
+Merging the Glide output files...
+E:\SC\utilities\glide_merge -f files_to_merge.txt -m 303 -id_prop s_vsw_compound_code -o dc01-SP_OUT_1_lib.maegz -p 1
+For progress, see: C:\Users\Administrator\Documents\Schrodinger\dc01\dc01-DOCK_SP_1\glide_merge.log
+glide_merge completed suffessfully
+Reading merged structures...
+   Number of compounds expected to keep: 303
+   Number of compounds kept: 303
+   Number of structures kept: 303
+Generating csv report file...
+Properties CSV file: dc01-SP_OUT_1.csv
+
+Cleaning up...
+  Archiving dc01-DOCK_SP_1-001.log...
+
+STAGE COMPLETED. Elapsed time: 3 hours 14 minutes 52 seconds
+
+    Output #1 (dc01-SP_OUT_1) [structures(303)]:
+      C:\Users\Administrator\Documents\Schrodinger\dc01\dc01-DOCK_SP_1\dc01-SP_OUT_1_lib.maegz

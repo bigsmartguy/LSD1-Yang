@@ -1,0 +1,23 @@
+Stage dc01-POSTLIGPREP initializing...
+[running at reduced cpu priority]
+
+Running stage: dc01-POSTLIGPREP
+SCHRODINGER: E:\SC
+PYTHONPATH: None
+Job ID: USER-96L5A2TLTM-0-62a49fbc
+Time: Sat Jun 11 21:59:24 2022
+Stage started successfully
+
+Python version: 59011
+Removing penalized states and keeping 4 stereoisomers per ion/taut of each compound.
+
+Working on file: C:\Users\Administrator\Documents\Schrodinger\dc01\dc01-LIGPREP\dc01-LIGPREP_OUT-001.maegz
+...
+Number of compounds: 2027
+Number of input structures: 3879
+Number of output structures: 3783
+
+STAGE COMPLETED. Elapsed time: 7 seconds
+
+    Output #1 (dc01-POSTLIGPREP_OUT) [structures(3783)]:
+      C:\Users\Administrator\Documents\Schrodinger\dc01\dc01-POSTLIGPREP\dc01-POSTLIGPREP_OUT-001.maegz

@@ -1,0 +1,162 @@
+########## Virtual Screening Workflow Input File ###############
+# Run as: $SCHRODINGER/vsw <inputfile> 
+
+[SET:ORIGINAL_LIGANDS]
+    VARCLASS   Structures
+    FILES   E:\sc-work\dc01.sd,
+
+[SET:GRID_1]
+    VARCLASS   Grid
+    FILE   E:\sc-work\glide-grid_1\glide-grid_1.zip
+
+[STAGE:LIGPREP]
+    STAGECLASS   ligprep.LigPrepStage
+    INPUTS   ORIGINAL_LIGANDS,
+    OUTPUTS   LIGPREP_OUT,
+    RECOMBINE   YES
+    RETITLE   YES
+    MIXLIGS   YES
+    SKIP_BAD_LIGANDS   YES
+    UNIQUEFIELD   NONE
+    OUTCOMPOUNDFIELD   s_vsw_compound_code
+    USE_EPIK   YES
+    METAL_BINDING   NO
+    PH   7.0
+    PHT   2.0
+    NRINGCONFS   1
+    COMBINEOUTS   NO
+    STEREO_SOURCE   parities
+    NUM_STEREOISOMERS   32
+    REGULARIZE   NO
+
+[STAGE:POSTLIGPREP]
+    STAGECLASS   ligprep.PostLigPrepStage
+    INPUTS   LIGPREP_OUT,
+    OUTPUTS   POSTLIGPREP_OUT,
+    UNIQUEFIELD   s_vsw_compound_code
+    OUTVARIANTFIELD   s_vsw_variant
+    PRESERVE_NJOBS   YES
+    LIMIT_STEREOISOMERS   YES
+    MAXSTEREO   4
+    REMOVE_PENALIZED_STATES   YES
+
+[STAGE:PRE_DOCK_HTVS_1]
+    STAGECLASS   gencodes.RecombineStage
+    INPUTS   POSTLIGPREP_OUT,
+    OUTPUTS   DOCK_HTVS_1_INPUT,
+    NUMOUT   njobs
+    OUTFORMAT   maegz
+    MIN_SUBJOB_STS   4000
+    MAX_SUBJOB_STS   40000
+    GENCODES   NO
+    UNIQUEFIELD   s_vsw_compound_code
+
+[STAGE:DOCK_HTVS_1]
+    STAGECLASS   glide.DockingStage
+    INPUTS   DOCK_HTVS_1_INPUT, GRID_1
+    OUTPUTS   HTVS_OUT_1,
+    RECOMBINE   NO
+    PRECISION   HTVS
+    UNIQUEFIELD   s_vsw_compound_code
+    PERCENT_TO_KEEP   50.0
+    DOCKING_METHOD   confgen
+    POSES_PER_LIG   1
+    BEST_BY_TITLE   YES
+    LIG_VSCALE   0.8
+    LIG_CCUT   0.15
+    MAXATOMS   300
+    MAXROTBONDS   50
+    AMIDE_MODE   penal
+    POSE_OUTTYPE   LIB
+    POSTDOCK   YES
+    POSTDOCKSTRAIN   NO
+    COMPRESS_POSES   YES
+    EPIK_PENALTIES   YES
+    FORCEPLANAR   NO
+
+[STAGE:PULL_HTVS_1]
+    STAGECLASS   pull.PullStage
+    INPUTS   HTVS_OUT_1, POSTLIGPREP_OUT
+    OUTPUTS   HTVS_OUT_ORIG_1,
+    UNIQUEFIELD   s_vsw_variant
+
+[STAGE:PRE_DOCK_SP_1]
+    STAGECLASS   gencodes.RecombineStage
+    INPUTS   HTVS_OUT_ORIG_1,
+    OUTPUTS   DOCK_SP_1_INPUT,
+    NUMOUT   njobs
+    OUTFORMAT   maegz
+    MIN_SUBJOB_STS   300
+    MAX_SUBJOB_STS   3000
+    GENCODES   NO
+    UNIQUEFIELD   s_vsw_compound_code
+
+[STAGE:DOCK_SP_1]
+    STAGECLASS   glide.DockingStage
+    INPUTS   DOCK_SP_1_INPUT, GRID_1
+    OUTPUTS   SP_OUT_1,
+    RECOMBINE   NO
+    PRECISION   SP
+    UNIQUEFIELD   s_vsw_compound_code
+    PERCENT_TO_KEEP   30.0
+    DOCKING_METHOD   confgen
+    POSES_PER_LIG   1
+    WRITE_XP_DESC   NO
+    NENHANCED_SAMPLING   1
+    BEST_BY_TITLE   YES
+    LIG_VSCALE   0.8
+    LIG_CCUT   0.15
+    MAXATOMS   300
+    MAXROTBONDS   50
+    AMIDE_MODE   penal
+    POSE_OUTTYPE   LIB
+    POSTDOCK   YES
+    POSTDOCKSTRAIN   NO
+    COMPRESS_POSES   YES
+    EPIK_PENALTIES   YES
+    FORCEPLANAR   NO
+
+[STAGE:PULL_SP_1]
+    STAGECLASS   pull.PullStage
+    INPUTS   SP_OUT_1, HTVS_OUT_ORIG_1
+    OUTPUTS   SP_OUT_ORIG_1,
+    UNIQUEFIELD   s_vsw_variant
+
+[STAGE:PRE_DOCK_XP_1]
+    STAGECLASS   gencodes.RecombineStage
+    INPUTS   SP_OUT_ORIG_1,
+    OUTPUTS   DOCK_XP_1_INPUT,
+    NUMOUT   njobs
+    OUTFORMAT   maegz
+    MIN_SUBJOB_STS   20
+    MAX_SUBJOB_STS   200
+    GENCODES   NO
+    UNIQUEFIELD   s_vsw_compound_code
+
+[STAGE:DOCK_XP_1]
+    STAGECLASS   glide.DockingStage
+    INPUTS   DOCK_XP_1_INPUT, GRID_1
+    OUTPUTS   XP_OUT_1,
+    RECOMBINE   NO
+    PRECISION   XP
+    UNIQUEFIELD   s_vsw_compound_code
+    PERCENT_TO_KEEP   10.0
+    DOCKING_METHOD   confgen
+    POSES_PER_LIG   1
+    WRITE_XP_DESC   NO
+    BEST_BY_TITLE   YES
+    LIG_VSCALE   0.8
+    LIG_CCUT   0.15
+    MAXATOMS   300
+    MAXROTBONDS   50
+    AMIDE_MODE   penal
+    POSE_OUTTYPE   PV
+    POSTDOCK   YES
+    POSTDOCKSTRAIN   NO
+    COMPRESS_POSES   YES
+    EPIK_PENALTIES   YES
+    FORCEPLANAR   NO
+
+[USEROUTS]
+    USEROUTS   XP_OUT_1, POSTLIGPREP_OUT
+    STRUCTOUT   XP_OUT_1
