@@ -1,0 +1,33 @@
+Stage dc02-PRE_DOCK_HTVS_1 initializing...
+[running at reduced cpu priority]
+
+Running stage: dc02-PRE_DOCK_HTVS_1
+SCHRODINGER: E:\SC
+PYTHONPATH: None
+Job ID: USER-96L5A2TLTM-0-62a4a060
+Time: Sat Jun 11 22:02:09 2022
+Stage started successfully
+
+Python version: 59011
+The number of output files will be derived from -NJOBS value
+GENCODES is False; ignoring UNIQUEFIELD keyword
+GENCODES is False; ignoring OUTVARIANTFIELD keyword
+GENCODES is False; ignoring OUTCOMPOUNDFIELD keyword
+Counting number of input structures
+Number of input structures: 6778
+Will generate 1 subjobs
+
+Processing ligand files...
+......
+Number of input structures: 6778
+Number of processed structures: 6778
+Number of processed compounds: 3868
+Number of output files: 1
+
+Number of (compounds, structures) for each output file:
+1:(3868, 6778)
+
+STAGE COMPLETED. Elapsed time: 11 seconds
+
+    Output #1 (dc02-DOCK_HTVS_1_INPUT) [structures(6778)]:
+      C:\Users\Administrator\Documents\Schrodinger\dc02\dc02-PRE_DOCK_HTVS_1\dc02-PRE_DOCK_HTVS_1-001-in.maegz

@@ -1,0 +1,82 @@
+Stage dc02-DOCK_XP_1 initializing...
+[running at reduced cpu priority]
+
+Running stage: dc02-DOCK_XP_1
+SCHRODINGER: E:\SC
+PYTHONPATH: None
+Job ID: USER-96L5A2TLTM-0-62a6fe14
+Time: Mon Jun 13 17:06:29 2022
+Stage started successfully
+
+Python version: 59011
+Will NOT recombine or retitle input ligands
+There will be 3 subjobs.
+Will identify ligands based on unique field: s_vsw_compound_code
+Counting numbers of structures and compounds in input ligands...
+
+Number of input compounds: 580
+Number of input structures: 580
+
+Input number of poses for each subjob:
+{1: 194, 2: 194, 3: 192}
+
+NOTE: 3 jobs will be launched, as that's the number of input files. (The option to 'use input files directly for subjobs' was used.)
+
+Setting up Glide jobs...
+Running Glide jobs...
+
+Running subjobs on hosts:
+  Not available yet
+Number of jobs:       3
+Max retries per job:  2
+Max allowed failures: unlimited
+Run with -LOCAL:      False
+Verbosity:            normal
+
+Starting JobDJ...
+
+Keep one job on driver host: False
+JobDJ columns:
+  C: Number of completed subjobs
+  A: Number of active subjobs (e.g., submitted, running)
+  W: Number of waiting/pending subjobs
+
+C A W | Activity  JobId  JobName  JobHost
+- - - | --------- -----------------------
+Waiting for available processors to use...
+0 1 2 | launched  USER-96L5A2TLTM-0-62a6fe1b dc02-DOCK_XP_1-001 localhost [USER-96L5A2TLTM]
+1 0 2 | finished  USER-96L5A2TLTM-0-62a6fe1b dc02-DOCK_XP_1-001 localhost [USER-96L5A2TLTM]
+1 1 1 | launched  USER-96L5A2TLTM-0-62a82f6b dc02-DOCK_XP_1-002 localhost [USER-96L5A2TLTM]
+2 0 1 | finished  USER-96L5A2TLTM-0-62a82f6b dc02-DOCK_XP_1-002 localhost [USER-96L5A2TLTM]
+2 1 0 | launched  USER-96L5A2TLTM-0-62a87b16 dc02-DOCK_XP_1-003 localhost [USER-96L5A2TLTM]
+3 0 0 | finished  USER-96L5A2TLTM-0-62a87b16 dc02-DOCK_XP_1-003 localhost [USER-96L5A2TLTM]
+
+All jobs have completed.
+
+3 of 3 job(s) succeeded; 0 job(s) failed.
+
+  Keeping 10% of compounds.
+    Actually keeping 58 of 580 compounds.
+  Best by compound: True
+  Calculating CPU time and combining log files...
+    have not calculated CPU time or generated combined logfile
+Merging the Glide output files...
+E:\SC\utilities\glide_merge -f files_to_merge.txt -m 58 -id_prop s_vsw_compound_code -o dc02-XP_OUT_1_pv.maegz -p 1
+For progress, see: C:\Users\Administrator\Documents\Schrodinger\dc02\dc02-DOCK_XP_1\glide_merge.log
+glide_merge completed suffessfully
+Reading merged structures...
+   Number of compounds expected to keep: 58
+   Number of compounds kept: 58
+   Number of structures kept: 58
+Generating csv report file...
+Properties CSV file: dc02-XP_OUT_1.csv
+
+Cleaning up...
+  Archiving dc02-DOCK_XP_1-001.log...
+  Archiving dc02-DOCK_XP_1-002.log...
+  Archiving dc02-DOCK_XP_1-003.log...
+
+STAGE COMPLETED. Elapsed time: 42 hours 20 minutes 31 seconds
+
+    Output #1 (dc02-XP_OUT_1) [structures(59)]:
+      C:\Users\Administrator\Documents\Schrodinger\dc02\dc02-DOCK_XP_1\dc02-XP_OUT_1_pv.maegz

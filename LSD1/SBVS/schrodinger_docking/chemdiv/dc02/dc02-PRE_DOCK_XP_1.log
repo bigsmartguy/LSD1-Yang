@@ -1,0 +1,36 @@
+Stage dc02-PRE_DOCK_XP_1 initializing...
+[running at reduced cpu priority]
+
+Running stage: dc02-PRE_DOCK_XP_1
+SCHRODINGER: E:\SC
+PYTHONPATH: None
+Job ID: USER-96L5A2TLTM-0-62a6fe0e
+Time: Mon Jun 13 17:06:22 2022
+Stage started successfully
+
+Python version: 59011
+The number of output files will be derived from -NJOBS value
+GENCODES is False; ignoring UNIQUEFIELD keyword
+GENCODES is False; ignoring OUTVARIANTFIELD keyword
+GENCODES is False; ignoring OUTCOMPOUNDFIELD keyword
+Counting number of input structures
+Number of input structures: 580
+Adjusting number of jobs to yield 20-200 ligands per job
+Will generate 3 subjobs
+
+Processing ligand files...
+
+Number of input structures: 580
+Number of processed structures: 580
+Number of processed compounds: 580
+Number of output files: 3
+
+Number of (compounds, structures) for each output file:
+1:(194, 194), 2:(194, 194), 3:(192, 192)
+
+STAGE COMPLETED. Elapsed time: 1 second
+
+    Output #1 (dc02-DOCK_XP_1_INPUT) [structures(580)]:
+      C:\Users\Administrator\Documents\Schrodinger\dc02\dc02-PRE_DOCK_XP_1\dc02-PRE_DOCK_XP_1-001-in.maegz
+      C:\Users\Administrator\Documents\Schrodinger\dc02\dc02-PRE_DOCK_XP_1\dc02-PRE_DOCK_XP_1-002-in.maegz
+      C:\Users\Administrator\Documents\Schrodinger\dc02\dc02-PRE_DOCK_XP_1\dc02-PRE_DOCK_XP_1-003-in.maegz

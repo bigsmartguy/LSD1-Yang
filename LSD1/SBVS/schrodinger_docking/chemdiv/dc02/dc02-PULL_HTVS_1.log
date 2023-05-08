@@ -1,0 +1,21 @@
+Stage dc02-PULL_HTVS_1 initializing...
+[running at reduced cpu priority]
+
+Running stage: dc02-PULL_HTVS_1
+SCHRODINGER: E:\SC
+PYTHONPATH: None
+Job ID: USER-96L5A2TLTM-0-62a563a6
+Time: Sun Jun 12 11:55:19 2022
+Stage started successfully
+
+Python version: 59011
+Generating a set of compounds in the subset
+.
+  Pulling all 1934 compounds from the original set
+......
+
+
+STAGE COMPLETED. Elapsed time: 7 seconds
+
+    Output #1 (dc02-HTVS_OUT_ORIG_1) [structures(1934)]:
+      C:\Users\Administrator\Documents\Schrodinger\dc02\dc02-PULL_HTVS_1\dc02-HTVS_OUT_ORIG_1-001.maegz

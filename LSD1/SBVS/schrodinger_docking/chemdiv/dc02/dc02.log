@@ -1,0 +1,220 @@
+
+===========================================
+     Virtual Screening Workflow (VSW)
+     Python version: 59011
+===========================================
+
+SCHRODINGER: E:\SC
+PYTHONPATH: None
+Started at: Sat Jun 11 21:44:14 2022
+[running at reduced cpu priority]
+Driver JobId: USER-96L5A2TLTM-0-62a49c2d
+Launch directory: C:\Users\Administrator\Documents\Schrodinger\dc02
+Job directory: C:\Users\Administrator\Documents\Schrodinger\dc02
+Running locally: True
+Input File: dc02.inp
+
+To restart the job upon failure, run this command:
+   $SCHRODINGER/vsw dc02.inp -RESTART
+
+Setting subjob_local to: False
+Setting njobs to: 1
+Setting adjust to: True
+Setting cleanup to: True
+
+Starting the pipeline...
+
+Will listen to "pipeline" messages from stages
+General subjob hosts: [('localhost', 1)]
+ligprep hosts: [('localhost', 1)]
+glide hosts: [('localhost', 1)]
+Subjob Local: False
+Number of subjobs: 1
+Adjust subjobs: True
+No force job: Will terminate upon first docking subjob failure instead of merging output from successful Glide subjobs.
+Maximum retries: 2
+Cleanup: True
+
+    Stage: dc02-LIGPREP
+        RETITLE: YES
+        NUM_STEREOISOMERS: 32
+        MIXLIGS: YES
+        USE_EPIK: YES
+        STEREO_SOURCE: parities
+        UNIQUEFIELD: NONE
+        METAL_BINDING: NO
+        COMBINEOUTS: NO
+        REGULARIZE: NO
+        NRINGCONFS: 1
+        SKIP_BAD_LIGANDS: YES
+        OUTCOMPOUNDFIELD: s_vsw_compound_code
+        PH: 7.0
+        RECOMBINE: YES
+        PHT: 2.0
+
+    Stage: dc02-POSTLIGPREP
+        MAXSTEREO: 4
+        UNIQUEFIELD: s_vsw_compound_code
+        OUTVARIANTFIELD: s_vsw_variant
+        PRESERVE_NJOBS: YES
+        REMOVE_PENALIZED_STATES: YES
+        LIMIT_STEREOISOMERS: YES
+
+    Stage: dc02-PRE_DOCK_HTVS_1
+        MAX_SUBJOB_STS: 40000
+        OUTFORMAT: maegz
+        UNIQUEFIELD: s_vsw_compound_code
+        NUMOUT: njobs
+        GENCODES: NO
+        MIN_SUBJOB_STS: 4000
+
+    Stage: dc02-DOCK_HTVS_1
+        AMIDE_MODE: penal
+        POSE_OUTTYPE: LIB
+        PRECISION: HTVS
+        POSTDOCKSTRAIN: NO
+        LIG_CCUT: 0.15
+        UNIQUEFIELD: s_vsw_compound_code
+        DOCKING_METHOD: confgen
+        LIG_VSCALE: 0.8
+        FORCEPLANAR: NO
+        EPIK_PENALTIES: YES
+        MAXATOMS: 300
+        PERCENT_TO_KEEP: 50.0
+        POSES_PER_LIG: 1
+        POSTDOCK: YES
+        MAXROTBONDS: 50
+        RECOMBINE: NO
+        BEST_BY_TITLE: YES
+        COMPRESS_POSES: YES
+
+    Stage: dc02-PULL_HTVS_1
+        UNIQUEFIELD: s_vsw_variant
+
+    Stage: dc02-PRE_DOCK_SP_1
+        MAX_SUBJOB_STS: 3000
+        OUTFORMAT: maegz
+        UNIQUEFIELD: s_vsw_compound_code
+        NUMOUT: njobs
+        GENCODES: NO
+        MIN_SUBJOB_STS: 300
+
+    Stage: dc02-DOCK_SP_1
+        LIG_VSCALE: 0.8
+        POSE_OUTTYPE: LIB
+        COMPRESS_POSES: YES
+        POSTDOCKSTRAIN: NO
+        UNIQUEFIELD: s_vsw_compound_code
+        DOCKING_METHOD: confgen
+        PRECISION: SP
+        FORCEPLANAR: NO
+        EPIK_PENALTIES: YES
+        MAXATOMS: 300
+        NENHANCED_SAMPLING: 1
+        LIG_CCUT: 0.15
+        PERCENT_TO_KEEP: 30.0
+        AMIDE_MODE: penal
+        POSTDOCK: YES
+        MAXROTBONDS: 50
+        RECOMBINE: NO
+        BEST_BY_TITLE: YES
+        POSES_PER_LIG: 1
+        WRITE_XP_DESC: NO
+
+    Stage: dc02-PULL_SP_1
+        UNIQUEFIELD: s_vsw_variant
+
+    Stage: dc02-PRE_DOCK_XP_1
+        MAX_SUBJOB_STS: 200
+        OUTFORMAT: maegz
+        UNIQUEFIELD: s_vsw_compound_code
+        NUMOUT: njobs
+        GENCODES: NO
+        MIN_SUBJOB_STS: 20
+
+    Stage: dc02-DOCK_XP_1
+        LIG_VSCALE: 0.8
+        POSE_OUTTYPE: PV
+        COMPRESS_POSES: YES
+        POSTDOCKSTRAIN: NO
+        UNIQUEFIELD: s_vsw_compound_code
+        DOCKING_METHOD: confgen
+        PRECISION: XP
+        FORCEPLANAR: NO
+        EPIK_PENALTIES: YES
+        MAXATOMS: 300
+        LIG_CCUT: 0.15
+        PERCENT_TO_KEEP: 10.0
+        AMIDE_MODE: penal
+        POSTDOCK: YES
+        MAXROTBONDS: 50
+        RECOMBINE: NO
+        BEST_BY_TITLE: YES
+        POSES_PER_LIG: 1
+        WRITE_XP_DESC: NO
+
+Status of stages:
+  Stage Name                     Status
+  ------------------------------ ---------
+  dc02-LIGPREP                   WAITING
+  dc02-POSTLIGPREP               WAITING
+  dc02-PRE_DOCK_HTVS_1           WAITING
+  dc02-DOCK_HTVS_1               WAITING
+  dc02-PULL_HTVS_1               WAITING
+  dc02-PRE_DOCK_SP_1             WAITING
+  dc02-DOCK_SP_1                 WAITING
+  dc02-PULL_SP_1                 WAITING
+  dc02-PRE_DOCK_XP_1             WAITING
+  dc02-DOCK_XP_1                 WAITING
+
+Stage activity keys...
+  C: Number of completed stages
+  A: Number of active/running stages
+  W: Number of waiting/pending stages
+
+ C  A  W | Stage name and activity
+-- -- -- | -----------------------
+ 0  0 10 | dc02-LIGPREP (USER-96L5A2TLTM-0-62a49c2f) launched.
+ 1  0  9 | dc02-LIGPREP (USER-96L5A2TLTM-0-62a49c2f) completed.
+            Output: dc02-LIGPREP_OUT
+ 1  0  9 | dc02-POSTLIGPREP (USER-96L5A2TLTM-0-62a4a04d) launched.
+ 2  0  8 | dc02-POSTLIGPREP (USER-96L5A2TLTM-0-62a4a04d) completed.
+            Output: dc02-POSTLIGPREP_OUT (6778)
+Cleaning up intermediate files: dc02-LIGPREP_OUT
+ 2  0  8 | dc02-PRE_DOCK_HTVS_1 (USER-96L5A2TLTM-0-62a4a060) launched.
+ 3  0  7 | dc02-PRE_DOCK_HTVS_1 (USER-96L5A2TLTM-0-62a4a060) completed.
+            Output: dc02-DOCK_HTVS_1_INPUT (6778)
+ 3  0  7 | dc02-DOCK_HTVS_1 (USER-96L5A2TLTM-0-62a4a073) launched.
+ 4  0  6 | dc02-DOCK_HTVS_1 (USER-96L5A2TLTM-0-62a4a073) completed.
+            Output: dc02-HTVS_OUT_1 (1934)
+Cleaning up intermediate files: dc02-DOCK_HTVS_1_INPUT
+ 4  0  6 | dc02-PULL_HTVS_1 (USER-96L5A2TLTM-0-62a563a6) launched.
+ 5  0  5 | dc02-PULL_HTVS_1 (USER-96L5A2TLTM-0-62a563a6) completed.
+            Output: dc02-HTVS_OUT_ORIG_1 (1934)
+Cleaning up intermediate files: dc02-HTVS_OUT_1
+ 5  0  5 | dc02-PRE_DOCK_SP_1 (USER-96L5A2TLTM-0-62a563b2) launched.
+ 6  0  4 | dc02-PRE_DOCK_SP_1 (USER-96L5A2TLTM-0-62a563b2) completed.
+            Output: dc02-DOCK_SP_1_INPUT (1934)
+ 6  0  4 | dc02-DOCK_SP_1 (USER-96L5A2TLTM-0-62a563bc) launched.
+ 7  0  3 | dc02-DOCK_SP_1 (USER-96L5A2TLTM-0-62a563bc) completed.
+            Output: dc02-SP_OUT_1 (580)
+Cleaning up intermediate files: dc02-DOCK_SP_1_INPUT
+ 7  0  3 | dc02-PULL_SP_1 (USER-96L5A2TLTM-0-62a6fe04) launched.
+ 8  0  2 | dc02-PULL_SP_1 (USER-96L5A2TLTM-0-62a6fe04) completed.
+            Output: dc02-SP_OUT_ORIG_1 (580)
+Cleaning up intermediate files: dc02-HTVS_OUT_ORIG_1
+Cleaning up intermediate files: dc02-SP_OUT_1
+ 8  0  2 | dc02-PRE_DOCK_XP_1 (USER-96L5A2TLTM-0-62a6fe0e) launched.
+ 9  0  1 | dc02-PRE_DOCK_XP_1 (USER-96L5A2TLTM-0-62a6fe0e) completed.
+            Output: dc02-DOCK_XP_1_INPUT (580)
+Cleaning up intermediate files: dc02-SP_OUT_ORIG_1
+ 9  0  1 | dc02-DOCK_XP_1 (USER-96L5A2TLTM-0-62a6fe14) launched.
+10  0  0 | dc02-DOCK_XP_1 (USER-96L5A2TLTM-0-62a6fe14) completed.
+            Output: dc02-XP_OUT_1 (59)
+Cleaning up intermediate files: dc02-DOCK_XP_1_INPUT
+All stages have completed sucessfully.
+User outputs:
+  XP_OUT_1 (incorporatable) [structures(59)]:
+      C:\Users\Administrator\Documents\Schrodinger\dc02\dc02-DOCK_XP_1\dc02-XP_OUT_1_pv.maegz
+  POSTLIGPREP_OUT [structures(6778)]:
+      C:\Users\Administrator\Documents\Schrodinger\dc02\dc02-POSTLIGPREP\dc02-POSTLIGPREP_OUT-001.maegz

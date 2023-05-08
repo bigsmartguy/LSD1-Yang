@@ -1,0 +1,21 @@
+Stage dc02-PULL_SP_1 initializing...
+[running at reduced cpu priority]
+
+Running stage: dc02-PULL_SP_1
+SCHRODINGER: E:\SC
+PYTHONPATH: None
+Job ID: USER-96L5A2TLTM-0-62a6fe04
+Time: Mon Jun 13 17:06:13 2022
+Stage started successfully
+
+Python version: 59011
+Generating a set of compounds in the subset
+
+  Pulling all 580 compounds from the original set
+.
+
+
+STAGE COMPLETED. Elapsed time: 2 seconds
+
+    Output #1 (dc02-SP_OUT_ORIG_1) [structures(580)]:
+      C:\Users\Administrator\Documents\Schrodinger\dc02\dc02-PULL_SP_1\dc02-SP_OUT_ORIG_1-001.maegz
