@@ -1,0 +1,30 @@
+"Hold" simulations to avoid the box changing size too much,1000ps, frame:1000
+&cntrl
+  imin   = 0,           ! no mininisation
+  irest  = 1,           ! restart
+  ntx    = 5,           ! read coordinates and velocities
+  dt = 0.002,           ! 2fs time step
+  ntc    = 2,           ! SHAKE; bonds involving H are constrainted
+  ntf    = 2,           ! all H-atom bonds forces are not evaluated
+  tol = 0.000001,       ! Shake tolerance 10 times tighter
+  ntb    = 2,           ! constant pressure
+  ntp    = 2,             ! IMORTANT!!! anisotropic pressure control
+  pres0  = 1.0,         ! pressure of 1 bar
+  taup   = 2.0,         ! 2ps pressure coupling
+  cut    = 8.0,         ! 8A cut off
+  ntt    = 3,           ! constant temp using Langevin
+  temp0  = 300.0,       ! target temp = 300K
+  gamma_ln = 1.0,       ! Langevin collision freq in 1/ps
+  ntpr   = 500,         ! print details to log every 500 steps
+  ntwx   = 1000,         ! write coordinates to mdcrd every 500 steps
+  ntwr   = 100000,      ! write restart file to equil.rst every 100,000 steps
+  nstlim = 5000000,         ! run for 500,000 steps (1000 ps)
+  ig     = -1,          ! Random seed based on wallclock.
+  iwrap  = 1,           ! wrap periodic molecules.
+  nscm   = 1000,        ! Remove COM motion every 1,000 steps
+  ioutfm = 1,           ! NetCDF MDCRD.
+/                         
+&ewald                    
+  dsum_tol = 0.000001,  ! Dsum_tol 10 times tighter.
+  skinnb = 3,
+/

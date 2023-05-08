@@ -1,0 +1,17 @@
+Minimization for 100000 steps
+&cntrl
+ imin   = 1,           ! mininisation
+ irest  = 0,           ! no trajectory restart
+ ntx    = 1,           ! read coordinates only
+ ntb    = 1,           ! constant volume periodic boundaries
+ cut    = 8,           ! 8A cut off
+ ntc    = 1,           ! SHAKE off, no bonds constraint
+ ntf    = 1,           ! SHAKE off, all bond forces calculated
+ ncyc   = 80000,          ! 80000 steps of SD
+ maxcyc = 100000,          ! 100000 steps of minimization
+ drms   = 0.0001       ! convergence criterion
+ ntpr   = 500,          ! print details to log every 100 steps
+ ntwx   = 500,          ! write coordinates to mdcrd every 100 steps
+ ntwr   = 10000,        ! write restart file every 10000 steps
+ ioutfm = 1            ! NetCDF traj
+/

@@ -1,0 +1,45 @@
+Constant volume heating with Langevin thermostat to 300K (NVT) for 200ps
+&cntrl
+  imin   = 0,           ! do MD
+  irest  = 0,           ! no trajectory restart
+  ntx    = 1,           ! read coordinates only
+  dt     = 0.002,       ! 2fs time step
+  ntc    = 2,           ! Shake; bonds involving H are constrainted
+  ntf    = 2,           ! do not evaluate H-atom bonds forces (use with ntc=2)
+  tol    = 0.000001,    ! Shake tolerance 1.d-06 (10 times tighter than default)
+  ntb    = 1,           ! constant volume PBC
+  cut    = 8.0,         ! cut off in Angstrom
+  ntt    = 3,           ! constant temp using Langevin
+  tempi  = 10.0,        ! initial temp
+  temp0  = 300.0,       ! target temp
+  gamma_ln = 5.0,       ! collision frequency in 1/ps
+  ntpr = 1000,           ! print details to log every 1000 steps (2 ps)
+  ntwx = 1000,           ! write coordinates to mdcrd every 1000 steps
+  ntwr = 25000,         ! write restart file to heat.rst every 25,000 steps
+  iwrap  = 1,           ! wrap periodic molecules.
+  nstlim = 100000,       ! run for 50,000 steps
+  nmropt = 1,           ! Scale temp target.
+  ig     = -1,          ! Random seed based on wallclock.
+  nscm   = 1000,        ! Remove COM motion every 1,000 steps
+  ioutfm = 1,           ! NetCDF MDCRD.
+/
+&wt
+  type   = 'TEMP0',
+  istep1 = 0,
+  istep2 = 50000,
+  value1 = 10.0,
+  value2 = 300.0
+/
+&wt 
+  type   = 'TEMP0',
+  istep1 = 50001,
+  istep2 = 100000,
+  value1 = 300.0,
+  value2 = 300.0
+/
+&wt
+  type='END'
+/
+&ewald
+  dsum_tol = 0.000001,  !Dsum_tol 1.d-06 (10 times tighter than default)
+/

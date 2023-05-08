@@ -1,0 +1,27 @@
+NVT production run with Berendsen thermostat at 300K (NVT) 10ns
+&cntrl
+  imin   = 0,           ! no mininisation
+  irest  = 1,           ! restart
+  ntx    = 5,           ! read coordinates and velocities
+  dt     = 0.002,       ! 2fs time step 
+  ntc    = 2,           ! Shake; bonds involving H are constrainted
+  ntf    = 2,           ! do not evaluate H-atom bonds forces (use with ntc=2)
+  tol    = 0.000001,    ! Shake tolerance 1.d-06 (10 times tighter than default)
+  ntb    = 2,           ! constant pressure 
+  ntp    = 2,           ! #####IMPORTANT CHARNGE####  anisotropic pressure scaling
+  barostat = 1,         ! berendsen (default)
+  cut    = 8.0,         ! 8A cut off
+  ntt    = 1,           ! constant temp using weak coupling (Berendsen)
+  temp0  = 300.0,       ! target temp = 300K
+  tautp  = 10.0,        ! time constant for heat bath couplin in ps
+  ntpr   = 1000,         ! print details to log every 500 steps (1.0 ps)
+  ntwx   = 1000,         ! write coordinates to mdcrd every 500 steps
+  ntwr   = 250000,      ! write restart file every 250,000 steps (every 0.5 ns)
+  nstlim = 5000000,    ! run for 50,000,000 steps (5 ns at dt=2fs)
+  iwrap  = 1,           ! wrap periodic molecules.
+  nscm   = 10000,       ! remove COM motion every 1,000 steps
+  ioutfm = 1,           ! NetCDF MDCRD.
+/
+&ewald
+  dsum_tol = 0.000001,  !Dsum_tol 1.d-06 (10 times tighter than default)
+/ 
